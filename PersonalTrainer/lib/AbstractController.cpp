@@ -21,6 +21,11 @@ AbstractController::AbstractController(QTcpSocket *socket, QThread *thread, QObj
     }
 }
 
+Model *AbstractController::getModel() const
+{
+    return model;
+}
+
 void AbstractController::initConnections()
 {
 

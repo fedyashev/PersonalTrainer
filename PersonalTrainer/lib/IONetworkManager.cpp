@@ -11,6 +11,16 @@ void IONetworkManager::initConnections()
     connect(socket, SIGNAL(error(QAbstractSocket::SocketError)), SLOT(errorPrint()));
 }
 
+QTcpSocket *IONetworkManager::getSocket() const
+{
+    return socket;
+}
+
+void IONetworkManager::connectToHost(const Data &data)
+{
+    socket->connectToHost(data.content, 52816);
+}
+
 void IONetworkManager::recieveData() {
     QByteArray data = socket->readAll();
     qDebug() << "Socket " << socket->socketDescriptor() << ", thread " << thread() << ": " << data.data();

@@ -7,7 +7,8 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QDialog>
-#include "Client.h"
+#include "Controller.h"
+#include "../lib/Data.h"
 
 class Widget : public QWidget
 {
@@ -26,14 +27,14 @@ private:
     QLineEdit *ledit1;
     QLineEdit *ledit2;
 
-    Client client;
-
-signals:
-    void authorization(const QString& login, const QString& password);
+    Controller *m_client;
 
 public slots:
     void button1OnClick();
     void showMessageDialog(const QString& msg);
+
+signals:
+    void authorization(const Data& data);
 };
 
 #endif // WIDGET_H

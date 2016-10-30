@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QTcpSocket>
 #include <QDebug>
+#include "Data.h"
 
 class IONetworkManager : public QObject
 {
@@ -13,6 +14,7 @@ public:
     explicit IONetworkManager(QTcpSocket *socket, QObject *parent = 0);
 
     void initConnections();
+    QTcpSocket *getSocket() const;
 
 private:
     QTcpSocket *socket;
@@ -20,6 +22,7 @@ private:
 signals:
 
 public slots:
+    void connectToHost(const Data& data);
     void recieveData();
     void errorPrint();
 

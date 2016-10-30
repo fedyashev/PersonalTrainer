@@ -15,6 +15,8 @@ Q_OBJECT
 public:
     explicit AbstractController(QTcpSocket *socket, QThread *thread = 0, QObject *parent = 0);
 
+    Model *getModel() const;
+
 protected:
     virtual void initConnections() = 0;
 

@@ -4,8 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-QT       += network
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,11 +14,19 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         Widget.cpp \
-    Client.cpp \
-    FSM.cpp \
-    Data.cpp
+    ../lib/AbstractController.cpp \
+    ../lib/Data.cpp \
+    ../lib/DBManager.cpp \
+    ../lib/FSM.cpp \
+    ../lib/IONetworkManager.cpp \
+    ../lib/Model.cpp \
+    Controller.cpp
 
 HEADERS  += Widget.h \
-    Client.h \
-    FSM.h \
-    Data.h
+    ../lib/AbstractController.h \
+    ../lib/Data.h \
+    ../lib/DBManager.h \
+    ../lib/FSM.h \
+    ../lib/IONetworkManager.h \
+    ../lib/Model.h \
+    Controller.h

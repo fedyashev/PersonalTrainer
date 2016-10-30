@@ -3,6 +3,8 @@
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
 {
+    m_client = new Controller();
+
     this->setWindowTitle("Personal Trainer - Authorization");
 
     grid = new QGridLayout();
@@ -33,26 +35,28 @@ Widget::Widget(QWidget *parent)
 
     this->setFixedSize(this->sizeHint());
 
-    connect(button1, SIGNAL(clicked()), this, SLOT(button1OnClick()));
-    connect(this, SIGNAL(authorization(QString,QString)) , &client, SLOT(connectToServer(QString,QString)));
-    connect(&client, SIGNAL(showMessageDialog(QString)), this, SLOT(showMessageDialog(QString)));
+    connect(button1, SIGNAL(clicked()), SLOT(button1OnClick()));
+    connect(this, SIGNAL(authorization(Data)), m_client->getModel()->getNet(), SLOT(connectToHost(Data)));
+//    connect(this, SIGNAL(authorization(QString,QString)) , &client, SLOT(connectToServer(QString,QString)));
+//    connect(&client, SIGNAL(showMessageDialog(QString)), this, SLOT(showMessageDialog(QString)));
+
 }
 
 Widget::~Widget()
 {
 
-    delete label1;
-    delete label2;
-    delete button1;
-    delete button2;
-    delete ledit1;
-    delete ledit2;
-    delete grid;
+//    delete label1;
+//    delete label2;
+//    delete button1;
+//    delete button2;
+//    delete ledit1;
+//    delete ledit2;
+//    delete grid;
 }
 
 void Widget::button1OnClick()
 {
-    emit authorization(ledit1->text(), ledit2->text());
+    emit authorization(Data("192.168.100.2", this));
 }
 
 void Widget::showMessageDialog(const QString &msg)
