@@ -23,6 +23,7 @@ void Server::startServer()
 
 void Server::newConnection()
 {
-    Client *client = new Client(server.nextPendingConnection());
-    qDebug() << "Client connected: socket " << client->getSocket()->socketDescriptor();
+    QTcpSocket *socket = server.nextPendingConnection();
+    ServerController *client = new ServerController(socket, this);
+    qDebug() << "Client connected: socket " << socket->socketDescriptor() << ", current thread " << thread();
 }

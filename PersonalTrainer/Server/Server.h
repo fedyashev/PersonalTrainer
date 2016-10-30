@@ -4,11 +4,12 @@
 #include <QObject>
 #include <QTcpServer>
 #include <QTcpSocket>
-#include "Client.h"
+#include "ServerController.h"
 
 class Server : public QObject
 {
-    Q_OBJECT
+Q_OBJECT
+
 public:
     explicit Server(QObject *parent = 0);
     ~Server();

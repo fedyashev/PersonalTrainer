@@ -15,7 +15,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         Widget.cpp \
-    Client.cpp
+    Client.cpp \
+    FSM.cpp \
+    Data.cpp
 
 HEADERS  += Widget.h \
-    Client.h
+    Client.h \
+    FSM.h \
+    Data.h

@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QTcpSocket>
+#include "FSM.h"
 
 class Client : public QObject
 {
@@ -13,6 +14,7 @@ public:
 
 private:
     QTcpSocket socket;
+    FSM client_fsm;
 
 signals:
     void showMessageDialog(const QString& msg);

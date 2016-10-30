@@ -9,18 +9,18 @@ Client::Client(QObject *parent) : QObject(parent)
 
 void Client::connectToServer(const QString &login, const QString &password)
 {
-    socket.connectToHost("192.168.1.100", 52816);
+    socket.connectToHost("192.168.100.2", 52816);
 }
 
 void Client::connectionEstablished()
 {
     emit showMessageDialog("Connection established.");
-    socket.disconnectFromHost();
+    //socket.disconnectFromHost();
 }
 
 void Client::connectionError(const QAbstractSocket::SocketError err)
 {
-    emit showMessageDialog(socket.errorString());
+    emit showMessageDialog("Error:\n" + socket.errorString());
     socket.disconnectFromHost();
 }
 

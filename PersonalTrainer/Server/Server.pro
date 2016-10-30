@@ -12,10 +12,20 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     Server.cpp \
-    Client.cpp \
-    IONetworkManager.cpp
+    ServerController.cpp \
+    ../lib/AbstractController.cpp \
+    ../lib/Data.cpp \
+    ../lib/DBManager.cpp \
+    ../lib/FSM.cpp \
+    ../lib/IONetworkManager.cpp \
+    ../lib/Model.cpp
 
 HEADERS += \
     Server.h \
-    Client.h \
-    IONetworkManager.h
+    ServerController.h \
+    ../lib/AbstractController.h \
+    ../lib/Data.h \
+    ../lib/DBManager.h \
+    ../lib/FSM.h \
+    ../lib/IONetworkManager.h \
+    ../lib/Model.h
