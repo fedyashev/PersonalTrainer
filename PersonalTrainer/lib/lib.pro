@@ -5,7 +5,9 @@ HEADERS += \
     Data.h \
     DBManager.h \
     FSM.h \
-    IONetworkManager.h
+    IONetworkManager.h \
+    CAbstructModelTemplate.h \
+    CAbstructControllerTemplate.h
 
 SOURCES += \
     AbstractController.cpp \
