@@ -1,4 +1,4 @@
-QT += network
+QT += core network
 
 HEADERS += \
     AbstractController.h \
@@ -7,11 +7,13 @@ HEADERS += \
     FSM.h \
     IONetworkManager.h \
     CAbstructModelTemplate.h \
-    CAbstructControllerTemplate.h
+    CAbstructControllerTemplate.h \
+    CAbstructIONetworkManager.h
 
 SOURCES += \
     AbstractController.cpp \
     Data.cpp \
     DBManager.cpp \
     FSM.cpp \
-    IONetworkManager.cpp
+    IONetworkManager.cpp \
+    CAbstructIONetworkManager.cpp
