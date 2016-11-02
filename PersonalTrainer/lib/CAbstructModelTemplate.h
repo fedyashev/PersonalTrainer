@@ -19,8 +19,6 @@ public:
         delete m_dbm;
     }
 
-    virtual void initConnections() = 0;
-
     T_NET *getIONetworkManager() const
     {
         return m_net;

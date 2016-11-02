@@ -9,7 +9,7 @@ class CAbstructControllerTemplate
 
 public:
     CAbstructControllerTemplate():
-        m_model(new CAbstructModelTemplate())
+        m_model(new T_M())
     {
 
     }
@@ -18,8 +18,6 @@ public:
     {
         delete m_model;
     }
-
-    virtual void initConnections() = 0;
 
     T_M *getModel() const
     {
