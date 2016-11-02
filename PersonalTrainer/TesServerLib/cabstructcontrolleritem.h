@@ -14,8 +14,8 @@ protected:
     virtual void initConnections() = 0;
 
 signals:
-    void sendData(const QString &data);
-    void recvData(const QString &data);
+    void sendData(QString*);
+    void recvData(QString*);
 };
 
 #endif // CABSTRUCTCONTROLLERITEM_H

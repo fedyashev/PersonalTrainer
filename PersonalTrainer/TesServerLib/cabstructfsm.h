@@ -12,11 +12,11 @@ public:
     explicit CAbstructFSM(QObject *parent = 0);
 
 signals:
-    void sendDataToIONetworkManager(const QString &data);
-    void sendDataToDBManager(const QString &data);
+    void sendDataToIONetworkManager(QString*);
+    void sendDataToDBManager(QString*);
 
 public slots:
-    void fsm(const QString &data);
+    void fsm(QString* data);
 
     // CAbstructControllerItem interface
 protected:

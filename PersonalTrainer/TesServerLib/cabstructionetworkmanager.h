@@ -21,7 +21,7 @@ signals:
 
 public slots:
     void recvDataFromSocket();
-    void sendDataToSocket(const QString &data);
+    void sendDataToSocket(QString* data);
 
     // CAbstructControllerItem interface
 protected:

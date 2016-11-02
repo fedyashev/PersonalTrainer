@@ -14,13 +14,15 @@ QTcpSocket *CAbstructIONetworkManager::getSocket() const
 void CAbstructIONetworkManager::recvDataFromSocket()
 {
     QByteArray raw_data = m_socket->readAll();
-    emit sendData(QString(raw_data.data()));
+    QString raw_string(raw_data.data());
+    emit sendData(new QString(raw_string.toUtf8().data()));
 }
 
-void CAbstructIONetworkManager::sendDataToSocket(const QString &data)
+void CAbstructIONetworkManager::sendDataToSocket(QString* data)
 {
-    char* msg = data.toUtf8().data();
-    m_socket->write(msg, strlen(msg));
+    QByteArray byte_data = data->toUtf8();
+    char* msg = byte_data.data();
+    m_socket->write(msg, byte_data.size());
     m_socket->waitForBytesWritten(500);
     m_socket->flush();
 }
@@ -28,5 +30,5 @@ void CAbstructIONetworkManager::sendDataToSocket(const QString &data)
 void CAbstructIONetworkManager::initConnections()
 {
     connect(m_socket, SIGNAL(readyRead()), SLOT(recvDataFromSocket()));
-    connect(this, SIGNAL(recvData(QString)), this, SLOT(sendDataToSocket(QString)));
+    connect(this, SIGNAL(recvData(QString*)), this, SLOT(sendDataToSocket(QString*)));
 }

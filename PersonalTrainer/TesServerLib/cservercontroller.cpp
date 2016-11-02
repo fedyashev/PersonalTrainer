@@ -40,8 +40,8 @@ CServerDBManager *CServerController::getDBManager() const
 
 void CServerController::initConnections() const
 {
-    connect(m_net, SIGNAL(sendData(QString)), m_fsm, SIGNAL(recvData(QString)));
-    connect(m_dbm, SIGNAL(sendData(QString)), m_fsm, SIGNAL(recvData(QString)));
-    connect(m_fsm, SIGNAL(sendDataToIONetworkManager(QString)), m_net, SIGNAL(recvData(QString)));
-    connect(m_fsm, SIGNAL(sendDataToDBManager(QString)), m_dbm, SIGNAL(recvData(QString)));
+    connect(m_net, SIGNAL(sendData(QString*)), m_fsm, SIGNAL(recvData(QString*)));
+    connect(m_dbm, SIGNAL(sendData(QString*)), m_fsm, SIGNAL(recvData(QString*)));
+    connect(m_fsm, SIGNAL(sendDataToIONetworkManager(QString*)), m_net, SIGNAL(recvData(QString*)));
+    connect(m_fsm, SIGNAL(sendDataToDBManager(QString*)), m_dbm, SIGNAL(recvData(QString*)));
 }

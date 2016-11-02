@@ -6,14 +6,15 @@ CAbstructFSM::CAbstructFSM(QObject *parent) :
     initConnections();
 }
 
-void CAbstructFSM::fsm(const QString &data)
+void CAbstructFSM::fsm(QString* data)
 {
-    qDebug() << data.toUtf8().data();
-    emit sendDataToIONetworkManager(QString(data.toUtf8()));
+    qDebug() << *data;
+    emit sendDataToIONetworkManager(new QString(*data));
+    delete data;
 }
 
 void CAbstructFSM::initConnections()
 {
-    connect(this, SIGNAL(recvData(QString)), SLOT(fsm(QString)));
+    connect(this, SIGNAL(recvData(QString*)), SLOT(fsm(QString*)));
 }
 
