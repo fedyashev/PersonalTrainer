@@ -6,6 +6,11 @@ CServerDBManager::CServerDBManager(QObject *parent) :
     initConnections();
 }
 
+CServerDBManager::~CServerDBManager()
+{
+    qDebug() << "CServerDBManager: destructor " << this;
+}
+
 void CServerDBManager::initConnections()
 {
 

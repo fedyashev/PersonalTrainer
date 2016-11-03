@@ -2,6 +2,7 @@
 #define CABSTRUCTDBMANAGER_H
 
 #include <QObject>
+#include <QDebug>
 #include "cabstructcontrolleritem.h"
 
 class CAbstructDBManager : public CAbstructControllerItem
@@ -9,6 +10,7 @@ class CAbstructDBManager : public CAbstructControllerItem
     Q_OBJECT
 public:
     explicit CAbstructDBManager(QObject *parent = 0);
+    virtual ~CAbstructDBManager();
 
 signals:
 

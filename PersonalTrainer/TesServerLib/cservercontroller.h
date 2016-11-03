@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QTcpSocket>
 #include <QThread>
+#include <QDebug>
 #include "cserverionetworkmanager.h"
 #include "cserverdbmanager.h"
 #include "cserverfsm.h"
@@ -13,6 +14,7 @@ class CServerController : public QObject
     Q_OBJECT
 public:
     explicit CServerController(QTcpSocket *socket, QObject *parent = 0);
+    ~CServerController();
 
     CServerIONetworkManager *getIONetworkManager() const;
     CServerFSM *getFSM() const;
@@ -25,6 +27,9 @@ private:
     CServerFSM *m_fsm;
     CServerDBManager *m_dbm;
     QThread *m_thread;
+
+signals:
+    void finishWork();
 };
 
 #endif // CSERVERCONTROLLER_H

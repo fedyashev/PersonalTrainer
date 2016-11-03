@@ -6,6 +6,11 @@ CServerIONetworkManager::CServerIONetworkManager(QTcpSocket *socket, QObject *pa
     initConnections();
 }
 
+CServerIONetworkManager::~CServerIONetworkManager()
+{
+    qDebug() << "CServerIONetworkManager: destructor " << this;
+}
+
 void CServerIONetworkManager::initConnections()
 {
     connect(getSocket(), SIGNAL(error(QAbstractSocket::SocketError)), SLOT(errorPrint(QAbstractSocket::SocketError)));

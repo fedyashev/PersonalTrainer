@@ -6,6 +6,11 @@ CAbstructIONetworkManager::CAbstructIONetworkManager(QTcpSocket *socket, QObject
     initConnections();
 }
 
+CAbstructIONetworkManager::~CAbstructIONetworkManager()
+{
+    qDebug() << "CAbstructIONetworkManager: destructor " << this;
+}
+
 QTcpSocket *CAbstructIONetworkManager::getSocket() const
 {
     return m_socket;
@@ -31,4 +36,6 @@ void CAbstructIONetworkManager::initConnections()
 {
     connect(m_socket, SIGNAL(readyRead()), SLOT(recvDataFromSocket()));
     connect(this, SIGNAL(recvData(QString*)), this, SLOT(sendDataToSocket(QString*)));
+    connect(m_socket, SIGNAL(disconnected()), SIGNAL(disconnected()));
+    connect(m_socket, SIGNAL(disconnected()), m_socket, SLOT(deleteLater()));
 }

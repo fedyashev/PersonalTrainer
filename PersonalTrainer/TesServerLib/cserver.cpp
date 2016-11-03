@@ -6,6 +6,11 @@ CServer::CServer(QObject *parent) :
     initConnections();
 }
 
+CServer::~CServer()
+{
+    qDebug() << "CServer: destructor " << this;
+}
+
 void CServer::initConnections()
 {
     startServer();
@@ -21,6 +26,7 @@ void CServer::newConnection()
 {
     QTcpSocket *socket = m_server->nextPendingConnection();
     CServerController *controller = new CServerController(socket, this);
+    connect(controller, SIGNAL(finishWork()), controller, SLOT(deleteLater()));
     qDebug() << "Client connected. SC: " << socket->socketDescriptor();
 }
 

@@ -2,7 +2,7 @@
 #define CABSTRUCTFSM_H
 
 #include <QObject>
-#include <qDebug>
+#include <QDebug>
 #include "cabstructcontrolleritem.h"
 
 class CAbstructFSM : public CAbstructControllerItem
@@ -10,6 +10,7 @@ class CAbstructFSM : public CAbstructControllerItem
     Q_OBJECT
 public:
     explicit CAbstructFSM(QObject *parent = 0);
+    virtual ~CAbstructFSM();
 
 signals:
     void sendDataToIONetworkManager(QString*);

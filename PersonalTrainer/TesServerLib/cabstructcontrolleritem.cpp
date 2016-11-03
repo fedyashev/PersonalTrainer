@@ -5,3 +5,8 @@ CAbstructControllerItem::CAbstructControllerItem(QObject *parent) : QObject(pare
 
 }
 
+CAbstructControllerItem::~CAbstructControllerItem()
+{
+    qDebug() << "CAbstructControllerItem: destructor " << this;
+}
+

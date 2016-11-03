@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QTcpSocket>
+#include <QDebug>
 #include "cabstructcontrolleritem.h"
 
 class CAbstructIONetworkManager : public CAbstructControllerItem
@@ -10,6 +11,7 @@ class CAbstructIONetworkManager : public CAbstructControllerItem
     Q_OBJECT
 public:
     explicit CAbstructIONetworkManager(QTcpSocket *socket, QObject *parent = 0);
+    virtual ~CAbstructIONetworkManager();
 
     QTcpSocket *getSocket() const;
 
@@ -17,7 +19,7 @@ private:
     QTcpSocket *m_socket;
 
 signals:
-
+    void disconnected();
 
 public slots:
     void recvDataFromSocket();

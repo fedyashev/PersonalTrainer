@@ -6,6 +6,11 @@ CAbstructFSM::CAbstructFSM(QObject *parent) :
     initConnections();
 }
 
+CAbstructFSM::~CAbstructFSM()
+{
+    qDebug() << "CAbsrtuctFSM: destructor " << this;
+}
+
 void CAbstructFSM::fsm(QString* data)
 {
     qDebug() << *data;

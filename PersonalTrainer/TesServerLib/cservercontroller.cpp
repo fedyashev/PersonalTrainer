@@ -22,6 +22,11 @@ CServerController::CServerController(QTcpSocket *socket, QObject *parent) :
     m_thread->start();
 }
 
+CServerController::~CServerController()
+{
+    qDebug() << "CServerController: destructor " << this;
+}
+
 
 CServerIONetworkManager *CServerController::getIONetworkManager() const
 {
@@ -44,4 +49,10 @@ void CServerController::initConnections() const
     connect(m_dbm, SIGNAL(sendData(QString*)), m_fsm, SIGNAL(recvData(QString*)));
     connect(m_fsm, SIGNAL(sendDataToIONetworkManager(QString*)), m_net, SIGNAL(recvData(QString*)));
     connect(m_fsm, SIGNAL(sendDataToDBManager(QString*)), m_dbm, SIGNAL(recvData(QString*)));
+    connect(m_net, SIGNAL(disconnected()), m_net, SLOT(deleteLater()));
+    connect(m_net, SIGNAL(disconnected()), m_fsm, SLOT(deleteLater()));
+    connect(m_net, SIGNAL(disconnected()), m_dbm, SLOT(deleteLater()));
+    connect(m_net, SIGNAL(disconnected()), m_thread, SLOT(quit()));
+    connect(m_thread, SIGNAL(finished()), m_thread, SLOT(deleteLater()));
+    connect(m_thread, SIGNAL(finished()), SIGNAL(finishWork()));
 }

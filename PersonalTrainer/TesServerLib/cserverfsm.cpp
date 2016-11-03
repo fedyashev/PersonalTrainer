@@ -6,6 +6,11 @@ CServerFSM::CServerFSM(QObject *parent) :
     initConnections();
 }
 
+CServerFSM::~CServerFSM()
+{
+    qDebug() << "CServerFSM: destructor " << this;
+}
+
 void CServerFSM::initConnections()
 {
 

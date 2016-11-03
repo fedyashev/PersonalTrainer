@@ -10,6 +10,7 @@ class CServerIONetworkManager : public CAbstructIONetworkManager
     Q_OBJECT
 public:
     CServerIONetworkManager(QTcpSocket *socket, QObject *parent = 0);
+    ~CServerIONetworkManager();
 
 public slots:
     void errorPrint(QAbstractSocket::SocketError);

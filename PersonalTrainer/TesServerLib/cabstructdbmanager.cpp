@@ -6,6 +6,11 @@ CAbstructDBManager::CAbstructDBManager(QObject *parent) :
     initConnections();
 }
 
+CAbstructDBManager::~CAbstructDBManager()
+{
+    qDebug() << "CAbstructDBManager: destructor " << this;
+}
+
 void CAbstructDBManager::initConnections()
 {
 
