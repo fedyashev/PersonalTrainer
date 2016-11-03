@@ -1,9 +1,14 @@
-#include "CAbstructIONetworkManager.h"
+#include "cabstructionetworkmanager.h"
 
 CAbstructIONetworkManager::CAbstructIONetworkManager(QTcpSocket *socket, QObject *parent) :
-    QObject(parent), m_socket(socket)
+    CAbstructControllerItem(parent), m_socket(socket)
 {
-    initConnection();
+    initConnections();
+}
+
+CAbstructIONetworkManager::~CAbstructIONetworkManager()
+{
+    qDebug() << "CAbstructIONetworkManager: destructor " << this;
 }
 
 QTcpSocket *CAbstructIONetworkManager::getSocket() const
@@ -11,13 +16,26 @@ QTcpSocket *CAbstructIONetworkManager::getSocket() const
     return m_socket;
 }
 
-void CAbstructIONetworkManager::recieveDataFromNetwork()
+void CAbstructIONetworkManager::recvDataFromSocket()
 {
-    QByteArray data = m_socket->readAll();
-    qDebug() << m_socket->socketDescriptor() << " " << data.data();
+    QByteArray raw_data = m_socket->readAll();
+    QString raw_string(raw_data.data());
+    emit sendData(new QString(raw_string.toUtf8().data()));
 }
 
-void CAbstructIONetworkManager::initConnection()
+void CAbstructIONetworkManager::sendDataToSocket(QString* data)
 {
-    connect(m_socket, SIGNAL(readyRead()), SLOT(recieveDataFromNetwork()));
+    QByteArray byte_data = data->toUtf8();
+    char* msg = byte_data.data();
+    m_socket->write(msg, byte_data.size());
+    m_socket->waitForBytesWritten(500);
+    m_socket->flush();
+}
+
+void CAbstructIONetworkManager::initConnections()
+{
+    connect(m_socket, SIGNAL(readyRead()), SLOT(recvDataFromSocket()));
+    connect(this, SIGNAL(recvData(QString*)), this, SLOT(sendDataToSocket(QString*)));
+    connect(m_socket, SIGNAL(disconnected()), SIGNAL(disconnected()));
+    connect(m_socket, SIGNAL(disconnected()), m_socket, SLOT(deleteLater()));
 }

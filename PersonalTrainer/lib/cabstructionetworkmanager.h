@@ -3,15 +3,15 @@
 
 #include <QObject>
 #include <QTcpSocket>
-#include <Data.h>
+#include <QDebug>
+#include "cabstructcontrolleritem.h"
 
-class CAbstructIONetworkManager : public QObject
+class CAbstructIONetworkManager : public CAbstructControllerItem
 {
     Q_OBJECT
 public:
-    explicit CAbstructIONetworkManager(QTcpSocket* socket, QObject *parent = 0);
-
-    virtual void initConnection() = 0;
+    explicit CAbstructIONetworkManager(QTcpSocket *socket, QObject *parent = 0);
+    virtual ~CAbstructIONetworkManager();
 
     QTcpSocket *getSocket() const;
 
@@ -19,10 +19,15 @@ private:
     QTcpSocket *m_socket;
 
 signals:
-    void sendDataToFSM(const Data&);
+    void disconnected();
 
 public slots:
-    void recieveDataFromNetwork();
+    void recvDataFromSocket();
+    void sendDataToSocket(QString* data);
+
+    // CAbstructControllerItem interface
+protected:
+    void initConnections();
 };
 
 #endif // CABSTRUCTIONETWORKMANAGER_H

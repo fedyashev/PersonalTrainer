@@ -2,7 +2,7 @@
 #define CSERVERIONETWORKMANAGER_H
 
 #include <QDebug>
-#include "cabstructionetworkmanager.h"
+#include "../lib/cabstructionetworkmanager.h"
 
 
 class CServerIONetworkManager : public CAbstructIONetworkManager

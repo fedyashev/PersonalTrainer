@@ -1,8 +1,8 @@
 #ifndef CSERVERFSM_H
 #define CSERVERFSM_H
 
-#include "cabstructfsm.h"
 #include <QDebug>
+#include "../lib/cabstructfsm.h"
 
 class CServerFSM : public CAbstructFSM
 {

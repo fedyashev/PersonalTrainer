@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2016-10-27T15:01:57
+# Project created by QtCreator 2016-11-03T21:06:07
 #
 #-------------------------------------------------
 
@@ -13,20 +13,22 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        Widget.cpp \
-    ../lib/AbstractController.cpp \
-    ../lib/Data.cpp \
-    ../lib/DBManager.cpp \
-    ../lib/FSM.cpp \
-    ../lib/IONetworkManager.cpp \
-    ../lib/Model.cpp \
-    Controller.cpp
+        mainwindow.cpp \
+    ../lib/cabstructcontrolleritem.cpp \
+    ../lib/cabstructdbmanager.cpp \
+    ../lib/cabstructfsm.cpp \
+    ../lib/cabstructionetworkmanager.cpp \
+    cclientionetworkmanager.cpp \
+    cclientfsm.cpp \
+    cclientdbmanager.cpp \
+    cclientcontroller.cpp
 
-HEADERS  += Widget.h \
-    ../lib/AbstractController.h \
-    ../lib/Data.h \
-    ../lib/DBManager.h \
-    ../lib/FSM.h \
-    ../lib/IONetworkManager.h \
-    ../lib/Model.h \
-    Controller.h
+HEADERS  += mainwindow.h \
+    ../lib/cabstructcontrolleritem.h \
+    ../lib/cabstructdbmanager.h \
+    ../lib/cabstructfsm.h \
+    ../lib/cabstructionetworkmanager.h \
+    cclientionetworkmanager.h \
+    cclientfsm.h \
+    cclientdbmanager.h \
+    cclientcontroller.h

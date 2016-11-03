@@ -1,12 +1,12 @@
 #include <QCoreApplication>
-#include "Server.h"
+#include "cserver.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    Server server;
-    server.startServer();
+    CServer *server = new CServer();
 
     return a.exec();
 }
+

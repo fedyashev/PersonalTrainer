@@ -1,5 +1,4 @@
-QT += core
-QT += network
+QT += core network
 QT -= gui
 
 CONFIG += c++11
@@ -11,21 +10,23 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    Server.cpp \
-    ServerController.cpp \
-    ../lib/AbstractController.cpp \
-    ../lib/Data.cpp \
-    ../lib/DBManager.cpp \
-    ../lib/FSM.cpp \
-    ../lib/IONetworkManager.cpp \
-    ../lib/Model.cpp
+    cserver.cpp \
+    cservercontroller.cpp \
+    cserverdbmanager.cpp \
+    cserverfsm.cpp \
+    cserverionetworkmanager.cpp \
+    ../lib/cabstructcontrolleritem.cpp \
+    ../lib/cabstructdbmanager.cpp \
+    ../lib/cabstructfsm.cpp \
+    ../lib/cabstructionetworkmanager.cpp
 
 HEADERS += \
-    Server.h \
-    ServerController.h \
-    ../lib/AbstractController.h \
-    ../lib/Data.h \
-    ../lib/DBManager.h \
-    ../lib/FSM.h \
-    ../lib/IONetworkManager.h \
-    ../lib/Model.h
+    cserver.h \
+    cservercontroller.h \
+    cserverdbmanager.h \
+    cserverfsm.h \
+    cserverionetworkmanager.h \
+    ../lib/cabstructcontrolleritem.h \
+    ../lib/cabstructdbmanager.h \
+    ../lib/cabstructfsm.h \
+    ../lib/cabstructionetworkmanager.h

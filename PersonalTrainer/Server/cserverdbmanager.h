@@ -1,8 +1,8 @@
 #ifndef CSERVERDBMANAGER_H
 #define CSERVERDBMANAGER_H
 
-#include "cabstructdbmanager.h"
 #include <QDebug>
+#include "../lib/cabstructdbmanager.h"
 
 class CServerDBManager : public CAbstructDBManager
 {
