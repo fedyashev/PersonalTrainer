@@ -1,5 +1,14 @@
 \hypertarget{class_c_server_controller}{}\section{Класс C\+Server\+Controller}
 \label{class_c_server_controller}\index{C\+Server\+Controller@{C\+Server\+Controller}}
+
+
+Контроллер управления работой подключенного к серверу клиента.  
+
+
+
+
+{\ttfamily \#include $<$cservercontroller.\+h$>$}
+
 Граф наследования\+:C\+Server\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,30 +18,354 @@
 \subsection*{Сигналы}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117}{}\label{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117} 
-void {\bfseries finish\+Work} ()
-\end{DoxyCompactItemize}
+void \hyperlink{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117}{finish\+Work} ()
+\begin{DoxyCompactList}\small\item\em Сигнал завершения работы контроллера. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{class_c_server_controller_ac7fa78891be114aa9ae1985541d5a766}{C\+Server\+Controller} (Q\+Tcp\+Socket $\ast$socket, Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_controller_ad1efc4b48869ea320005a9dc6e3e5483}{$\sim$\+C\+Server\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_i_o_network_manager}{C\+Server\+I\+O\+Network\+Manager} $\ast$ \hyperlink{class_c_server_controller_a9934f4eb54e1e1debd1aa6fd5e036012}{get\+I\+O\+Network\+Manager} () const
+\begin{DoxyCompactList}\small\item\em Метод-\/getter для объекта работы с сетью. \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_f_s_m}{C\+Server\+F\+SM} $\ast$ \hyperlink{class_c_server_controller_ade77d98a3358e5b1914ebbffa7d810ce}{get\+F\+SM} () const
+\begin{DoxyCompactList}\small\item\em Метод-\/getter для объекта конечного автомата. \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_d_b_manager}{C\+Server\+D\+B\+Manager} $\ast$ \hyperlink{class_c_server_controller_a2dc0dbf4a5ee9356f10b2156ad2ce712}{get\+D\+B\+Manager} () const
+\begin{DoxyCompactList}\small\item\em Метод-\/getter для объекта работы с базой данных \end{DoxyCompactList}\item 
+void \hyperlink{class_c_server_controller_aeccfde1d541a9f57f8276cc6a24aea12}{init\+Connections} () const
+\begin{DoxyCompactList}\small\item\em Метод инициализации соединнений сигналов и слотов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_server_i_o_network_manager}{C\+Server\+I\+O\+Network\+Manager} $\ast$ \hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\+\_\+net}
+\begin{DoxyCompactList}\small\item\em Указатель на объект работы с сетью. \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_f_s_m}{C\+Server\+F\+SM} $\ast$ \hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\+\_\+fsm}
+\begin{DoxyCompactList}\small\item\em Указатель на объект конечного автомата. \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_d_b_manager}{C\+Server\+D\+B\+Manager} $\ast$ \hyperlink{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582}{m\+\_\+dbm}
+\begin{DoxyCompactList}\small\item\em Указатель на объект работы с базой данных. \end{DoxyCompactList}\item 
+Q\+Thread $\ast$ \hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\+\_\+thread}
+\begin{DoxyCompactList}\small\item\em Указетель на объект потока. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Контроллер управления работой подключенного к серверу клиента. 
+
+См. определение в файле cservercontroller.\+h строка 15
+
+
+
+\subsection{Конструктор(ы)}
 \hypertarget{class_c_server_controller_ac7fa78891be114aa9ae1985541d5a766}{}\label{class_c_server_controller_ac7fa78891be114aa9ae1985541d5a766} 
-{\bfseries C\+Server\+Controller} (Q\+Tcp\+Socket $\ast$socket, Q\+Object $\ast$parent=0)
-\item 
-\hypertarget{class_c_server_controller_a9934f4eb54e1e1debd1aa6fd5e036012}{}\label{class_c_server_controller_a9934f4eb54e1e1debd1aa6fd5e036012} 
-\hyperlink{class_c_server_i_o_network_manager}{C\+Server\+I\+O\+Network\+Manager} $\ast$ {\bfseries get\+I\+O\+Network\+Manager} () const
-\item 
-\hypertarget{class_c_server_controller_ade77d98a3358e5b1914ebbffa7d810ce}{}\label{class_c_server_controller_ade77d98a3358e5b1914ebbffa7d810ce} 
-\hyperlink{class_c_server_f_s_m}{C\+Server\+F\+SM} $\ast$ {\bfseries get\+F\+SM} () const
-\item 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!C\+Server\+Controller@{C\+Server\+Controller}}
+\index{C\+Server\+Controller@{C\+Server\+Controller}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{C\+Server\+Controller()}{CServerController()}}
+{\footnotesize\ttfamily C\+Server\+Controller\+::\+C\+Server\+Controller (\begin{DoxyParamCaption}\item[{Q\+Tcp\+Socket $\ast$}]{socket,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em socket} & Указатель на сокет подключенного к серверу клиента. \\
+\hline
+\mbox{\tt in}  & {\em parent} & Указатель на объект верхнего уровня иерархии объектов.\\
+\hline
+\end{DoxyParams}
+В конструкторе динамически создаются объектся классов \hyperlink{class_c_server_i_o_network_manager}{C\+Server\+I\+O\+Network\+Manager}, \hyperlink{class_c_server_f_s_m}{C\+Server\+F\+SM}, \hyperlink{class_c_server_d_b_manager}{C\+Server\+D\+B\+Manager}, Q\+Thread. Далее вызывается метод init\+Connection() инициализирующий соединения сигналов и сокетов для созданных объектов. Затем созданные объекты перемещаются в отдельный поток (кроме объекта класса Q\+Thread, т.\+к. этот объект является обверткой для системного потока). Так как, перемещать в отдельный поток можно только объекты верхнего уровня иерархии, то перед перемещением в отдельный поток для объекта socket необходимо вызвать метод set\+Parent(\+N\+U\+L\+L). Затем вызывается слот start() у объект потока, который запускает отдельный поток, в котором находятся перемещенные в поток объекты, и запускается механизм обработки событий. 
+
+См. определение в файле cservercontroller.\+cpp строка 19
+
+
+
+Перекрестные ссылки init\+Connections(), m\+\_\+dbm, m\+\_\+fsm, m\+\_\+net и m\+\_\+thread.
+
+
+\begin{DoxyCode}
+19                                                                         :
+20     QObject(parent),
+21     \hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net}(0),
+22     \hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\_fsm}(0),
+23     \hyperlink{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582}{m\_dbm}(0),
+24     \hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread}(0)
+25 \{
+26     \hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net} = \textcolor{keyword}{new} \hyperlink{class_c_server_i_o_network_manager}{CServerIONetworkManager}(socket);
+27     \hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\_fsm} = \textcolor{keyword}{new} \hyperlink{class_c_server_f_s_m}{CServerFSM}();
+28     \hyperlink{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582}{m\_dbm} = \textcolor{keyword}{new} \hyperlink{class_c_server_d_b_manager}{CServerDBManager}();
+29     \hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread} = \textcolor{keyword}{new} QThread();
+30 
+31     \hyperlink{class_c_server_controller_aeccfde1d541a9f57f8276cc6a24aea12}{initConnections}();
+32 
+33     socket->setParent(NULL);
+34     socket->moveToThread(\hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread});
+35     \hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net}->moveToThread(\hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread});
+36     \hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\_fsm}->moveToThread(\hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread});
+37     \hyperlink{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582}{m\_dbm}->moveToThread(\hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread});
+38     \hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread}->start();
+39 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_controller_ad1efc4b48869ea320005a9dc6e3e5483}{}\label{class_c_server_controller_ad1efc4b48869ea320005a9dc6e3e5483} 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!````~C\+Server\+Controller@{$\sim$\+C\+Server\+Controller}}
+\index{````~C\+Server\+Controller@{$\sim$\+C\+Server\+Controller}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Server\+Controller()}{~CServerController()}}
+{\footnotesize\ttfamily C\+Server\+Controller\+::$\sim$\+C\+Server\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор 
+
+
+
+См. определение в файле cservercontroller.\+cpp строка 44
+
+
+\begin{DoxyCode}
+45 \{
+46     qDebug() << \textcolor{stringliteral}{"CServerController: destructor "} << \textcolor{keyword}{this};
+47 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117}{}\label{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117} 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!finish\+Work@{finish\+Work}}
+\index{finish\+Work@{finish\+Work}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{finish\+Work}{finishWork}}
+{\footnotesize\ttfamily void C\+Server\+Controller\+::finish\+Work (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал завершения работы контроллера. 
+
+
+
+Используется в init\+Connections().
+
 \hypertarget{class_c_server_controller_a2dc0dbf4a5ee9356f10b2156ad2ce712}{}\label{class_c_server_controller_a2dc0dbf4a5ee9356f10b2156ad2ce712} 
-\hyperlink{class_c_server_d_b_manager}{C\+Server\+D\+B\+Manager} $\ast$ {\bfseries get\+D\+B\+Manager} () const
-\item 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!get\+D\+B\+Manager@{get\+D\+B\+Manager}}
+\index{get\+D\+B\+Manager@{get\+D\+B\+Manager}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{get\+D\+B\+Manager()}{getDBManager()}}
+{\footnotesize\ttfamily \hyperlink{class_c_server_d_b_manager}{C\+Server\+D\+B\+Manager} $\ast$ C\+Server\+Controller\+::get\+D\+B\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Метод-\/getter для объекта работы с базой данных 
+
+\begin{DoxyReturn}{Возвращает}
+Возвращает указатель на объек работы с базой данных. 
+\end{DoxyReturn}
+
+
+См. определение в файле cservercontroller.\+cpp строка 71
+
+
+
+Перекрестные ссылки m\+\_\+dbm.
+
+
+\begin{DoxyCode}
+72 \{
+73     \textcolor{keywordflow}{return} \hyperlink{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582}{m\_dbm};
+74 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_controller_ade77d98a3358e5b1914ebbffa7d810ce}{}\label{class_c_server_controller_ade77d98a3358e5b1914ebbffa7d810ce} 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!get\+F\+SM@{get\+F\+SM}}
+\index{get\+F\+SM@{get\+F\+SM}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{get\+F\+S\+M()}{getFSM()}}
+{\footnotesize\ttfamily \hyperlink{class_c_server_f_s_m}{C\+Server\+F\+SM} $\ast$ C\+Server\+Controller\+::get\+F\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Метод-\/getter для объекта конечного автомата. 
+
+\begin{DoxyReturn}{Возвращает}
+Возвращает указатель на объект конечного автомата. 
+\end{DoxyReturn}
+
+
+См. определение в файле cservercontroller.\+cpp строка 62
+
+
+
+Перекрестные ссылки m\+\_\+fsm.
+
+
+\begin{DoxyCode}
+63 \{
+64     \textcolor{keywordflow}{return} \hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\_fsm};
+65 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_controller_a9934f4eb54e1e1debd1aa6fd5e036012}{}\label{class_c_server_controller_a9934f4eb54e1e1debd1aa6fd5e036012} 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!get\+I\+O\+Network\+Manager@{get\+I\+O\+Network\+Manager}}
+\index{get\+I\+O\+Network\+Manager@{get\+I\+O\+Network\+Manager}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{get\+I\+O\+Network\+Manager()}{getIONetworkManager()}}
+{\footnotesize\ttfamily \hyperlink{class_c_server_i_o_network_manager}{C\+Server\+I\+O\+Network\+Manager} $\ast$ C\+Server\+Controller\+::get\+I\+O\+Network\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Метод-\/getter для объекта работы с сетью. 
+
+\begin{DoxyReturn}{Возвращает}
+Возвращает указатель на объект работы с сетью. 
+\end{DoxyReturn}
+
+
+См. определение в файле cservercontroller.\+cpp строка 53
+
+
+
+Перекрестные ссылки m\+\_\+net.
+
+
+\begin{DoxyCode}
+54 \{
+55     \textcolor{keywordflow}{return} \hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net};
+56 \}
+\end{DoxyCode}
 \hypertarget{class_c_server_controller_aeccfde1d541a9f57f8276cc6a24aea12}{}\label{class_c_server_controller_aeccfde1d541a9f57f8276cc6a24aea12} 
-void {\bfseries init\+Connections} () const
-\end{DoxyCompactItemize}
+\index{C\+Server\+Controller@{C\+Server\+Controller}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Server\+Controller\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Метод инициализации соединнений сигналов и слотов. 
+
+Сигнал \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{C\+Server\+I\+O\+Network\+Manager\+::send\+Data()} соединяется с сигналом \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{C\+Server\+F\+S\+M\+::recv\+Data()}. Данные отправленные от объекта m\+\_\+net работы с сетью по сигналу send\+Data() передаются в сигнал recv\+Data() объекта m\+\_\+fsm конечного автомата. Т.\+е. данные которые принял socket из сети помещаются в сигнал send\+Data() объекта работы с сетью, а объект m\+\_\+fsm конечного автомата принимает их через сигнал recv\+Data().
+
+Сигналы \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{C\+Server\+D\+B\+Manager\+::send\+Data()} соединяется с сигналом \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{C\+Server\+F\+S\+M\+::recv\+Data()}. Данные отправленные объектом m\+\_\+dbm работы с базой данных помещаются в сигнал recv\+Data() объекта m\+\_\+fsm конечного автомата.
+
+Сигнал \hyperlink{class_c_abstruct_f_s_m_a542570a7469e3923eeace7c3c308ff97}{C\+Server\+F\+S\+M\+::send\+Data\+To\+I\+O\+Network\+Manager()} соединяется c сигналом \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{C\+Server\+I\+O\+Network\+Manager\+::recv\+Data()}. Объект m\+\_\+fsm помещает данные в сигнал send\+Data\+To\+I\+O\+Network\+Manager(\+Q\+String$\ast$) и передает их в сигнал recv\+Data(\+Q\+String$\ast$) объекта m\+\_\+net, такием образом происходит передача данных в объект работы с сетью для оправки данных по сети.
+
+Сигнал \hyperlink{class_c_abstruct_f_s_m_a8b3e4a9134df07825f357d16e6d7c436}{C\+Server\+F\+S\+M\+::send\+Data\+To\+D\+B\+Manager()} соединяется с сигналом \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{C\+Server\+D\+B\+Manager\+::recv\+Data()}. Конечный автомат передает запрос в объект работы с базой данных.
+
+Сигнал \hyperlink{class_c_abstruct_i_o_network_manager_a4c25afd753612c5c719944a3e8ef4373}{C\+Server\+I\+O\+Network\+Manager\+::disconnected()} соединяется cо слотом C\+Server\+I\+O\+Network\+Manager\+::delete\+Later(). При отключении от сети объект m\+\_\+net включается в расписание на удаление объектов.
+
+Сигнал \hyperlink{class_c_abstruct_i_o_network_manager_a4c25afd753612c5c719944a3e8ef4373}{C\+Server\+I\+O\+Network\+Manager\+::disconnected()} соединяется cо слотом C\+Server\+F\+S\+M\+::delete\+Later(). При отключении от сети объект m\+\_\+fsm включается в расписание на удаление объектов.
+
+Сигнал \hyperlink{class_c_abstruct_i_o_network_manager_a4c25afd753612c5c719944a3e8ef4373}{C\+Server\+I\+O\+Network\+Manager\+::disconnected()} соединяется cо слотом C\+Server\+D\+B\+Manager\+::delete\+Later(). При отключении от сети объект m\+\_\+dbm включается в расписание на удаление объектов.
+
+Сигнал \hyperlink{class_c_abstruct_i_o_network_manager_a4c25afd753612c5c719944a3e8ef4373}{C\+Server\+I\+O\+Network\+Manager\+::disconnected()} соединяется cо слотом Q\+Thread\+::quit(). При отключении от сети объект m\+\_\+thread завершает работу отдельного потока.
+
+Сигнал Q\+Thread\+::finished() соединяется со слотом Q\+Thread\+::delete\+Later(). Когда поток завершил свою работу он генерирует сигнал finished() и соответственно объект потока может быть включен в расписание на удаление.
+
+Сигнал Q\+Thread\+::finished() соединяется с сигналом \hyperlink{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117}{C\+Server\+Controller\+::finish\+Work()}. Когда объект потока генерирует сигнал finished(), т.\+е. поток завершил свою работу, контроллер генерирует сигнал \hyperlink{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117}{finish\+Work()}, что в свою очередь говорит о том что контроллер завершил свою работу. Сигнал \hyperlink{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117}{finish\+Work()} перехватывает сервер и включет объект контроллера в расписание на удаление.
+
+См. определение в файле cservercontroller.\+cpp строка 79
+
+
+
+Перекрестные ссылки finish\+Work(), m\+\_\+dbm, m\+\_\+fsm, m\+\_\+net и m\+\_\+thread.
+
+
+
+Используется в C\+Server\+Controller().
+
+
+\begin{DoxyCode}
+80 \{
+88     connect(\hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net}, SIGNAL(sendData(QString*)), \hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\_fsm}, SIGNAL(recvData(QString*)));
+89 
+95     connect(\hyperlink{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582}{m\_dbm}, SIGNAL(sendData(QString*)), \hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\_fsm}, SIGNAL(recvData(QString*)));
+96 
+104     connect(\hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\_fsm}, SIGNAL(sendDataToIONetworkManager(QString*)), \hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net}, SIGNAL(recvData(QString*)
+      ));
+105 
+110     connect(\hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\_fsm}, SIGNAL(sendDataToDBManager(QString*)), \hyperlink{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582}{m\_dbm}, SIGNAL(recvData(QString*)));
+111 
+117     connect(\hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net}, SIGNAL(disconnected()), \hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net}, SLOT(deleteLater()));
+118 
+124     connect(\hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net}, SIGNAL(disconnected()), \hyperlink{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{m\_fsm}, SLOT(deleteLater()));
+125 
+131     connect(\hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net}, SIGNAL(disconnected()), \hyperlink{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582}{m\_dbm}, SLOT(deleteLater()));
+132 
+138     connect(\hyperlink{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{m\_net}, SIGNAL(disconnected()), \hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread}, SLOT(quit()));
+139 
+145     connect(\hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread}, SIGNAL(finished()), \hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread}, SLOT(deleteLater()));
+146 
+154     connect(\hyperlink{class_c_server_controller_a4a4764db869209e68283af91608f9751}{m\_thread}, SIGNAL(finished()), SIGNAL(\hyperlink{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117}{finishWork}()));
+155 \}
+\end{DoxyCode}
+
+
+\subsection{Данные класса}
+\hypertarget{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582}{}\label{class_c_server_controller_ab147bebeb63fe45d845090f0a4750582} 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!m\+\_\+dbm@{m\+\_\+dbm}}
+\index{m\+\_\+dbm@{m\+\_\+dbm}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{m\+\_\+dbm}{m\_dbm}}
+{\footnotesize\ttfamily \hyperlink{class_c_server_d_b_manager}{C\+Server\+D\+B\+Manager}$\ast$ C\+Server\+Controller\+::m\+\_\+dbm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на объект работы с базой данных. 
+
+
+
+См. определение в файле cservercontroller.\+h строка 31
+
+
+
+Используется в C\+Server\+Controller(), get\+D\+B\+Manager() и init\+Connections().
+
+\hypertarget{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f}{}\label{class_c_server_controller_a3282dabaabac03bdb3447001c186a97f} 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!m\+\_\+fsm@{m\+\_\+fsm}}
+\index{m\+\_\+fsm@{m\+\_\+fsm}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{m\+\_\+fsm}{m\_fsm}}
+{\footnotesize\ttfamily \hyperlink{class_c_server_f_s_m}{C\+Server\+F\+SM}$\ast$ C\+Server\+Controller\+::m\+\_\+fsm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на объект конечного автомата. 
+
+
+
+См. определение в файле cservercontroller.\+h строка 30
+
+
+
+Используется в C\+Server\+Controller(), get\+F\+S\+M() и init\+Connections().
+
+\hypertarget{class_c_server_controller_a64ce9925628d153d9576ee4534380dac}{}\label{class_c_server_controller_a64ce9925628d153d9576ee4534380dac} 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!m\+\_\+net@{m\+\_\+net}}
+\index{m\+\_\+net@{m\+\_\+net}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{m\+\_\+net}{m\_net}}
+{\footnotesize\ttfamily \hyperlink{class_c_server_i_o_network_manager}{C\+Server\+I\+O\+Network\+Manager}$\ast$ C\+Server\+Controller\+::m\+\_\+net\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на объект работы с сетью. 
+
+
+
+См. определение в файле cservercontroller.\+h строка 29
+
+
+
+Используется в C\+Server\+Controller(), get\+I\+O\+Network\+Manager() и init\+Connections().
+
+\hypertarget{class_c_server_controller_a4a4764db869209e68283af91608f9751}{}\label{class_c_server_controller_a4a4764db869209e68283af91608f9751} 
+\index{C\+Server\+Controller@{C\+Server\+Controller}!m\+\_\+thread@{m\+\_\+thread}}
+\index{m\+\_\+thread@{m\+\_\+thread}!C\+Server\+Controller@{C\+Server\+Controller}}
+\subsubsection{\texorpdfstring{m\+\_\+thread}{m\_thread}}
+{\footnotesize\ttfamily Q\+Thread$\ast$ C\+Server\+Controller\+::m\+\_\+thread\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указетель на объект потока. 
+
+
+
+См. определение в файле cservercontroller.\+h строка 32
+
+
+
+Используется в C\+Server\+Controller() и init\+Connections().
+
 
 
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-cservercontroller.\+h\item 
-cservercontroller.\+cpp\end{DoxyCompactItemize}
+Server/\hyperlink{cservercontroller_8h}{cservercontroller.\+h}\item 
+Server/\hyperlink{cservercontroller_8cpp}{cservercontroller.\+cpp}\end{DoxyCompactItemize}

@@ -1,5 +1,9 @@
 \hypertarget{class_c_client_d_b_manager}{}\section{Класс C\+Client\+D\+B\+Manager}
 \label{class_c_client_d_b_manager}\index{C\+Client\+D\+B\+Manager@{C\+Client\+D\+B\+Manager}}
+
+
+{\ttfamily \#include $<$cclientdbmanager.\+h$>$}
+
 Граф наследования\+:C\+Client\+D\+B\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,19 +13,97 @@
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_d_b_manager_aaac2c483f7a445d8565a6dd35f1a77b9}{}\label{class_c_client_d_b_manager_aaac2c483f7a445d8565a6dd35f1a77b9} 
-{\bfseries C\+Client\+D\+B\+Manager} (Q\+Object $\ast$parent=0)
+\hyperlink{class_c_client_d_b_manager_aaac2c483f7a445d8565a6dd35f1a77b9}{C\+Client\+D\+B\+Manager} (Q\+Object $\ast$parent=0)
+\item 
+virtual \hyperlink{class_c_client_d_b_manager_a93ee522535ebb3bcba938b251ee9fa1b}{$\sim$\+C\+Client\+D\+B\+Manager} ()
 \end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_d_b_manager_a85d962d6f61d8f9480b6bc9a7f121204}{}\label{class_c_client_d_b_manager_a85d962d6f61d8f9480b6bc9a7f121204} 
 void \hyperlink{class_c_client_d_b_manager_a85d962d6f61d8f9480b6bc9a7f121204}{init\+Connections} ()
 \begin{DoxyCompactList}\small\item\em Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Дополнительные унаследованные члены}
 
 
+\subsection{Подробное описание}
+
+
+См. определение в файле cclientdbmanager.\+h строка 7
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_client_d_b_manager_aaac2c483f7a445d8565a6dd35f1a77b9}{}\label{class_c_client_d_b_manager_aaac2c483f7a445d8565a6dd35f1a77b9} 
+\index{C\+Client\+D\+B\+Manager@{C\+Client\+D\+B\+Manager}!C\+Client\+D\+B\+Manager@{C\+Client\+D\+B\+Manager}}
+\index{C\+Client\+D\+B\+Manager@{C\+Client\+D\+B\+Manager}!C\+Client\+D\+B\+Manager@{C\+Client\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{C\+Client\+D\+B\+Manager()}{CClientDBManager()}}
+{\footnotesize\ttfamily C\+Client\+D\+B\+Manager\+::\+C\+Client\+D\+B\+Manager (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+См. определение в файле cclientdbmanager.\+cpp строка 3
+
+
+
+Перекрестные ссылки init\+Connections().
+
+
+\begin{DoxyCode}
+4     : \hyperlink{class_c_abstruct_d_b_manager_a53c2018cfa7a1a24bacd747967509bd7}{CAbstructDBManager}(parent)
+5 \{
+6     \hyperlink{class_c_client_d_b_manager_a85d962d6f61d8f9480b6bc9a7f121204}{initConnections}();
+7 \}
+\end{DoxyCode}
+\hypertarget{class_c_client_d_b_manager_a93ee522535ebb3bcba938b251ee9fa1b}{}\label{class_c_client_d_b_manager_a93ee522535ebb3bcba938b251ee9fa1b} 
+\index{C\+Client\+D\+B\+Manager@{C\+Client\+D\+B\+Manager}!````~C\+Client\+D\+B\+Manager@{$\sim$\+C\+Client\+D\+B\+Manager}}
+\index{````~C\+Client\+D\+B\+Manager@{$\sim$\+C\+Client\+D\+B\+Manager}!C\+Client\+D\+B\+Manager@{C\+Client\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Client\+D\+B\+Manager()}{~CClientDBManager()}}
+{\footnotesize\ttfamily C\+Client\+D\+B\+Manager\+::$\sim$\+C\+Client\+D\+B\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+См. определение в файле cclientdbmanager.\+cpp строка 9
+
+
+\begin{DoxyCode}
+10 \{
+11 
+12 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_client_d_b_manager_a85d962d6f61d8f9480b6bc9a7f121204}{}\label{class_c_client_d_b_manager_a85d962d6f61d8f9480b6bc9a7f121204} 
+\index{C\+Client\+D\+B\+Manager@{C\+Client\+D\+B\+Manager}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Client\+D\+B\+Manager@{C\+Client\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Client\+D\+B\+Manager\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. 
+
+
+
+Замещает \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{C\+Abstruct\+Controller\+Item}.
+
+
+
+См. определение в файле cclientdbmanager.\+cpp строка 14
+
+
+
+Используется в C\+Client\+D\+B\+Manager().
+
+
+\begin{DoxyCode}
+15 \{
+16 
+17 \}
+\end{DoxyCode}
+
+
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/cclientdbmanager.\+h\item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/cclientdbmanager.\+cpp\end{DoxyCompactItemize}
+Client/\hyperlink{cclientdbmanager_8h}{cclientdbmanager.\+h}\item 
+Client/\hyperlink{cclientdbmanager_8cpp}{cclientdbmanager.\+cpp}\end{DoxyCompactItemize}

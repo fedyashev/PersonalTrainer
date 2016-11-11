@@ -4,7 +4,9 @@
 #include <QDebug>
 #include "../lib/cabstructionetworkmanager.h"
 
-
+/*!
+ * \brief Класс работы с сетью на сервере.
+ */
 class CServerIONetworkManager : public CAbstructIONetworkManager
 {
     Q_OBJECT

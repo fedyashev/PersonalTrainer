@@ -4,6 +4,9 @@
 #include <QDebug>
 #include "../lib/cabstructfsm.h"
 
+/*!
+ * \brief Класс работы с конечным автоматом сервера.
+ */
 class CServerFSM : public CAbstructFSM
 {
     Q_OBJECT

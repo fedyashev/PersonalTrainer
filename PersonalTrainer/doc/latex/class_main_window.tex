@@ -1,5 +1,9 @@
 \hypertarget{class_main_window}{}\section{Класс Main\+Window}
 \label{class_main_window}\index{Main\+Window@{Main\+Window}}
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
 Граф наследования\+:Main\+Window\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,15 +13,251 @@
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db} 
-{\bfseries Main\+Window} (Q\+Widget $\ast$parent=0)
+\hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\+Window} (Q\+Widget $\ast$parent=0)
 \item 
-\hypertarget{class_main_window_aecba599b372d9fdf89dfbc1f4a060019}{}\label{class_main_window_aecba599b372d9fdf89dfbc1f4a060019} 
-void {\bfseries init\+Connections} ()
+\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window} ()
+\item 
+void \hyperlink{class_main_window_aecba599b372d9fdf89dfbc1f4a060019}{init\+Connections} ()
 \end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Label $\ast$ \hyperlink{class_main_window_a95477871d987adcaef8cfea7b87e27b0}{label1}
+\item 
+Q\+Label $\ast$ \hyperlink{class_main_window_ae83149c8748d57de45e882c51baef867}{label2}
+\item 
+Q\+Line\+Edit $\ast$ \hyperlink{class_main_window_af08619c735ace803854d9f3fc6fdf4d2}{line1}
+\item 
+Q\+Line\+Edit $\ast$ \hyperlink{class_main_window_a6bfac503123591b8bb31fd8e7dddd0c3}{line2}
+\item 
+Q\+Push\+Button $\ast$ \hyperlink{class_main_window_a96ee7d6a31dd131de9220930822f9da7}{button1}
+\item 
+Q\+Push\+Button $\ast$ \hyperlink{class_main_window_ad24e1c4eebdd74c9aadeea1f4c98414f}{button2}
+\item 
+Q\+Grid\+Layout $\ast$ \hyperlink{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{grid}
+\item 
+\hyperlink{class_c_client_controller}{C\+Client\+Controller} $\ast$ \hyperlink{class_main_window_af1f864005894311612c0b9174f82db8a}{controller}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+
+
+См. определение в файле mainwindow.\+h строка 12
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db} 
+\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{Main\+Window()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле mainwindow.\+cpp строка 3
+
+
+
+Перекрестные ссылки button1, button2, controller, grid, init\+Connections(), label1, label2, line1 и line2.
+
+
+\begin{DoxyCode}
+4     : QWidget(parent), \hyperlink{class_main_window_af1f864005894311612c0b9174f82db8a}{controller}(0)
+5 \{
+6     \hyperlink{class_main_window_af1f864005894311612c0b9174f82db8a}{controller} = \textcolor{keyword}{new} \hyperlink{class_c_client_controller}{CClientController}(\textcolor{keyword}{new} QTcpSocket(), \textcolor{keyword}{this});
+7 
+8     this->setWindowTitle(\textcolor{stringliteral}{"Authorization"});
+9 
+10     \hyperlink{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{grid} = \textcolor{keyword}{new} QGridLayout();
+11     \hyperlink{class_main_window_a95477871d987adcaef8cfea7b87e27b0}{label1} = \textcolor{keyword}{new} QLabel(\textcolor{stringliteral}{"Login"});
+12     \hyperlink{class_main_window_a95477871d987adcaef8cfea7b87e27b0}{label1}->setAlignment(Qt::AlignLeft);
+13     \hyperlink{class_main_window_ae83149c8748d57de45e882c51baef867}{label2} = \textcolor{keyword}{new} QLabel(\textcolor{stringliteral}{"Password"});
+14     \hyperlink{class_main_window_ae83149c8748d57de45e882c51baef867}{label2}->setAlignment(Qt::AlignLeft);
+15     \hyperlink{class_main_window_af08619c735ace803854d9f3fc6fdf4d2}{line1} = \textcolor{keyword}{new} QLineEdit();
+16     \hyperlink{class_main_window_af08619c735ace803854d9f3fc6fdf4d2}{line1}->setFixedWidth(100);
+17     \hyperlink{class_main_window_a6bfac503123591b8bb31fd8e7dddd0c3}{line2} = \textcolor{keyword}{new} QLineEdit();
+18     \hyperlink{class_main_window_a6bfac503123591b8bb31fd8e7dddd0c3}{line2}->setFixedWidth(100);
+19     \hyperlink{class_main_window_a96ee7d6a31dd131de9220930822f9da7}{button1} = \textcolor{keyword}{new} QPushButton(\textcolor{stringliteral}{"Enter"});
+20     \hyperlink{class_main_window_ad24e1c4eebdd74c9aadeea1f4c98414f}{button2} = \textcolor{keyword}{new} QPushButton(\textcolor{stringliteral}{"Registration"});
+21 
+22     \hyperlink{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{grid}->addWidget(\hyperlink{class_main_window_a95477871d987adcaef8cfea7b87e27b0}{label1}, 0, 0, 1, 1);
+23     \hyperlink{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{grid}->addWidget(\hyperlink{class_main_window_af08619c735ace803854d9f3fc6fdf4d2}{line1}, 0, 1, 1, 1);
+24     \hyperlink{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{grid}->addWidget(\hyperlink{class_main_window_ae83149c8748d57de45e882c51baef867}{label2}, 1, 0, 1, 1);
+25     \hyperlink{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{grid}->addWidget(\hyperlink{class_main_window_a6bfac503123591b8bb31fd8e7dddd0c3}{line2}, 1, 1, 1, 1);
+26     \hyperlink{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{grid}->addWidget(\hyperlink{class_main_window_a96ee7d6a31dd131de9220930822f9da7}{button1}, 2, 0, 1, 2);
+27     \hyperlink{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{grid}->addWidget(\hyperlink{class_main_window_ad24e1c4eebdd74c9aadeea1f4c98414f}{button2}, 3, 0, 1, 2);
+28 
+29     setLayout(\hyperlink{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{grid});
+30 
+31     setFixedSize(sizeHint());
+32 
+33     \hyperlink{class_main_window_aecba599b372d9fdf89dfbc1f4a060019}{initConnections}();
+34 
+35 \}
+\end{DoxyCode}
+\hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7} 
+\index{Main\+Window@{Main\+Window}!````~Main\+Window@{$\sim$\+Main\+Window}}
+\index{````~Main\+Window@{$\sim$\+Main\+Window}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Main\+Window()}{~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::$\sim$\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле mainwindow.\+cpp строка 37
+
+
+\begin{DoxyCode}
+38 \{
+39 
+40 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_main_window_aecba599b372d9fdf89dfbc1f4a060019}{}\label{class_main_window_aecba599b372d9fdf89dfbc1f4a060019} 
+\index{Main\+Window@{Main\+Window}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void Main\+Window\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле mainwindow.\+cpp строка 42
+
+
+
+Перекрестные ссылки button1 и controller.
+
+
+
+Используется в Main\+Window().
+
+
+\begin{DoxyCode}
+43 \{
+44     connect(\hyperlink{class_main_window_a96ee7d6a31dd131de9220930822f9da7}{button1}, SIGNAL(clicked(\textcolor{keywordtype}{bool})), \hyperlink{class_main_window_af1f864005894311612c0b9174f82db8a}{controller}, SIGNAL(connectToHost()));
+45 \}
+\end{DoxyCode}
+
+
+\subsection{Данные класса}
+\hypertarget{class_main_window_a96ee7d6a31dd131de9220930822f9da7}{}\label{class_main_window_a96ee7d6a31dd131de9220930822f9da7} 
+\index{Main\+Window@{Main\+Window}!button1@{button1}}
+\index{button1@{button1}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{button1}{button1}}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Main\+Window\+::button1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле mainwindow.\+h строка 27
+
+
+
+Используется в init\+Connections() и Main\+Window().
+
+\hypertarget{class_main_window_ad24e1c4eebdd74c9aadeea1f4c98414f}{}\label{class_main_window_ad24e1c4eebdd74c9aadeea1f4c98414f} 
+\index{Main\+Window@{Main\+Window}!button2@{button2}}
+\index{button2@{button2}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{button2}{button2}}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Main\+Window\+::button2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле mainwindow.\+h строка 28
+
+
+
+Используется в Main\+Window().
+
+\hypertarget{class_main_window_af1f864005894311612c0b9174f82db8a}{}\label{class_main_window_af1f864005894311612c0b9174f82db8a} 
+\index{Main\+Window@{Main\+Window}!controller@{controller}}
+\index{controller@{controller}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \hyperlink{class_c_client_controller}{C\+Client\+Controller}$\ast$ Main\+Window\+::controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле mainwindow.\+h строка 31
+
+
+
+Используется в init\+Connections() и Main\+Window().
+
+\hypertarget{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365}{}\label{class_main_window_a152a77e5d13ba05ca3deb8cec9ab0365} 
+\index{Main\+Window@{Main\+Window}!grid@{grid}}
+\index{grid@{grid}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily Q\+Grid\+Layout$\ast$ Main\+Window\+::grid\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле mainwindow.\+h строка 29
+
+
+
+Используется в Main\+Window().
+
+\hypertarget{class_main_window_a95477871d987adcaef8cfea7b87e27b0}{}\label{class_main_window_a95477871d987adcaef8cfea7b87e27b0} 
+\index{Main\+Window@{Main\+Window}!label1@{label1}}
+\index{label1@{label1}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{label1}{label1}}
+{\footnotesize\ttfamily Q\+Label$\ast$ Main\+Window\+::label1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле mainwindow.\+h строка 23
+
+
+
+Используется в Main\+Window().
+
+\hypertarget{class_main_window_ae83149c8748d57de45e882c51baef867}{}\label{class_main_window_ae83149c8748d57de45e882c51baef867} 
+\index{Main\+Window@{Main\+Window}!label2@{label2}}
+\index{label2@{label2}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{label2}{label2}}
+{\footnotesize\ttfamily Q\+Label$\ast$ Main\+Window\+::label2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле mainwindow.\+h строка 24
+
+
+
+Используется в Main\+Window().
+
+\hypertarget{class_main_window_af08619c735ace803854d9f3fc6fdf4d2}{}\label{class_main_window_af08619c735ace803854d9f3fc6fdf4d2} 
+\index{Main\+Window@{Main\+Window}!line1@{line1}}
+\index{line1@{line1}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{line1}{line1}}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Main\+Window\+::line1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле mainwindow.\+h строка 25
+
+
+
+Используется в Main\+Window().
+
+\hypertarget{class_main_window_a6bfac503123591b8bb31fd8e7dddd0c3}{}\label{class_main_window_a6bfac503123591b8bb31fd8e7dddd0c3} 
+\index{Main\+Window@{Main\+Window}!line2@{line2}}
+\index{line2@{line2}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{line2}{line2}}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Main\+Window\+::line2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле mainwindow.\+h строка 26
+
+
+
+Используется в Main\+Window().
+
 
 
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/mainwindow.\+h\item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/mainwindow.\+cpp\end{DoxyCompactItemize}
+Client/\hyperlink{mainwindow_8h}{mainwindow.\+h}\item 
+Client/\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}\end{DoxyCompactItemize}

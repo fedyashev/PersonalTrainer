@@ -18,10 +18,8 @@
 \subsection*{Сигналы}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{}\label{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9} 
 void \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{send\+Data} (Q\+String $\ast$)
 \begin{DoxyCompactList}\small\item\em Сигнал передачи данных внешним объектам. \end{DoxyCompactList}\item 
-\hypertarget{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{}\label{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1} 
 void \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recv\+Data} (Q\+String $\ast$)
 \begin{DoxyCompactList}\small\item\em Сигнал приема данных от внешнего объекта. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Открытые члены}
@@ -29,13 +27,11 @@ void \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386
 \item 
 \hyperlink{class_c_abstruct_controller_item_a1d99654a9522cc8721a329d1dcee35a4}{C\+Abstruct\+Controller\+Item} (Q\+Object $\ast$parent=0)
 \begin{DoxyCompactList}\small\item\em Коструктор \end{DoxyCompactList}\item 
-\hypertarget{class_c_abstruct_controller_item_a807bca71bd9a2966e60ec5c3c807f359}{}\label{class_c_abstruct_controller_item_a807bca71bd9a2966e60ec5c3c807f359} 
 virtual \hyperlink{class_c_abstruct_controller_item_a807bca71bd9a2966e60ec5c3c807f359}{$\sim$\+C\+Abstruct\+Controller\+Item} ()
 \begin{DoxyCompactList}\small\item\em Виртуальный деструктор \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{}\label{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1} 
 virtual void \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{init\+Connections} ()=0
 \begin{DoxyCompactList}\small\item\em Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -44,6 +40,10 @@ virtual void \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d
 Абстрактный класс задает интерфейс для взаимодействия объектов контроллера. 
 
 Класс задает интерфейс взаимодействия объектов контроллера при помощи сигналов \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{send\+Data()} и \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recv\+Data()}. Класс содержит чисто виртуальный метод init\+Connect() для инициализации сигналов и слотов в классах наследниках. В классах наследниках для передачи данных внешним объектам необходимо использовать сигнал \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{send\+Data()}, а для приема данных от внешних объектов необходимо использовать сигнал \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recv\+Data()}. 
+
+См. определение в файле cabstructcontrolleritem.\+h строка 19
+
+
 
 \subsection{Конструктор(ы)}
 \hypertarget{class_c_abstruct_controller_item_a1d99654a9522cc8721a329d1dcee35a4}{}\label{class_c_abstruct_controller_item_a1d99654a9522cc8721a329d1dcee35a4} 
@@ -63,7 +63,83 @@ virtual void \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d
 \end{DoxyParams}
 
 
+См. определение в файле cabstructcontrolleritem.\+cpp строка 8
+
+
+\begin{DoxyCode}
+8                                                                 : QObject(parent)
+9 \{
+10 
+11 \}
+\end{DoxyCode}
+\hypertarget{class_c_abstruct_controller_item_a807bca71bd9a2966e60ec5c3c807f359}{}\label{class_c_abstruct_controller_item_a807bca71bd9a2966e60ec5c3c807f359} 
+\index{C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}!````~C\+Abstruct\+Controller\+Item@{$\sim$\+C\+Abstruct\+Controller\+Item}}
+\index{````~C\+Abstruct\+Controller\+Item@{$\sim$\+C\+Abstruct\+Controller\+Item}!C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Abstruct\+Controller\+Item()}{~CAbstructControllerItem()}}
+{\footnotesize\ttfamily C\+Abstruct\+Controller\+Item\+::$\sim$\+C\+Abstruct\+Controller\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Виртуальный деструктор 
+
+
+
+См. определение в файле cabstructcontrolleritem.\+cpp строка 16
+
+
+\begin{DoxyCode}
+17 \{
+18     qDebug() << \textcolor{stringliteral}{"CAbstructControllerItem: destructor "} << \textcolor{keyword}{this};
+19 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{}\label{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1} 
+\index{C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily virtual void C\+Abstruct\+Controller\+Item\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. 
+
+
+
+Замещается в \hyperlink{class_c_client_controller_a1dabfbc538daf66f1c2565808bc7db6d}{C\+Client\+Controller}, \hyperlink{class_c_abstruct_i_o_network_manager_ac01bfefacfa37050c8d3a9317a38fbf5}{C\+Abstruct\+I\+O\+Network\+Manager}, \hyperlink{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3}{C\+Abstruct\+F\+SM}, \hyperlink{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659}{C\+Abstruct\+D\+B\+Manager}, \hyperlink{class_c_server_i_o_network_manager_a17155570c51dc951db52d827f120c689}{C\+Server\+I\+O\+Network\+Manager}, \hyperlink{class_c_client_i_o_network_manager_aeb1564c209ae8b790cf799075cfa6a98}{C\+Client\+I\+O\+Network\+Manager}, \hyperlink{class_c_server_f_s_m_ae0e6a994505c26e60b718af9989bea77}{C\+Server\+F\+SM}, \hyperlink{class_c_server_d_b_manager_a6dcd2f88c0845cc79a47bac2ab9e9235}{C\+Server\+D\+B\+Manager}, \hyperlink{class_c_client_f_s_m_aaf6b857e9a5d2b2f55b71212e74fd4cb}{C\+Client\+F\+SM} и \hyperlink{class_c_client_d_b_manager_a85d962d6f61d8f9480b6bc9a7f121204}{C\+Client\+D\+B\+Manager}.
+
+\hypertarget{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{}\label{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1} 
+\index{C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}!recv\+Data@{recv\+Data}}
+\index{recv\+Data@{recv\+Data}!C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}}
+\subsubsection{\texorpdfstring{recv\+Data}{recvData}}
+{\footnotesize\ttfamily void C\+Abstruct\+Controller\+Item\+::recv\+Data (\begin{DoxyParamCaption}\item[{Q\+String $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал приема данных от внешнего объекта. 
+
+
+
+Используется в C\+Abstruct\+F\+S\+M\+::init\+Connections(), C\+Abstruct\+I\+O\+Network\+Manager\+::init\+Connections() и C\+Client\+Controller\+::init\+Connections().
+
+\hypertarget{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{}\label{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9} 
+\index{C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}}
+\subsubsection{\texorpdfstring{send\+Data}{sendData}}
+{\footnotesize\ttfamily void C\+Abstruct\+Controller\+Item\+::send\+Data (\begin{DoxyParamCaption}\item[{Q\+String $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал передачи данных внешним объектам. 
+
+
+
+Используется в C\+Client\+I\+O\+Network\+Manager\+::error(), C\+Client\+Controller\+::init\+Connections() и C\+Abstruct\+I\+O\+Network\+Manager\+::recv\+Data\+From\+Socket().
+
+
+
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructcontrolleritem.\+h\item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructcontrolleritem.\+cpp\end{DoxyCompactItemize}
+lib/\hyperlink{cabstructcontrolleritem_8h}{cabstructcontrolleritem.\+h}\item 
+lib/\hyperlink{cabstructcontrolleritem_8cpp}{cabstructcontrolleritem.\+cpp}\end{DoxyCompactItemize}

@@ -23,10 +23,8 @@ void \hyperlink{class_c_abstruct_f_s_m_ae06497e1f93385cd6c20eaa84fc253c1}{fsm} (
 \subsection*{Сигналы}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_abstruct_f_s_m_a542570a7469e3923eeace7c3c308ff97}{}\label{class_c_abstruct_f_s_m_a542570a7469e3923eeace7c3c308ff97} 
 void \hyperlink{class_c_abstruct_f_s_m_a542570a7469e3923eeace7c3c308ff97}{send\+Data\+To\+I\+O\+Network\+Manager} (Q\+String $\ast$)
 \begin{DoxyCompactList}\small\item\em Сигнал передачи данных объекту управляющему сетевым взаимодействием. \end{DoxyCompactList}\item 
-\hypertarget{class_c_abstruct_f_s_m_a8b3e4a9134df07825f357d16e6d7c436}{}\label{class_c_abstruct_f_s_m_a8b3e4a9134df07825f357d16e6d7c436} 
 void \hyperlink{class_c_abstruct_f_s_m_a8b3e4a9134df07825f357d16e6d7c436}{send\+Data\+To\+D\+B\+Manager} (Q\+String $\ast$)
 \begin{DoxyCompactList}\small\item\em Сигнал передачи данных объекту работающему с базой данных. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Открытые члены}
@@ -34,19 +32,21 @@ void \hyperlink{class_c_abstruct_f_s_m_a8b3e4a9134df07825f357d16e6d7c436}{send\+
 \item 
 \hyperlink{class_c_abstruct_f_s_m_a54037c986f6b437c50d5e8ba42063330}{C\+Abstruct\+F\+SM} (Q\+Object $\ast$parent=0)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_c_abstruct_f_s_m_a54037c986f6b437c50d5e8ba42063330}{C\+Abstruct\+F\+S\+M\+::\+C\+Abstruct\+F\+SM}. \end{DoxyCompactList}\item 
-\hypertarget{class_c_abstruct_f_s_m_acef4a425dee5b9705bc6bbff79225bae}{}\label{class_c_abstruct_f_s_m_acef4a425dee5b9705bc6bbff79225bae} 
 virtual \hyperlink{class_c_abstruct_f_s_m_acef4a425dee5b9705bc6bbff79225bae}{$\sim$\+C\+Abstruct\+F\+SM} ()
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_c_abstruct_f_s_m_acef4a425dee5b9705bc6bbff79225bae}{C\+Abstruct\+F\+S\+M\+::$\sim$\+C\+Abstruct\+F\+SM}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3}{}\label{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3} 
 void \hyperlink{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3}{init\+Connections} ()
 \begin{DoxyCompactList}\small\item\em Реализация виртуального метода базового класса. Устанавливает связь между принимаемыми данными от сигнала \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recv\+Data()} и слотом \hyperlink{class_c_abstruct_f_s_m_ae06497e1f93385cd6c20eaa84fc253c1}{fsm()} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Подробное описание}
 Базовый класс реализующий базовый функционал конечного автомата. 
+
+См. определение в файле cabstructfsm.\+h строка 12
+
+
 
 \subsection{Конструктор(ы)}
 \hypertarget{class_c_abstruct_f_s_m_a54037c986f6b437c50d5e8ba42063330}{}\label{class_c_abstruct_f_s_m_a54037c986f6b437c50d5e8ba42063330} 
@@ -64,6 +64,42 @@ void \hyperlink{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3}{init\+
 {\em parent} & В конструкторе вызывается метод \hyperlink{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3}{init\+Connections()}; \\
 \hline
 \end{DoxyParams}
+
+
+См. определение в файле cabstructfsm.\+cpp строка 9
+
+
+
+Перекрестные ссылки init\+Connections().
+
+
+\begin{DoxyCode}
+9                                           :
+10     \hyperlink{class_c_abstruct_controller_item_a1d99654a9522cc8721a329d1dcee35a4}{CAbstructControllerItem}(parent)
+11 \{
+12     \hyperlink{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3}{initConnections}();
+13 \}
+\end{DoxyCode}
+\hypertarget{class_c_abstruct_f_s_m_acef4a425dee5b9705bc6bbff79225bae}{}\label{class_c_abstruct_f_s_m_acef4a425dee5b9705bc6bbff79225bae} 
+\index{C\+Abstruct\+F\+SM@{C\+Abstruct\+F\+SM}!````~C\+Abstruct\+F\+SM@{$\sim$\+C\+Abstruct\+F\+SM}}
+\index{````~C\+Abstruct\+F\+SM@{$\sim$\+C\+Abstruct\+F\+SM}!C\+Abstruct\+F\+SM@{C\+Abstruct\+F\+SM}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Abstruct\+F\+S\+M()}{~CAbstructFSM()}}
+{\footnotesize\ttfamily C\+Abstruct\+F\+S\+M\+::$\sim$\+C\+Abstruct\+F\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_c_abstruct_f_s_m_acef4a425dee5b9705bc6bbff79225bae}{C\+Abstruct\+F\+S\+M\+::$\sim$\+C\+Abstruct\+F\+SM}. 
+
+
+
+См. определение в файле cabstructfsm.\+cpp строка 18
+
+
+\begin{DoxyCode}
+19 \{
+20     qDebug() << \textcolor{stringliteral}{"CAbsrtuctFSM: destructor "} << \textcolor{keyword}{this};
+21 \}
+\end{DoxyCode}
 
 
 \subsection{Методы}
@@ -84,7 +120,87 @@ void \hyperlink{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3}{init\+
 \end{DoxyParams}
 
 
+См. определение в файле cabstructfsm.\+cpp строка 28
+
+
+
+Перекрестные ссылки send\+Data\+To\+I\+O\+Network\+Manager().
+
+
+
+Используется в init\+Connections().
+
+
+\begin{DoxyCode}
+29 \{
+30     qDebug() << *data;
+31     emit \hyperlink{class_c_abstruct_f_s_m_a542570a7469e3923eeace7c3c308ff97}{sendDataToIONetworkManager}(\textcolor{keyword}{new} QString(*data));
+32     \textcolor{keyword}{delete} data;
+33 \}
+\end{DoxyCode}
+\hypertarget{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3}{}\label{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3} 
+\index{C\+Abstruct\+F\+SM@{C\+Abstruct\+F\+SM}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Abstruct\+F\+SM@{C\+Abstruct\+F\+SM}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Abstruct\+F\+S\+M\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Реализация виртуального метода базового класса. Устанавливает связь между принимаемыми данными от сигнала \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recv\+Data()} и слотом \hyperlink{class_c_abstruct_f_s_m_ae06497e1f93385cd6c20eaa84fc253c1}{fsm()} 
+
+
+
+Замещает \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{C\+Abstruct\+Controller\+Item}.
+
+
+
+Переопределяется в \hyperlink{class_c_server_f_s_m_ae0e6a994505c26e60b718af9989bea77}{C\+Server\+F\+SM}.
+
+
+
+См. определение в файле cabstructfsm.\+cpp строка 40
+
+
+
+Перекрестные ссылки fsm() и C\+Abstruct\+Controller\+Item\+::recv\+Data().
+
+
+
+Используется в C\+Abstruct\+F\+S\+M().
+
+
+\begin{DoxyCode}
+41 \{
+42     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recvData}(QString*)), SLOT(\hyperlink{class_c_abstruct_f_s_m_ae06497e1f93385cd6c20eaa84fc253c1}{fsm}(QString*)));
+43 \}
+\end{DoxyCode}
+\hypertarget{class_c_abstruct_f_s_m_a8b3e4a9134df07825f357d16e6d7c436}{}\label{class_c_abstruct_f_s_m_a8b3e4a9134df07825f357d16e6d7c436} 
+\index{C\+Abstruct\+F\+SM@{C\+Abstruct\+F\+SM}!send\+Data\+To\+D\+B\+Manager@{send\+Data\+To\+D\+B\+Manager}}
+\index{send\+Data\+To\+D\+B\+Manager@{send\+Data\+To\+D\+B\+Manager}!C\+Abstruct\+F\+SM@{C\+Abstruct\+F\+SM}}
+\subsubsection{\texorpdfstring{send\+Data\+To\+D\+B\+Manager}{sendDataToDBManager}}
+{\footnotesize\ttfamily void C\+Abstruct\+F\+S\+M\+::send\+Data\+To\+D\+B\+Manager (\begin{DoxyParamCaption}\item[{Q\+String $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал передачи данных объекту работающему с базой данных. 
+
+\hypertarget{class_c_abstruct_f_s_m_a542570a7469e3923eeace7c3c308ff97}{}\label{class_c_abstruct_f_s_m_a542570a7469e3923eeace7c3c308ff97} 
+\index{C\+Abstruct\+F\+SM@{C\+Abstruct\+F\+SM}!send\+Data\+To\+I\+O\+Network\+Manager@{send\+Data\+To\+I\+O\+Network\+Manager}}
+\index{send\+Data\+To\+I\+O\+Network\+Manager@{send\+Data\+To\+I\+O\+Network\+Manager}!C\+Abstruct\+F\+SM@{C\+Abstruct\+F\+SM}}
+\subsubsection{\texorpdfstring{send\+Data\+To\+I\+O\+Network\+Manager}{sendDataToIONetworkManager}}
+{\footnotesize\ttfamily void C\+Abstruct\+F\+S\+M\+::send\+Data\+To\+I\+O\+Network\+Manager (\begin{DoxyParamCaption}\item[{Q\+String $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал передачи данных объекту управляющему сетевым взаимодействием. 
+
+
+
+Используется в fsm().
+
+
+
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructfsm.\+h\item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructfsm.\+cpp\end{DoxyCompactItemize}
+lib/\hyperlink{cabstructfsm_8h}{cabstructfsm.\+h}\item 
+lib/\hyperlink{cabstructfsm_8cpp}{cabstructfsm.\+cpp}\end{DoxyCompactItemize}

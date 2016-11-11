@@ -1,5 +1,14 @@
 \hypertarget{class_c_server_i_o_network_manager}{}\section{Класс C\+Server\+I\+O\+Network\+Manager}
 \label{class_c_server_i_o_network_manager}\index{C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}}
+
+
+Класс работы с сетью на сервере.  
+
+
+
+
+{\ttfamily \#include $<$cserverionetworkmanager.\+h$>$}
+
 Граф наследования\+:C\+Server\+I\+O\+Network\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,24 +18,115 @@
 \subsection*{Открытые слоты}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_i_o_network_manager_a27831f1d8f66c1e0d665c2ef52d262e4}{}\label{class_c_server_i_o_network_manager_a27831f1d8f66c1e0d665c2ef52d262e4} 
-void {\bfseries error\+Print} (Q\+Abstract\+Socket\+::\+Socket\+Error)
-\end{DoxyCompactItemize}
+void \hyperlink{class_c_server_i_o_network_manager_a27831f1d8f66c1e0d665c2ef52d262e4}{error\+Print} (Q\+Abstract\+Socket\+::\+Socket\+Error)
+\begin{DoxyCompactList}\small\item\em Слот вывода в консоль ошибок работы сокета. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_i_o_network_manager_a89afb0912a02b5745aaad5ccea706304}{}\label{class_c_server_i_o_network_manager_a89afb0912a02b5745aaad5ccea706304} 
-{\bfseries C\+Server\+I\+O\+Network\+Manager} (Q\+Tcp\+Socket $\ast$socket, Q\+Object $\ast$parent=0)
-\end{DoxyCompactItemize}
+\hyperlink{class_c_server_i_o_network_manager_a89afb0912a02b5745aaad5ccea706304}{C\+Server\+I\+O\+Network\+Manager} (Q\+Tcp\+Socket $\ast$socket, Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_i_o_network_manager_a513fe280d83eab4b89054eac2fb27e0d}{$\sim$\+C\+Server\+I\+O\+Network\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_c_server_i_o_network_manager_a17155570c51dc951db52d827f120c689}{init\+Connections} ()
-\begin{DoxyCompactList}\small\item\em Инициализация подключений сигналов и слотов \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Метод инициализации сигналов и слотов. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Дополнительные унаследованные члены}
 
 
+\subsection{Подробное описание}
+Класс работы с сетью на сервере. 
+
+См. определение в файле cserverionetworkmanager.\+h строка 10
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_server_i_o_network_manager_a89afb0912a02b5745aaad5ccea706304}{}\label{class_c_server_i_o_network_manager_a89afb0912a02b5745aaad5ccea706304} 
+\index{C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}!C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}}
+\index{C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}!C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{C\+Server\+I\+O\+Network\+Manager()}{CServerIONetworkManager()}}
+{\footnotesize\ttfamily C\+Server\+I\+O\+Network\+Manager\+::\+C\+Server\+I\+O\+Network\+Manager (\begin{DoxyParamCaption}\item[{Q\+Tcp\+Socket $\ast$}]{socket,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em socket} & Указатель на сокет подключенного к серверу клиента. \\
+\hline
+\mbox{\tt in}  & {\em parent} & Указатель на объект верхнего уровня в иерархии объектов.\\
+\hline
+\end{DoxyParams}
+В конструкторе вызывается метод \hyperlink{class_c_server_i_o_network_manager_a17155570c51dc951db52d827f120c689}{init\+Connections()} инициализации соединений сигналов и слотов. 
+
+См. определение в файле cserverionetworkmanager.\+cpp строка 11
+
+
+
+Перекрестные ссылки init\+Connections().
+
+
+\begin{DoxyCode}
+11                                                                                     :
+12     \hyperlink{class_c_abstruct_i_o_network_manager_a4ed201a3712ddf4ccd2135a0eb40fbf2}{CAbstructIONetworkManager}(socket, parent)
+13 \{
+14     \hyperlink{class_c_server_i_o_network_manager_a17155570c51dc951db52d827f120c689}{initConnections}();
+15 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_i_o_network_manager_a513fe280d83eab4b89054eac2fb27e0d}{}\label{class_c_server_i_o_network_manager_a513fe280d83eab4b89054eac2fb27e0d} 
+\index{C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}!````~C\+Server\+I\+O\+Network\+Manager@{$\sim$\+C\+Server\+I\+O\+Network\+Manager}}
+\index{````~C\+Server\+I\+O\+Network\+Manager@{$\sim$\+C\+Server\+I\+O\+Network\+Manager}!C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Server\+I\+O\+Network\+Manager()}{~CServerIONetworkManager()}}
+{\footnotesize\ttfamily C\+Server\+I\+O\+Network\+Manager\+::$\sim$\+C\+Server\+I\+O\+Network\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. 
+
+
+
+См. определение в файле cserverionetworkmanager.\+cpp строка 20
+
+
+\begin{DoxyCode}
+21 \{
+22     qDebug() << \textcolor{stringliteral}{"CServerIONetworkManager: destructor "} << \textcolor{keyword}{this};
+23 \}
+\end{DoxyCode}
+
+
 \subsection{Методы}
+\hypertarget{class_c_server_i_o_network_manager_a27831f1d8f66c1e0d665c2ef52d262e4}{}\label{class_c_server_i_o_network_manager_a27831f1d8f66c1e0d665c2ef52d262e4} 
+\index{C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}!error\+Print@{error\+Print}}
+\index{error\+Print@{error\+Print}!C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{error\+Print}{errorPrint}}
+{\footnotesize\ttfamily void C\+Server\+I\+O\+Network\+Manager\+::error\+Print (\begin{DoxyParamCaption}\item[{Q\+Abstract\+Socket\+::\+Socket\+Error}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот вывода в консоль ошибок работы сокета. 
+
+
+
+См. определение в файле cserverionetworkmanager.\+cpp строка 40
+
+
+
+Перекрестные ссылки C\+Abstruct\+I\+O\+Network\+Manager\+::get\+Socket().
+
+
+
+Используется в init\+Connections().
+
+
+\begin{DoxyCode}
+41 \{
+42     qDebug() << \hyperlink{class_c_abstruct_i_o_network_manager_a118a2c8254c149614cba51c42147c709}{getSocket}()->errorString();
+43 \}
+\end{DoxyCode}
 \hypertarget{class_c_server_i_o_network_manager_a17155570c51dc951db52d827f120c689}{}\label{class_c_server_i_o_network_manager_a17155570c51dc951db52d827f120c689} 
 \index{C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}!init\+Connections@{init\+Connections}}
 \index{init\+Connections@{init\+Connections}!C\+Server\+I\+O\+Network\+Manager@{C\+Server\+I\+O\+Network\+Manager}}
@@ -35,15 +135,34 @@ void \hyperlink{class_c_server_i_o_network_manager_a17155570c51dc951db52d827f120
 
 
 
-Инициализация подключений сигналов и слотов 
+Метод инициализации сигналов и слотов. 
 
-Соединяем сигнал сокета ready\+Read() и слот \hyperlink{class_c_abstruct_i_o_network_manager_a78756fc08ed619162da210a9cfc09208}{C\+Abstruct\+I\+O\+Network\+Manager\+::recv\+Data\+From\+Socket()}.  Когда сокет генерирует сигнал ready\+Read(), т.\+е. сокету отправили из сети данные, которые он готов принять, вызывется слот приема данных из сети
+Сигнал socket\textquotesingle{}a \hyperlink{class_c_server_i_o_network_manager_a27831f1d8f66c1e0d665c2ef52d262e4}{error\+Print()} соединяется со слотом C\+Server\+I\+O\+Networ\+Manager\+::error\+Print(). Если сокет генерирует сигнал об ошибке, то слот объекта работы с сетью выводит ошибку с консоль.
 
 Переопределяет метод предка \hyperlink{class_c_abstruct_i_o_network_manager_ac01bfefacfa37050c8d3a9317a38fbf5}{C\+Abstruct\+I\+O\+Network\+Manager}.
 
 
 
+См. определение в файле cserverionetworkmanager.\+cpp строка 28
+
+
+
+Перекрестные ссылки error\+Print() и C\+Abstruct\+I\+O\+Network\+Manager\+::get\+Socket().
+
+
+
+Используется в C\+Server\+I\+O\+Network\+Manager().
+
+
+\begin{DoxyCode}
+29 \{
+34     connect(\hyperlink{class_c_abstruct_i_o_network_manager_a118a2c8254c149614cba51c42147c709}{getSocket}(), SIGNAL(error(QAbstractSocket::SocketError)), SLOT(
+      \hyperlink{class_c_server_i_o_network_manager_a27831f1d8f66c1e0d665c2ef52d262e4}{errorPrint}(QAbstractSocket::SocketError)));
+35 \}
+\end{DoxyCode}
+
+
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-cserverionetworkmanager.\+h\item 
-cserverionetworkmanager.\+cpp\end{DoxyCompactItemize}
+Server/\hyperlink{cserverionetworkmanager_8h}{cserverionetworkmanager.\+h}\item 
+Server/\hyperlink{cserverionetworkmanager_8cpp}{cserverionetworkmanager.\+cpp}\end{DoxyCompactItemize}

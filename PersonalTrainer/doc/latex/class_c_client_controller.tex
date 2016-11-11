@@ -1,5 +1,9 @@
 \hypertarget{class_c_client_controller}{}\section{Класс C\+Client\+Controller}
 \label{class_c_client_controller}\index{C\+Client\+Controller@{C\+Client\+Controller}}
+
+
+{\ttfamily \#include $<$cclientcontroller.\+h$>$}
+
 Граф наследования\+:C\+Client\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,39 +13,306 @@
 \subsection*{Сигналы}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79}{}\label{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79} 
-void {\bfseries disconnected} ()
+void \hyperlink{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79}{disconnected} ()
 \item 
-\hypertarget{class_c_client_controller_a04a024fdb1135b1b5dec86b006511672}{}\label{class_c_client_controller_a04a024fdb1135b1b5dec86b006511672} 
-void {\bfseries finished} ()
+void \hyperlink{class_c_client_controller_a04a024fdb1135b1b5dec86b006511672}{finished} ()
 \item 
-\hypertarget{class_c_client_controller_a358ef743560d560acef69e90dfaca11e}{}\label{class_c_client_controller_a358ef743560d560acef69e90dfaca11e} 
-void {\bfseries connect\+To\+Host} ()
+void \hyperlink{class_c_client_controller_a358ef743560d560acef69e90dfaca11e}{connect\+To\+Host} ()
 \end{DoxyCompactItemize}
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_controller_a95dd0dfe547a620dee2ae10790dee6be}{}\label{class_c_client_controller_a95dd0dfe547a620dee2ae10790dee6be} 
-{\bfseries C\+Client\+Controller} (Q\+Tcp\+Socket $\ast$socket, Q\+Object $\ast$parent=0)
+\hyperlink{class_c_client_controller_a95dd0dfe547a620dee2ae10790dee6be}{C\+Client\+Controller} (Q\+Tcp\+Socket $\ast$socket, Q\+Object $\ast$parent=0)
 \item 
-\hypertarget{class_c_client_controller_ab39fa71b009189acc06aa759d636de4d}{}\label{class_c_client_controller_ab39fa71b009189acc06aa759d636de4d} 
-\hyperlink{class_c_client_i_o_network_manager}{C\+Client\+I\+O\+Network\+Manager} $\ast$ {\bfseries get\+I\+O\+Network\+Manager} () const
+virtual \hyperlink{class_c_client_controller_adfd7338529c1b00e8ea52fa973141e70}{$\sim$\+C\+Client\+Controller} ()
 \item 
-\hypertarget{class_c_client_controller_a07441870867b13d7c867e57244101f92}{}\label{class_c_client_controller_a07441870867b13d7c867e57244101f92} 
-\hyperlink{class_c_client_f_s_m}{C\+Client\+F\+SM} $\ast$ {\bfseries get\+F\+SM} () const
+\hyperlink{class_c_client_i_o_network_manager}{C\+Client\+I\+O\+Network\+Manager} $\ast$ \hyperlink{class_c_client_controller_ab39fa71b009189acc06aa759d636de4d}{get\+I\+O\+Network\+Manager} () const
 \item 
-\hypertarget{class_c_client_controller_a456359547ec2e4225d54daeb6463008b}{}\label{class_c_client_controller_a456359547ec2e4225d54daeb6463008b} 
-\hyperlink{class_c_client_d_b_manager}{C\+Client\+D\+B\+Manager} $\ast$ {\bfseries get\+D\+B\+Manager} () const
+\hyperlink{class_c_client_f_s_m}{C\+Client\+F\+SM} $\ast$ \hyperlink{class_c_client_controller_a07441870867b13d7c867e57244101f92}{get\+F\+SM} () const
+\item 
+\hyperlink{class_c_client_d_b_manager}{C\+Client\+D\+B\+Manager} $\ast$ \hyperlink{class_c_client_controller_a456359547ec2e4225d54daeb6463008b}{get\+D\+B\+Manager} () const
 \end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_controller_a1dabfbc538daf66f1c2565808bc7db6d}{}\label{class_c_client_controller_a1dabfbc538daf66f1c2565808bc7db6d} 
 void \hyperlink{class_c_client_controller_a1dabfbc538daf66f1c2565808bc7db6d}{init\+Connections} ()
 \begin{DoxyCompactList}\small\item\em Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_client_i_o_network_manager}{C\+Client\+I\+O\+Network\+Manager} $\ast$ \hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\+\_\+net}
+\item 
+\hyperlink{class_c_client_f_s_m}{C\+Client\+F\+SM} $\ast$ \hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\+\_\+fsm}
+\item 
+\hyperlink{class_c_client_d_b_manager}{C\+Client\+D\+B\+Manager} $\ast$ \hyperlink{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c}{m\+\_\+dbm}
+\item 
+Q\+Thread $\ast$ \hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\+\_\+thread}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+
+
+См. определение в файле cclientcontroller.\+h строка 12
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_client_controller_a95dd0dfe547a620dee2ae10790dee6be}{}\label{class_c_client_controller_a95dd0dfe547a620dee2ae10790dee6be} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!C\+Client\+Controller@{C\+Client\+Controller}}
+\index{C\+Client\+Controller@{C\+Client\+Controller}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{C\+Client\+Controller()}{CClientController()}}
+{\footnotesize\ttfamily C\+Client\+Controller\+::\+C\+Client\+Controller (\begin{DoxyParamCaption}\item[{Q\+Tcp\+Socket $\ast$}]{socket,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+См. определение в файле cclientcontroller.\+cpp строка 3
+
+
+
+Перекрестные ссылки init\+Connections(), m\+\_\+dbm, m\+\_\+fsm, m\+\_\+net и m\+\_\+thread.
+
+
+\begin{DoxyCode}
+3                                                                        :
+4     \hyperlink{class_c_abstruct_controller_item_a1d99654a9522cc8721a329d1dcee35a4}{CAbstructControllerItem}(parent), \hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\_net}(0), \hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\_fsm}(0), 
+      \hyperlink{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c}{m\_dbm}(0), \hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\_thread}(0)
+5 \{
+6     socket->setParent(NULL);
+7 
+8     \hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\_net} = \textcolor{keyword}{new} \hyperlink{class_c_client_i_o_network_manager}{CClientIONetworkManager}(socket);
+9     \hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\_fsm} = \textcolor{keyword}{new} \hyperlink{class_c_client_f_s_m}{CClientFSM}();
+10     \hyperlink{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c}{m\_dbm} = \textcolor{keyword}{new} \hyperlink{class_c_client_d_b_manager}{CClientDBManager}();
+11     \hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\_thread} = \textcolor{keyword}{new} QThread(\textcolor{keyword}{this});
+12 
+13     \hyperlink{class_c_client_controller_a1dabfbc538daf66f1c2565808bc7db6d}{initConnections}();
+14 
+15     socket->moveToThread(\hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\_thread});
+16     \hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\_net}->moveToThread(\hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\_thread});
+17     \hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\_fsm}->moveToThread(\hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\_thread});
+18     \hyperlink{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c}{m\_dbm}->moveToThread(\hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\_thread});
+19     \hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\_thread}->start();
+20 \}
+\end{DoxyCode}
+\hypertarget{class_c_client_controller_adfd7338529c1b00e8ea52fa973141e70}{}\label{class_c_client_controller_adfd7338529c1b00e8ea52fa973141e70} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!````~C\+Client\+Controller@{$\sim$\+C\+Client\+Controller}}
+\index{````~C\+Client\+Controller@{$\sim$\+C\+Client\+Controller}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Client\+Controller()}{~CClientController()}}
+{\footnotesize\ttfamily C\+Client\+Controller\+::$\sim$\+C\+Client\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+См. определение в файле cclientcontroller.\+cpp строка 22
+
+
+\begin{DoxyCode}
+23 \{
+24 
+25 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_client_controller_a358ef743560d560acef69e90dfaca11e}{}\label{class_c_client_controller_a358ef743560d560acef69e90dfaca11e} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!connect\+To\+Host@{connect\+To\+Host}}
+\index{connect\+To\+Host@{connect\+To\+Host}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{connect\+To\+Host}{connectToHost}}
+{\footnotesize\ttfamily void C\+Client\+Controller\+::connect\+To\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Используется в init\+Connections().
+
+\hypertarget{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79}{}\label{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!disconnected@{disconnected}}
+\index{disconnected@{disconnected}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{disconnected}{disconnected}}
+{\footnotesize\ttfamily void C\+Client\+Controller\+::disconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Используется в init\+Connections().
+
+\hypertarget{class_c_client_controller_a04a024fdb1135b1b5dec86b006511672}{}\label{class_c_client_controller_a04a024fdb1135b1b5dec86b006511672} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!finished@{finished}}
+\index{finished@{finished}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{finished}{finished}}
+{\footnotesize\ttfamily void C\+Client\+Controller\+::finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Используется в init\+Connections().
+
+\hypertarget{class_c_client_controller_a456359547ec2e4225d54daeb6463008b}{}\label{class_c_client_controller_a456359547ec2e4225d54daeb6463008b} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!get\+D\+B\+Manager@{get\+D\+B\+Manager}}
+\index{get\+D\+B\+Manager@{get\+D\+B\+Manager}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{get\+D\+B\+Manager()}{getDBManager()}}
+{\footnotesize\ttfamily \hyperlink{class_c_client_d_b_manager}{C\+Client\+D\+B\+Manager} $\ast$ C\+Client\+Controller\+::get\+D\+B\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+См. определение в файле cclientcontroller.\+cpp строка 37
+
+
+
+Перекрестные ссылки m\+\_\+dbm.
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordflow}{return} \hyperlink{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c}{m\_dbm};
+40 \}
+\end{DoxyCode}
+\hypertarget{class_c_client_controller_a07441870867b13d7c867e57244101f92}{}\label{class_c_client_controller_a07441870867b13d7c867e57244101f92} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!get\+F\+SM@{get\+F\+SM}}
+\index{get\+F\+SM@{get\+F\+SM}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{get\+F\+S\+M()}{getFSM()}}
+{\footnotesize\ttfamily \hyperlink{class_c_client_f_s_m}{C\+Client\+F\+SM} $\ast$ C\+Client\+Controller\+::get\+F\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+См. определение в файле cclientcontroller.\+cpp строка 32
+
+
+
+Перекрестные ссылки m\+\_\+fsm.
+
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{keywordflow}{return} \hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\_fsm};
+35 \}
+\end{DoxyCode}
+\hypertarget{class_c_client_controller_ab39fa71b009189acc06aa759d636de4d}{}\label{class_c_client_controller_ab39fa71b009189acc06aa759d636de4d} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!get\+I\+O\+Network\+Manager@{get\+I\+O\+Network\+Manager}}
+\index{get\+I\+O\+Network\+Manager@{get\+I\+O\+Network\+Manager}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{get\+I\+O\+Network\+Manager()}{getIONetworkManager()}}
+{\footnotesize\ttfamily \hyperlink{class_c_client_i_o_network_manager}{C\+Client\+I\+O\+Network\+Manager} $\ast$ C\+Client\+Controller\+::get\+I\+O\+Network\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+См. определение в файле cclientcontroller.\+cpp строка 27
+
+
+
+Перекрестные ссылки m\+\_\+net.
+
+
+\begin{DoxyCode}
+28 \{
+29     \textcolor{keywordflow}{return} \hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\_net};
+30 \}
+\end{DoxyCode}
+\hypertarget{class_c_client_controller_a1dabfbc538daf66f1c2565808bc7db6d}{}\label{class_c_client_controller_a1dabfbc538daf66f1c2565808bc7db6d} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Client\+Controller\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. 
+
+
+
+Замещает \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{C\+Abstruct\+Controller\+Item}.
+
+
+
+См. определение в файле cclientcontroller.\+cpp строка 42
+
+
+
+Перекрестные ссылки connect\+To\+Host(), disconnected(), finished(), m\+\_\+dbm, m\+\_\+fsm, m\+\_\+net, m\+\_\+thread, C\+Abstruct\+Controller\+Item\+::recv\+Data() и C\+Abstruct\+Controller\+Item\+::send\+Data().
+
+
+
+Используется в C\+Client\+Controller().
+
+
+\begin{DoxyCode}
+43 \{
+44     connect(\hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\_net}, SIGNAL(\hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{sendData}(QString*)), \hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\_fsm}, SIGNAL(
+      \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recvData}(QString*)));
+45     connect(\hyperlink{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c}{m\_dbm}, SIGNAL(\hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{sendData}(QString*)), \hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\_fsm}, SIGNAL(
+      \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recvData}(QString*)));
+46     connect(\hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\_fsm}, SIGNAL(sendDataToIONetworkManager(QString*)), \hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\_net}, SIGNAL(
+      \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recvData}(QString*)));
+47     connect(\hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\_fsm}, SIGNAL(sendDataToDBManager(QString*)), \hyperlink{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c}{m\_dbm}, SIGNAL(
+      \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recvData}(QString*)));
+48     connect(\hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\_net}, SIGNAL(\hyperlink{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79}{disconnected}()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79}{disconnected}()));
+49     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79}{disconnected}()), \hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\_net}, SLOT(deleteLater()));
+50     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79}{disconnected}()), \hyperlink{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{m\_fsm}, SLOT(deleteLater()));
+51     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79}{disconnected}()), \hyperlink{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c}{m\_dbm}, SLOT(deleteLater()));
+52     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{class_c_client_controller_a171db18126ffb9541f47aec5cc0eda79}{disconnected}()), \hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\_thread}, SLOT(quit()));
+53     connect(\hyperlink{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{m\_thread}, SIGNAL(\hyperlink{class_c_client_controller_a04a024fdb1135b1b5dec86b006511672}{finished}()), \textcolor{keyword}{this}, SIGNAL(\hyperlink{class_c_client_controller_a04a024fdb1135b1b5dec86b006511672}{finished}()));
+54     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{class_c_client_controller_a358ef743560d560acef69e90dfaca11e}{connectToHost}()), \hyperlink{class_c_client_controller_ae97793346f702b77829129673408df48}{m\_net}, SLOT(
+      \hyperlink{class_c_client_controller_a358ef743560d560acef69e90dfaca11e}{connectToHost}()));
+55 \}
+\end{DoxyCode}
+
+
+\subsection{Данные класса}
+\hypertarget{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c}{}\label{class_c_client_controller_aacc71f5de726af350427a5eaedd6cf6c} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!m\+\_\+dbm@{m\+\_\+dbm}}
+\index{m\+\_\+dbm@{m\+\_\+dbm}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{m\+\_\+dbm}{m\_dbm}}
+{\footnotesize\ttfamily \hyperlink{class_c_client_d_b_manager}{C\+Client\+D\+B\+Manager}$\ast$ C\+Client\+Controller\+::m\+\_\+dbm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле cclientcontroller.\+h строка 26
+
+
+
+Используется в C\+Client\+Controller(), get\+D\+B\+Manager() и init\+Connections().
+
+\hypertarget{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d}{}\label{class_c_client_controller_ade8b08c2eae487031b6b64dac3296f5d} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!m\+\_\+fsm@{m\+\_\+fsm}}
+\index{m\+\_\+fsm@{m\+\_\+fsm}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{m\+\_\+fsm}{m\_fsm}}
+{\footnotesize\ttfamily \hyperlink{class_c_client_f_s_m}{C\+Client\+F\+SM}$\ast$ C\+Client\+Controller\+::m\+\_\+fsm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле cclientcontroller.\+h строка 25
+
+
+
+Используется в C\+Client\+Controller(), get\+F\+S\+M() и init\+Connections().
+
+\hypertarget{class_c_client_controller_ae97793346f702b77829129673408df48}{}\label{class_c_client_controller_ae97793346f702b77829129673408df48} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!m\+\_\+net@{m\+\_\+net}}
+\index{m\+\_\+net@{m\+\_\+net}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{m\+\_\+net}{m\_net}}
+{\footnotesize\ttfamily \hyperlink{class_c_client_i_o_network_manager}{C\+Client\+I\+O\+Network\+Manager}$\ast$ C\+Client\+Controller\+::m\+\_\+net\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле cclientcontroller.\+h строка 24
+
+
+
+Используется в C\+Client\+Controller(), get\+I\+O\+Network\+Manager() и init\+Connections().
+
+\hypertarget{class_c_client_controller_ab573eef5149837a53b276c928d2b680d}{}\label{class_c_client_controller_ab573eef5149837a53b276c928d2b680d} 
+\index{C\+Client\+Controller@{C\+Client\+Controller}!m\+\_\+thread@{m\+\_\+thread}}
+\index{m\+\_\+thread@{m\+\_\+thread}!C\+Client\+Controller@{C\+Client\+Controller}}
+\subsubsection{\texorpdfstring{m\+\_\+thread}{m\_thread}}
+{\footnotesize\ttfamily Q\+Thread$\ast$ C\+Client\+Controller\+::m\+\_\+thread\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле cclientcontroller.\+h строка 27
+
+
+
+Используется в C\+Client\+Controller() и init\+Connections().
+
 
 
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/cclientcontroller.\+h\item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/cclientcontroller.\+cpp\end{DoxyCompactItemize}
+Client/\hyperlink{cclientcontroller_8h}{cclientcontroller.\+h}\item 
+Client/\hyperlink{cclientcontroller_8cpp}{cclientcontroller.\+cpp}\end{DoxyCompactItemize}

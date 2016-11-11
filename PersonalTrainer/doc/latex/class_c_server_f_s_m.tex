@@ -1,5 +1,14 @@
 \hypertarget{class_c_server_f_s_m}{}\section{Класс C\+Server\+F\+SM}
 \label{class_c_server_f_s_m}\index{C\+Server\+F\+SM@{C\+Server\+F\+SM}}
+
+
+Класс работы с конечным автоматом сервера.  
+
+
+
+
+{\ttfamily \#include $<$cserverfsm.\+h$>$}
+
 Граф наследования\+:C\+Server\+F\+SM\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,19 +18,111 @@
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_f_s_m_a6d2328de2b1e2725e4a569e146b077f3}{}\label{class_c_server_f_s_m_a6d2328de2b1e2725e4a569e146b077f3} 
-{\bfseries C\+Server\+F\+SM} (Q\+Object $\ast$parent=0)
-\end{DoxyCompactItemize}
+\hyperlink{class_c_server_f_s_m_a6d2328de2b1e2725e4a569e146b077f3}{C\+Server\+F\+SM} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_f_s_m_a33dcbbf4680177c3f5769171f9516e8c}{$\sim$\+C\+Server\+F\+SM} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_f_s_m_ae0e6a994505c26e60b718af9989bea77}{}\label{class_c_server_f_s_m_ae0e6a994505c26e60b718af9989bea77} 
 void \hyperlink{class_c_server_f_s_m_ae0e6a994505c26e60b718af9989bea77}{init\+Connections} ()
-\begin{DoxyCompactList}\small\item\em Реализация виртуального метода базового класса. Устанавливает связь между принимаемыми данными от сигнала \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recv\+Data()} и слотом \hyperlink{class_c_abstruct_f_s_m_ae06497e1f93385cd6c20eaa84fc253c1}{fsm()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Метод инициализации соединений сигналов и слотов. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Дополнительные унаследованные члены}
+
+
+\subsection{Подробное описание}
+Класс работы с конечным автоматом сервера. 
+
+См. определение в файле cserverfsm.\+h строка 10
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_server_f_s_m_a6d2328de2b1e2725e4a569e146b077f3}{}\label{class_c_server_f_s_m_a6d2328de2b1e2725e4a569e146b077f3} 
+\index{C\+Server\+F\+SM@{C\+Server\+F\+SM}!C\+Server\+F\+SM@{C\+Server\+F\+SM}}
+\index{C\+Server\+F\+SM@{C\+Server\+F\+SM}!C\+Server\+F\+SM@{C\+Server\+F\+SM}}
+\subsubsection{\texorpdfstring{C\+Server\+F\+S\+M()}{CServerFSM()}}
+{\footnotesize\ttfamily C\+Server\+F\+S\+M\+::\+C\+Server\+F\+SM (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em parent} & Указатель на объект верхнего уровня иерархии объектов.\\
+\hline
+\end{DoxyParams}
+В конструкторе вызывается метод \hyperlink{class_c_server_f_s_m_ae0e6a994505c26e60b718af9989bea77}{init\+Connections()} инициализации соединений сигналов и слотов. 
+
+См. определение в файле cserverfsm.\+cpp строка 9
+
+
+
+Перекрестные ссылки init\+Connections().
+
+
+\begin{DoxyCode}
+9                                       :
+10     \hyperlink{class_c_abstruct_f_s_m_a54037c986f6b437c50d5e8ba42063330}{CAbstructFSM}(parent)
+11 \{
+12     \hyperlink{class_c_server_f_s_m_ae0e6a994505c26e60b718af9989bea77}{initConnections}();
+13 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_f_s_m_a33dcbbf4680177c3f5769171f9516e8c}{}\label{class_c_server_f_s_m_a33dcbbf4680177c3f5769171f9516e8c} 
+\index{C\+Server\+F\+SM@{C\+Server\+F\+SM}!````~C\+Server\+F\+SM@{$\sim$\+C\+Server\+F\+SM}}
+\index{````~C\+Server\+F\+SM@{$\sim$\+C\+Server\+F\+SM}!C\+Server\+F\+SM@{C\+Server\+F\+SM}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Server\+F\+S\+M()}{~CServerFSM()}}
+{\footnotesize\ttfamily C\+Server\+F\+S\+M\+::$\sim$\+C\+Server\+F\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. 
+
+
+
+См. определение в файле cserverfsm.\+cpp строка 18
+
+
+\begin{DoxyCode}
+19 \{
+20     qDebug() << \textcolor{stringliteral}{"CServerFSM: destructor "} << \textcolor{keyword}{this};
+21 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_server_f_s_m_ae0e6a994505c26e60b718af9989bea77}{}\label{class_c_server_f_s_m_ae0e6a994505c26e60b718af9989bea77} 
+\index{C\+Server\+F\+SM@{C\+Server\+F\+SM}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Server\+F\+SM@{C\+Server\+F\+SM}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Server\+F\+S\+M\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Метод инициализации соединений сигналов и слотов. 
+
+
+
+Переопределяет метод предка \hyperlink{class_c_abstruct_f_s_m_a9d6f4659a08f3028f8c047243f8dcfc3}{C\+Abstruct\+F\+SM}.
+
+
+
+См. определение в файле cserverfsm.\+cpp строка 26
+
+
+
+Используется в C\+Server\+F\+S\+M().
+
+
+\begin{DoxyCode}
+27 \{
+28 
+29 \}
+\end{DoxyCode}
 
 
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-cserverfsm.\+h\item 
-cserverfsm.\+cpp\end{DoxyCompactItemize}
+Server/\hyperlink{cserverfsm_8h}{cserverfsm.\+h}\item 
+Server/\hyperlink{cserverfsm_8cpp}{cserverfsm.\+cpp}\end{DoxyCompactItemize}

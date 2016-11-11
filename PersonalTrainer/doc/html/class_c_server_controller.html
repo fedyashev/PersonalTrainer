@@ -62,11 +62,17 @@ $(function() {
   <div class="summary">
 <a href="#signals">Сигналы</a> &#124;
 <a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
 <a href="class_c_server_controller-members.html">Полный список членов класса</a>  </div>
   <div class="headertitle">
 <div class="title">Класс CServerController</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Контроллер управления работой подключенного к серверу клиента.  
+ <a href="class_c_server_controller.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cservercontroller_8h_source.html">cservercontroller.h</a>&gt;</code></p>
 <div class="dynheader">
 Граф наследования:CServerController:</div>
 <div class="dyncontent">
@@ -78,31 +84,391 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Сигналы</h2></td></tr>
-<tr class="memitem:a49ac8bb325430fc9112056d862c5c117"><td class="memItemLeft" align="right" valign="top"><a id="a49ac8bb325430fc9112056d862c5c117"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>finishWork</b> ()</td></tr>
+<tr class="memitem:a49ac8bb325430fc9112056d862c5c117"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#a49ac8bb325430fc9112056d862c5c117">finishWork</a> ()</td></tr>
+<tr class="memdesc:a49ac8bb325430fc9112056d862c5c117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал завершения работы контроллера.  <a href="#a49ac8bb325430fc9112056d862c5c117">Подробнее...</a><br /></td></tr>
 <tr class="separator:a49ac8bb325430fc9112056d862c5c117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:ac7fa78891be114aa9ae1985541d5a766"><td class="memItemLeft" align="right" valign="top"><a id="ac7fa78891be114aa9ae1985541d5a766"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CServerController</b> (QTcpSocket *socket, QObject *parent=0)</td></tr>
+<tr class="memitem:ac7fa78891be114aa9ae1985541d5a766"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#ac7fa78891be114aa9ae1985541d5a766">CServerController</a> (QTcpSocket *socket, QObject *parent=0)</td></tr>
+<tr class="memdesc:ac7fa78891be114aa9ae1985541d5a766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор  <a href="#ac7fa78891be114aa9ae1985541d5a766">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac7fa78891be114aa9ae1985541d5a766"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9934f4eb54e1e1debd1aa6fd5e036012"><td class="memItemLeft" align="right" valign="top"><a id="a9934f4eb54e1e1debd1aa6fd5e036012"></a>
-<a class="el" href="class_c_server_i_o_network_manager.html">CServerIONetworkManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getIONetworkManager</b> () const</td></tr>
+<tr class="memitem:ad1efc4b48869ea320005a9dc6e3e5483"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#ad1efc4b48869ea320005a9dc6e3e5483">~CServerController</a> ()</td></tr>
+<tr class="memdesc:ad1efc4b48869ea320005a9dc6e3e5483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор  <a href="#ad1efc4b48869ea320005a9dc6e3e5483">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad1efc4b48869ea320005a9dc6e3e5483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9934f4eb54e1e1debd1aa6fd5e036012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_server_i_o_network_manager.html">CServerIONetworkManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#a9934f4eb54e1e1debd1aa6fd5e036012">getIONetworkManager</a> () const</td></tr>
+<tr class="memdesc:a9934f4eb54e1e1debd1aa6fd5e036012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод-getter для объекта работы с сетью.  <a href="#a9934f4eb54e1e1debd1aa6fd5e036012">Подробнее...</a><br /></td></tr>
 <tr class="separator:a9934f4eb54e1e1debd1aa6fd5e036012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade77d98a3358e5b1914ebbffa7d810ce"><td class="memItemLeft" align="right" valign="top"><a id="ade77d98a3358e5b1914ebbffa7d810ce"></a>
-<a class="el" href="class_c_server_f_s_m.html">CServerFSM</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getFSM</b> () const</td></tr>
+<tr class="memitem:ade77d98a3358e5b1914ebbffa7d810ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_server_f_s_m.html">CServerFSM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#ade77d98a3358e5b1914ebbffa7d810ce">getFSM</a> () const</td></tr>
+<tr class="memdesc:ade77d98a3358e5b1914ebbffa7d810ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод-getter для объекта конечного автомата.  <a href="#ade77d98a3358e5b1914ebbffa7d810ce">Подробнее...</a><br /></td></tr>
 <tr class="separator:ade77d98a3358e5b1914ebbffa7d810ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc0dbf4a5ee9356f10b2156ad2ce712"><td class="memItemLeft" align="right" valign="top"><a id="a2dc0dbf4a5ee9356f10b2156ad2ce712"></a>
-<a class="el" href="class_c_server_d_b_manager.html">CServerDBManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getDBManager</b> () const</td></tr>
+<tr class="memitem:a2dc0dbf4a5ee9356f10b2156ad2ce712"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_server_d_b_manager.html">CServerDBManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#a2dc0dbf4a5ee9356f10b2156ad2ce712">getDBManager</a> () const</td></tr>
+<tr class="memdesc:a2dc0dbf4a5ee9356f10b2156ad2ce712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод-getter для объекта работы с базой данных  <a href="#a2dc0dbf4a5ee9356f10b2156ad2ce712">Подробнее...</a><br /></td></tr>
 <tr class="separator:a2dc0dbf4a5ee9356f10b2156ad2ce712"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeccfde1d541a9f57f8276cc6a24aea12"><td class="memItemLeft" align="right" valign="top"><a id="aeccfde1d541a9f57f8276cc6a24aea12"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initConnections</b> () const</td></tr>
+<tr class="memitem:aeccfde1d541a9f57f8276cc6a24aea12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#aeccfde1d541a9f57f8276cc6a24aea12">initConnections</a> () const</td></tr>
+<tr class="memdesc:aeccfde1d541a9f57f8276cc6a24aea12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод инициализации соединнений сигналов и слотов.  <a href="#aeccfde1d541a9f57f8276cc6a24aea12">Подробнее...</a><br /></td></tr>
 <tr class="separator:aeccfde1d541a9f57f8276cc6a24aea12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a64ce9925628d153d9576ee4534380dac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_server_i_o_network_manager.html">CServerIONetworkManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a></td></tr>
+<tr class="memdesc:a64ce9925628d153d9576ee4534380dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на объект работы с сетью.  <a href="#a64ce9925628d153d9576ee4534380dac">Подробнее...</a><br /></td></tr>
+<tr class="separator:a64ce9925628d153d9576ee4534380dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3282dabaabac03bdb3447001c186a97f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_server_f_s_m.html">CServerFSM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a></td></tr>
+<tr class="memdesc:a3282dabaabac03bdb3447001c186a97f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на объект конечного автомата.  <a href="#a3282dabaabac03bdb3447001c186a97f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3282dabaabac03bdb3447001c186a97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab147bebeb63fe45d845090f0a4750582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_server_d_b_manager.html">CServerDBManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">m_dbm</a></td></tr>
+<tr class="memdesc:ab147bebeb63fe45d845090f0a4750582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на объект работы с базой данных.  <a href="#ab147bebeb63fe45d845090f0a4750582">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab147bebeb63fe45d845090f0a4750582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4764db869209e68283af91608f9751"><td class="memItemLeft" align="right" valign="top">QThread *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a></td></tr>
+<tr class="memdesc:a4a4764db869209e68283af91608f9751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указетель на объект потока.  <a href="#a4a4764db869209e68283af91608f9751">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4a4764db869209e68283af91608f9751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Контроллер управления работой подключенного к серверу клиента. </p>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8h_source.html">cservercontroller.h</a> строка <a class="el" href="cservercontroller_8h_source.html#l00015">15</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac7fa78891be114aa9ae1985541d5a766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7fa78891be114aa9ae1985541d5a766">&sect;&nbsp;</a></span>CServerController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CServerController::CServerController </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket</td><td>Указатель на сокет подключенного к серверу клиента. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent</td><td>Указатель на объект верхнего уровня иерархии объектов.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>В конструкторе динамически создаются объектся классов <a class="el" href="class_c_server_i_o_network_manager.html" title="Класс работы с сетью на сервере. ">CServerIONetworkManager</a>, <a class="el" href="class_c_server_f_s_m.html" title="Класс работы с конечным автоматом сервера. ">CServerFSM</a>, <a class="el" href="class_c_server_d_b_manager.html" title="Класс работы с базой данных на сервере ">CServerDBManager</a>, QThread. Далее вызывается метод initConnection() инициализирующий соединения сигналов и сокетов для созданных объектов. Затем созданные объекты перемещаются в отдельный поток (кроме объекта класса QThread, т.к. этот объект является обверткой для системного потока). Так как, перемещать в отдельный поток можно только объекты верхнего уровня иерархии, то перед перемещением в отдельный поток для объекта socket необходимо вызвать метод setParent(NULL). Затем вызывается слот start() у объект потока, который запускает отдельный поток, в котором находятся перемещенные в поток объекты, и запускается механизм обработки событий. </p>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8cpp_source.html">cservercontroller.cpp</a> строка <a class="el" href="cservercontroller_8cpp_source.html#l00019">19</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="cservercontroller_8cpp_source.html#l00079">initConnections()</a>, <a class="el" href="cservercontroller_8h_source.html#l00031">m_dbm</a>, <a class="el" href="cservercontroller_8h_source.html#l00030">m_fsm</a>, <a class="el" href="cservercontroller_8h_source.html#l00029">m_net</a> и <a class="el" href="cservercontroller_8h_source.html#l00032">m_thread</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                                                        :</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    QObject(parent),</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>(0),</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a>(0),</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">m_dbm</a>(0),</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>(0)</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a> = <span class="keyword">new</span> <a class="code" href="class_c_server_i_o_network_manager.html">CServerIONetworkManager</a>(socket);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a> = <span class="keyword">new</span> <a class="code" href="class_c_server_f_s_m.html">CServerFSM</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">m_dbm</a> = <span class="keyword">new</span> <a class="code" href="class_c_server_d_b_manager.html">CServerDBManager</a>();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a> = <span class="keyword">new</span> QThread();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_c_server_controller.html#aeccfde1d541a9f57f8276cc6a24aea12">initConnections</a>();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    socket-&gt;setParent(NULL);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    socket-&gt;moveToThread(<a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>-&gt;moveToThread(<a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a>-&gt;moveToThread(<a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">m_dbm</a>-&gt;moveToThread(<a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>-&gt;start();</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div><div class="ttc" id="class_c_server_controller_html_a4a4764db869209e68283af91608f9751"><div class="ttname"><a href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">CServerController::m_thread</a></div><div class="ttdeci">QThread * m_thread</div><div class="ttdoc">Указетель на объект потока. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00032">cservercontroller.h:32</a></div></div>
+<div class="ttc" id="class_c_server_controller_html_a64ce9925628d153d9576ee4534380dac"><div class="ttname"><a href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">CServerController::m_net</a></div><div class="ttdeci">CServerIONetworkManager * m_net</div><div class="ttdoc">Указатель на объект работы с сетью. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00029">cservercontroller.h:29</a></div></div>
+<div class="ttc" id="class_c_server_controller_html_a3282dabaabac03bdb3447001c186a97f"><div class="ttname"><a href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">CServerController::m_fsm</a></div><div class="ttdeci">CServerFSM * m_fsm</div><div class="ttdoc">Указатель на объект конечного автомата. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00030">cservercontroller.h:30</a></div></div>
+<div class="ttc" id="class_c_server_i_o_network_manager_html"><div class="ttname"><a href="class_c_server_i_o_network_manager.html">CServerIONetworkManager</a></div><div class="ttdoc">Класс работы с сетью на сервере. </div><div class="ttdef"><b>Definition:</b> <a href="cserverionetworkmanager_8h_source.html#l00010">cserverionetworkmanager.h:10</a></div></div>
+<div class="ttc" id="class_c_server_d_b_manager_html"><div class="ttname"><a href="class_c_server_d_b_manager.html">CServerDBManager</a></div><div class="ttdoc">Класс работы с базой данных на сервере </div><div class="ttdef"><b>Definition:</b> <a href="cserverdbmanager_8h_source.html#l00010">cserverdbmanager.h:10</a></div></div>
+<div class="ttc" id="class_c_server_f_s_m_html"><div class="ttname"><a href="class_c_server_f_s_m.html">CServerFSM</a></div><div class="ttdoc">Класс работы с конечным автоматом сервера. </div><div class="ttdef"><b>Definition:</b> <a href="cserverfsm_8h_source.html#l00010">cserverfsm.h:10</a></div></div>
+<div class="ttc" id="class_c_server_controller_html_aeccfde1d541a9f57f8276cc6a24aea12"><div class="ttname"><a href="class_c_server_controller.html#aeccfde1d541a9f57f8276cc6a24aea12">CServerController::initConnections</a></div><div class="ttdeci">void initConnections() const</div><div class="ttdoc">Метод инициализации соединнений сигналов и слотов. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8cpp_source.html#l00079">cservercontroller.cpp:79</a></div></div>
+<div class="ttc" id="class_c_server_controller_html_ab147bebeb63fe45d845090f0a4750582"><div class="ttname"><a href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">CServerController::m_dbm</a></div><div class="ttdeci">CServerDBManager * m_dbm</div><div class="ttdoc">Указатель на объект работы с базой данных. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00031">cservercontroller.h:31</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad1efc4b48869ea320005a9dc6e3e5483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1efc4b48869ea320005a9dc6e3e5483">&sect;&nbsp;</a></span>~CServerController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CServerController::~CServerController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Деструктор </p>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8cpp_source.html">cservercontroller.cpp</a> строка <a class="el" href="cservercontroller_8cpp_source.html#l00044">44</a></p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    qDebug() &lt;&lt; <span class="stringliteral">&quot;CServerController: destructor &quot;</span> &lt;&lt; <span class="keyword">this</span>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a49ac8bb325430fc9112056d862c5c117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ac8bb325430fc9112056d862c5c117">&sect;&nbsp;</a></span>finishWork</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CServerController::finishWork </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал завершения работы контроллера. </p>
+
+<p>Используется в <a class="el" href="cservercontroller_8cpp_source.html#l00079">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="a2dc0dbf4a5ee9356f10b2156ad2ce712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dc0dbf4a5ee9356f10b2156ad2ce712">&sect;&nbsp;</a></span>getDBManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_server_d_b_manager.html">CServerDBManager</a> * CServerController::getDBManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод-getter для объекта работы с базой данных </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Возвращает указатель на объек работы с базой данных. </dd></dl>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8cpp_source.html">cservercontroller.cpp</a> строка <a class="el" href="cservercontroller_8cpp_source.html#l00071">71</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="cservercontroller_8h_source.html#l00031">m_dbm</a>.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">m_dbm</a>;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div><div class="ttc" id="class_c_server_controller_html_ab147bebeb63fe45d845090f0a4750582"><div class="ttname"><a href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">CServerController::m_dbm</a></div><div class="ttdeci">CServerDBManager * m_dbm</div><div class="ttdoc">Указатель на объект работы с базой данных. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00031">cservercontroller.h:31</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ade77d98a3358e5b1914ebbffa7d810ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade77d98a3358e5b1914ebbffa7d810ce">&sect;&nbsp;</a></span>getFSM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_server_f_s_m.html">CServerFSM</a> * CServerController::getFSM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод-getter для объекта конечного автомата. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Возвращает указатель на объект конечного автомата. </dd></dl>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8cpp_source.html">cservercontroller.cpp</a> строка <a class="el" href="cservercontroller_8cpp_source.html#l00062">62</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="cservercontroller_8h_source.html#l00030">m_fsm</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a>;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div><div class="ttc" id="class_c_server_controller_html_a3282dabaabac03bdb3447001c186a97f"><div class="ttname"><a href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">CServerController::m_fsm</a></div><div class="ttdeci">CServerFSM * m_fsm</div><div class="ttdoc">Указатель на объект конечного автомата. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00030">cservercontroller.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9934f4eb54e1e1debd1aa6fd5e036012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9934f4eb54e1e1debd1aa6fd5e036012">&sect;&nbsp;</a></span>getIONetworkManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_server_i_o_network_manager.html">CServerIONetworkManager</a> * CServerController::getIONetworkManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод-getter для объекта работы с сетью. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Возвращает указатель на объект работы с сетью. </dd></dl>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8cpp_source.html">cservercontroller.cpp</a> строка <a class="el" href="cservercontroller_8cpp_source.html#l00053">53</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="cservercontroller_8h_source.html#l00029">m_net</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div><div class="ttc" id="class_c_server_controller_html_a64ce9925628d153d9576ee4534380dac"><div class="ttname"><a href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">CServerController::m_net</a></div><div class="ttdeci">CServerIONetworkManager * m_net</div><div class="ttdoc">Указатель на объект работы с сетью. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00029">cservercontroller.h:29</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeccfde1d541a9f57f8276cc6a24aea12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeccfde1d541a9f57f8276cc6a24aea12">&sect;&nbsp;</a></span>initConnections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CServerController::initConnections </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод инициализации соединнений сигналов и слотов. </p>
+<p>Сигнал <a class="el" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9" title="Сигнал передачи данных внешним объектам. ">CServerIONetworkManager::sendData()</a> соединяется с сигналом <a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1" title="Сигнал приема данных от внешнего объекта. ">CServerFSM::recvData()</a>. Данные отправленные от объекта m_net работы с сетью по сигналу sendData() передаются в сигнал recvData() объекта m_fsm конечного автомата. Т.е. данные которые принял socket из сети помещаются в сигнал sendData() объекта работы с сетью, а объект m_fsm конечного автомата принимает их через сигнал recvData().</p>
+<p>Сигналы <a class="el" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9" title="Сигнал передачи данных внешним объектам. ">CServerDBManager::sendData()</a> соединяется с сигналом <a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1" title="Сигнал приема данных от внешнего объекта. ">CServerFSM::recvData()</a>. Данные отправленные объектом m_dbm работы с базой данных помещаются в сигнал recvData() объекта m_fsm конечного автомата.</p>
+<p>Сигнал <a class="el" href="class_c_abstruct_f_s_m.html#a542570a7469e3923eeace7c3c308ff97" title="Сигнал передачи данных объекту управляющему сетевым взаимодействием. ">CServerFSM::sendDataToIONetworkManager()</a> соединяется c сигналом <a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1" title="Сигнал приема данных от внешнего объекта. ">CServerIONetworkManager::recvData()</a>. Объект m_fsm помещает данные в сигнал sendDataToIONetworkManager(QString*) и передает их в сигнал recvData(QString*) объекта m_net, такием образом происходит передача данных в объект работы с сетью для оправки данных по сети.</p>
+<p>Сигнал <a class="el" href="class_c_abstruct_f_s_m.html#a8b3e4a9134df07825f357d16e6d7c436" title="Сигнал передачи данных объекту работающему с базой данных. ">CServerFSM::sendDataToDBManager()</a> соединяется с сигналом <a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1" title="Сигнал приема данных от внешнего объекта. ">CServerDBManager::recvData()</a>. Конечный автомат передает запрос в объект работы с базой данных.</p>
+<p>Сигнал <a class="el" href="class_c_abstruct_i_o_network_manager.html#a4c25afd753612c5c719944a3e8ef4373" title="Сигнал генерируется когда сокет генерирует сигнал disconected() ">CServerIONetworkManager::disconnected()</a> соединяется cо слотом CServerIONetworkManager::deleteLater(). При отключении от сети объект m_net включается в расписание на удаление объектов.</p>
+<p>Сигнал <a class="el" href="class_c_abstruct_i_o_network_manager.html#a4c25afd753612c5c719944a3e8ef4373" title="Сигнал генерируется когда сокет генерирует сигнал disconected() ">CServerIONetworkManager::disconnected()</a> соединяется cо слотом CServerFSM::deleteLater(). При отключении от сети объект m_fsm включается в расписание на удаление объектов.</p>
+<p>Сигнал <a class="el" href="class_c_abstruct_i_o_network_manager.html#a4c25afd753612c5c719944a3e8ef4373" title="Сигнал генерируется когда сокет генерирует сигнал disconected() ">CServerIONetworkManager::disconnected()</a> соединяется cо слотом CServerDBManager::deleteLater(). При отключении от сети объект m_dbm включается в расписание на удаление объектов.</p>
+<p>Сигнал <a class="el" href="class_c_abstruct_i_o_network_manager.html#a4c25afd753612c5c719944a3e8ef4373" title="Сигнал генерируется когда сокет генерирует сигнал disconected() ">CServerIONetworkManager::disconnected()</a> соединяется cо слотом QThread::quit(). При отключении от сети объект m_thread завершает работу отдельного потока.</p>
+<p>Сигнал QThread::finished() соединяется со слотом QThread::deleteLater(). Когда поток завершил свою работу он генерирует сигнал finished() и соответственно объект потока может быть включен в расписание на удаление.</p>
+<p>Сигнал QThread::finished() соединяется с сигналом <a class="el" href="class_c_server_controller.html#a49ac8bb325430fc9112056d862c5c117" title="Сигнал завершения работы контроллера. ">CServerController::finishWork()</a>. Когда объект потока генерирует сигнал finished(), т.е. поток завершил свою работу, контроллер генерирует сигнал <a class="el" href="class_c_server_controller.html#a49ac8bb325430fc9112056d862c5c117" title="Сигнал завершения работы контроллера. ">finishWork()</a>, что в свою очередь говорит о том что контроллер завершил свою работу. Сигнал <a class="el" href="class_c_server_controller.html#a49ac8bb325430fc9112056d862c5c117" title="Сигнал завершения работы контроллера. ">finishWork()</a> перехватывает сервер и включет объект контроллера в расписание на удаление.</p>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8cpp_source.html">cservercontroller.cpp</a> строка <a class="el" href="cservercontroller_8cpp_source.html#l00079">79</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="class_c_server_controller.html#a49ac8bb325430fc9112056d862c5c117">finishWork()</a>, <a class="el" href="cservercontroller_8h_source.html#l00031">m_dbm</a>, <a class="el" href="cservercontroller_8h_source.html#l00030">m_fsm</a>, <a class="el" href="cservercontroller_8h_source.html#l00029">m_net</a> и <a class="el" href="cservercontroller_8h_source.html#l00032">m_thread</a>.</p>
+
+<p>Используется в <a class="el" href="cservercontroller_8cpp_source.html#l00019">CServerController()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>, SIGNAL(sendData(QString*)), <a class="code" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a>, SIGNAL(recvData(QString*)));</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">m_dbm</a>, SIGNAL(sendData(QString*)), <a class="code" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a>, SIGNAL(recvData(QString*)));</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a>, SIGNAL(sendDataToIONetworkManager(QString*)), <a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>, SIGNAL(recvData(QString*)));</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a>, SIGNAL(sendDataToDBManager(QString*)), <a class="code" href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">m_dbm</a>, SIGNAL(recvData(QString*)));</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>, SIGNAL(disconnected()), <a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>, SLOT(deleteLater()));</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>, SIGNAL(disconnected()), <a class="code" href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">m_fsm</a>, SLOT(deleteLater()));</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>, SIGNAL(disconnected()), <a class="code" href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">m_dbm</a>, SLOT(deleteLater()));</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">m_net</a>, SIGNAL(disconnected()), <a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>, SLOT(quit()));</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>, SIGNAL(finished()), <a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>, SLOT(deleteLater()));</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    connect(<a class="code" href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">m_thread</a>, SIGNAL(finished()), SIGNAL(<a class="code" href="class_c_server_controller.html#a49ac8bb325430fc9112056d862c5c117">finishWork</a>()));</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div><div class="ttc" id="class_c_server_controller_html_a4a4764db869209e68283af91608f9751"><div class="ttname"><a href="class_c_server_controller.html#a4a4764db869209e68283af91608f9751">CServerController::m_thread</a></div><div class="ttdeci">QThread * m_thread</div><div class="ttdoc">Указетель на объект потока. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00032">cservercontroller.h:32</a></div></div>
+<div class="ttc" id="class_c_server_controller_html_a64ce9925628d153d9576ee4534380dac"><div class="ttname"><a href="class_c_server_controller.html#a64ce9925628d153d9576ee4534380dac">CServerController::m_net</a></div><div class="ttdeci">CServerIONetworkManager * m_net</div><div class="ttdoc">Указатель на объект работы с сетью. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00029">cservercontroller.h:29</a></div></div>
+<div class="ttc" id="class_c_server_controller_html_a3282dabaabac03bdb3447001c186a97f"><div class="ttname"><a href="class_c_server_controller.html#a3282dabaabac03bdb3447001c186a97f">CServerController::m_fsm</a></div><div class="ttdeci">CServerFSM * m_fsm</div><div class="ttdoc">Указатель на объект конечного автомата. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00030">cservercontroller.h:30</a></div></div>
+<div class="ttc" id="class_c_server_controller_html_a49ac8bb325430fc9112056d862c5c117"><div class="ttname"><a href="class_c_server_controller.html#a49ac8bb325430fc9112056d862c5c117">CServerController::finishWork</a></div><div class="ttdeci">void finishWork()</div><div class="ttdoc">Сигнал завершения работы контроллера. </div></div>
+<div class="ttc" id="class_c_server_controller_html_ab147bebeb63fe45d845090f0a4750582"><div class="ttname"><a href="class_c_server_controller.html#ab147bebeb63fe45d845090f0a4750582">CServerController::m_dbm</a></div><div class="ttdeci">CServerDBManager * m_dbm</div><div class="ttdoc">Указатель на объект работы с базой данных. </div><div class="ttdef"><b>Definition:</b> <a href="cservercontroller_8h_source.html#l00031">cservercontroller.h:31</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ab147bebeb63fe45d845090f0a4750582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab147bebeb63fe45d845090f0a4750582">&sect;&nbsp;</a></span>m_dbm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_server_d_b_manager.html">CServerDBManager</a>* CServerController::m_dbm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Указатель на объект работы с базой данных. </p>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8h_source.html">cservercontroller.h</a> строка <a class="el" href="cservercontroller_8h_source.html#l00031">31</a></p>
+
+<p>Используется в <a class="el" href="cservercontroller_8cpp_source.html#l00019">CServerController()</a>, <a class="el" href="cservercontroller_8cpp_source.html#l00071">getDBManager()</a> и <a class="el" href="cservercontroller_8cpp_source.html#l00079">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="a3282dabaabac03bdb3447001c186a97f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3282dabaabac03bdb3447001c186a97f">&sect;&nbsp;</a></span>m_fsm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_server_f_s_m.html">CServerFSM</a>* CServerController::m_fsm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Указатель на объект конечного автомата. </p>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8h_source.html">cservercontroller.h</a> строка <a class="el" href="cservercontroller_8h_source.html#l00030">30</a></p>
+
+<p>Используется в <a class="el" href="cservercontroller_8cpp_source.html#l00019">CServerController()</a>, <a class="el" href="cservercontroller_8cpp_source.html#l00062">getFSM()</a> и <a class="el" href="cservercontroller_8cpp_source.html#l00079">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="a64ce9925628d153d9576ee4534380dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ce9925628d153d9576ee4534380dac">&sect;&nbsp;</a></span>m_net</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_server_i_o_network_manager.html">CServerIONetworkManager</a>* CServerController::m_net</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Указатель на объект работы с сетью. </p>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8h_source.html">cservercontroller.h</a> строка <a class="el" href="cservercontroller_8h_source.html#l00029">29</a></p>
+
+<p>Используется в <a class="el" href="cservercontroller_8cpp_source.html#l00019">CServerController()</a>, <a class="el" href="cservercontroller_8cpp_source.html#l00053">getIONetworkManager()</a> и <a class="el" href="cservercontroller_8cpp_source.html#l00079">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="a4a4764db869209e68283af91608f9751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a4764db869209e68283af91608f9751">&sect;&nbsp;</a></span>m_thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QThread* CServerController::m_thread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Указетель на объект потока. </p>
+
+<p>См. определение в файле <a class="el" href="cservercontroller_8h_source.html">cservercontroller.h</a> строка <a class="el" href="cservercontroller_8h_source.html#l00032">32</a></p>
+
+<p>Используется в <a class="el" href="cservercontroller_8cpp_source.html#l00019">CServerController()</a> и <a class="el" href="cservercontroller_8cpp_source.html#l00079">initConnections()</a>.</p>
+
+</div>
+</div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li><a class="el" href="cservercontroller_8h_source.html">cservercontroller.h</a></li>
-<li>cservercontroller.cpp</li>
+<li>Server/<a class="el" href="cservercontroller_8h_source.html">cservercontroller.h</a></li>
+<li>Server/<a class="el" href="cservercontroller_8cpp_source.html">cservercontroller.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

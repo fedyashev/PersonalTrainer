@@ -1,0 +1,32 @@
+\hypertarget{_server_2main_8cpp}{}\section{Файл Server/main.cpp}
+\label{_server_2main_8cpp}\index{Server/main.\+cpp@{Server/main.\+cpp}}
+{\ttfamily \#include $<$Q\+Core\+Application$>$}\newline
+{\ttfamily \#include \char`\"{}cserver.\+h\char`\"{}}\newline
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_server_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\hypertarget{_server_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{_server_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{Server/main.\+cpp@{Server/main.\+cpp}!main@{main}}
+\index{main@{main}!Server/main.\+cpp@{Server/main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле main.\+cpp строка 4
+
+
+\begin{DoxyCode}
+5 \{
+6     QCoreApplication a(argc, argv);
+7 
+8     \hyperlink{class_c_server}{CServer} *server = \textcolor{keyword}{new} \hyperlink{class_c_server}{CServer}();
+9 
+10     \textcolor{keywordflow}{return} a.exec();
+11 \}
+\end{DoxyCode}

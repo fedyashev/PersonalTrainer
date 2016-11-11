@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.12"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Исходный файл Client/cclientionetworkmanager.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+   <div id="projectbrief">Personal Trainer Server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.12 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_922c588100a187620fdc1533bc178f73.html">Client</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">cclientionetworkmanager.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cclientionetworkmanager_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cclientionetworkmanager_8h.html">cclientionetworkmanager.h</a>&quot;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_c_client_i_o_network_manager.html#af9f85db2c4a515cc974038086edc6b9f">    3</a></span>&#160;<a class="code" href="class_c_client_i_o_network_manager.html#af9f85db2c4a515cc974038086edc6b9f">CClientIONetworkManager::CClientIONetworkManager</a>(QTcpSocket *socket, QObject *parent):</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <a class="code" href="class_c_abstruct_i_o_network_manager.html">CAbstructIONetworkManager</a>(socket, parent)</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_c_client_i_o_network_manager.html#aeb1564c209ae8b790cf799075cfa6a98">initConnections</a>();</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_c_client_i_o_network_manager.html#aaaeddd1337640480b4eae0418cee6026">    9</a></span>&#160;<a class="code" href="class_c_client_i_o_network_manager.html#aaaeddd1337640480b4eae0418cee6026">CClientIONetworkManager::~CClientIONetworkManager</a>()</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_c_client_i_o_network_manager.html#a1a4c3fd9405b85cb43e20b24d9db18e8">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_client_i_o_network_manager.html#a1a4c3fd9405b85cb43e20b24d9db18e8">CClientIONetworkManager::error</a>(QAbstractSocket::SocketError)</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    emit <a class="code" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">sendData</a>(<span class="keyword">new</span> QString(<a class="code" href="class_c_abstruct_i_o_network_manager.html#a118a2c8254c149614cba51c42147c709">getSocket</a>()-&gt;errorString()));</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_c_client_i_o_network_manager.html#aaa7b77037603697d3bee7daed467b092">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_client_i_o_network_manager.html#aaa7b77037603697d3bee7daed467b092">CClientIONetworkManager::connectToHost</a>()</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_c_abstruct_i_o_network_manager.html#a118a2c8254c149614cba51c42147c709">getSocket</a>()-&gt;connectToHost(<span class="stringliteral">&quot;192.168.100.2&quot;</span>, 52816);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_c_client_i_o_network_manager.html#aeb1564c209ae8b790cf799075cfa6a98">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_client_i_o_network_manager.html#aeb1564c209ae8b790cf799075cfa6a98">CClientIONetworkManager::initConnections</a>()</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    connect(this-&gt;<a class="code" href="class_c_abstruct_i_o_network_manager.html#a118a2c8254c149614cba51c42147c709">getSocket</a>(), SIGNAL(<a class="code" href="class_c_client_i_o_network_manager.html#a1a4c3fd9405b85cb43e20b24d9db18e8">error</a>(QAbstractSocket::SocketError)), <span class="keyword">this</span>, SLOT(<a class="code" href="class_c_client_i_o_network_manager.html#a1a4c3fd9405b85cb43e20b24d9db18e8">error</a>(QAbstractSocket::SocketError)));</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div><div class="ttc" id="class_c_client_i_o_network_manager_html_af9f85db2c4a515cc974038086edc6b9f"><div class="ttname"><a href="class_c_client_i_o_network_manager.html#af9f85db2c4a515cc974038086edc6b9f">CClientIONetworkManager::CClientIONetworkManager</a></div><div class="ttdeci">CClientIONetworkManager(QTcpSocket *socket, QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="cclientionetworkmanager_8cpp_source.html#l00003">cclientionetworkmanager.cpp:3</a></div></div>
+<div class="ttc" id="class_c_client_i_o_network_manager_html_aaa7b77037603697d3bee7daed467b092"><div class="ttname"><a href="class_c_client_i_o_network_manager.html#aaa7b77037603697d3bee7daed467b092">CClientIONetworkManager::connectToHost</a></div><div class="ttdeci">void connectToHost()</div><div class="ttdef"><b>Definition:</b> <a href="cclientionetworkmanager_8cpp_source.html#l00019">cclientionetworkmanager.cpp:19</a></div></div>
+<div class="ttc" id="class_c_client_i_o_network_manager_html_a1a4c3fd9405b85cb43e20b24d9db18e8"><div class="ttname"><a href="class_c_client_i_o_network_manager.html#a1a4c3fd9405b85cb43e20b24d9db18e8">CClientIONetworkManager::error</a></div><div class="ttdeci">void error(QAbstractSocket::SocketError)</div><div class="ttdef"><b>Definition:</b> <a href="cclientionetworkmanager_8cpp_source.html#l00014">cclientionetworkmanager.cpp:14</a></div></div>
+<div class="ttc" id="class_c_abstruct_i_o_network_manager_html_a118a2c8254c149614cba51c42147c709"><div class="ttname"><a href="class_c_abstruct_i_o_network_manager.html#a118a2c8254c149614cba51c42147c709">CAbstructIONetworkManager::getSocket</a></div><div class="ttdeci">QTcpSocket * getSocket() const</div><div class="ttdoc">Функиция-getter для сокета </div><div class="ttdef"><b>Definition:</b> <a href="cabstructionetworkmanager_8cpp_source.html#l00026">cabstructionetworkmanager.cpp:26</a></div></div>
+<div class="ttc" id="class_c_abstruct_controller_item_html_a7cf2bebc87a7d0b660318e946a176eb9"><div class="ttname"><a href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">CAbstructControllerItem::sendData</a></div><div class="ttdeci">void sendData(QString *)</div><div class="ttdoc">Сигнал передачи данных внешним объектам. </div></div>
+<div class="ttc" id="class_c_client_i_o_network_manager_html_aeb1564c209ae8b790cf799075cfa6a98"><div class="ttname"><a href="class_c_client_i_o_network_manager.html#aeb1564c209ae8b790cf799075cfa6a98">CClientIONetworkManager::initConnections</a></div><div class="ttdeci">void initConnections()</div><div class="ttdoc">Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. </div><div class="ttdef"><b>Definition:</b> <a href="cclientionetworkmanager_8cpp_source.html#l00024">cclientionetworkmanager.cpp:24</a></div></div>
+<div class="ttc" id="class_c_abstruct_i_o_network_manager_html"><div class="ttname"><a href="class_c_abstruct_i_o_network_manager.html">CAbstructIONetworkManager</a></div><div class="ttdoc">Базовый класс передачи и приема данных по сети. </div><div class="ttdef"><b>Definition:</b> <a href="cabstructionetworkmanager_8h_source.html#l00012">cabstructionetworkmanager.h:12</a></div></div>
+<div class="ttc" id="cclientionetworkmanager_8h_html"><div class="ttname"><a href="cclientionetworkmanager_8h.html">cclientionetworkmanager.h</a></div></div>
+<div class="ttc" id="class_c_client_i_o_network_manager_html_aaaeddd1337640480b4eae0418cee6026"><div class="ttname"><a href="class_c_client_i_o_network_manager.html#aaaeddd1337640480b4eae0418cee6026">CClientIONetworkManager::~CClientIONetworkManager</a></div><div class="ttdeci">virtual ~CClientIONetworkManager()</div><div class="ttdef"><b>Definition:</b> <a href="cclientionetworkmanager_8cpp_source.html#l00009">cclientionetworkmanager.cpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.12
+</small></address>
+</body>
+</html>

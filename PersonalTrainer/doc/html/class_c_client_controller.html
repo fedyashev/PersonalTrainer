@@ -63,11 +63,14 @@ $(function() {
 <a href="#signals">Сигналы</a> &#124;
 <a href="#pub-methods">Открытые члены</a> &#124;
 <a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
 <a href="class_c_client_controller-members.html">Полный список членов класса</a>  </div>
   <div class="headertitle">
 <div class="title">Класс CClientController</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="cclientcontroller_8h_source.html">cclientcontroller.h</a>&gt;</code></p>
 <div class="dynheader">
 Граф наследования:CClientController:</div>
 <div class="dyncontent">
@@ -80,58 +83,437 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Сигналы</h2></td></tr>
-<tr class="memitem:a171db18126ffb9541f47aec5cc0eda79"><td class="memItemLeft" align="right" valign="top"><a id="a171db18126ffb9541f47aec5cc0eda79"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnected</b> ()</td></tr>
+<tr class="memitem:a171db18126ffb9541f47aec5cc0eda79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#a171db18126ffb9541f47aec5cc0eda79">disconnected</a> ()</td></tr>
 <tr class="separator:a171db18126ffb9541f47aec5cc0eda79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04a024fdb1135b1b5dec86b006511672"><td class="memItemLeft" align="right" valign="top"><a id="a04a024fdb1135b1b5dec86b006511672"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b> ()</td></tr>
+<tr class="memitem:a04a024fdb1135b1b5dec86b006511672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#a04a024fdb1135b1b5dec86b006511672">finished</a> ()</td></tr>
 <tr class="separator:a04a024fdb1135b1b5dec86b006511672"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a358ef743560d560acef69e90dfaca11e"><td class="memItemLeft" align="right" valign="top"><a id="a358ef743560d560acef69e90dfaca11e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>connectToHost</b> ()</td></tr>
+<tr class="memitem:a358ef743560d560acef69e90dfaca11e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#a358ef743560d560acef69e90dfaca11e">connectToHost</a> ()</td></tr>
 <tr class="separator:a358ef743560d560acef69e90dfaca11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header signals_class_c_abstruct_controller_item"><td colspan="2" onclick="javascript:toggleInherit('signals_class_c_abstruct_controller_item')"><img src="closed.png" alt="-"/>&#160;Сигналы унаследованные от <a class="el" href="class_c_abstruct_controller_item.html">CAbstructControllerItem</a></td></tr>
-<tr class="memitem:a7cf2bebc87a7d0b660318e946a176eb9 inherit signals_class_c_abstruct_controller_item"><td class="memItemLeft" align="right" valign="top"><a id="a7cf2bebc87a7d0b660318e946a176eb9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">sendData</a> (QString *)</td></tr>
-<tr class="memdesc:a7cf2bebc87a7d0b660318e946a176eb9 inherit signals_class_c_abstruct_controller_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал передачи данных внешним объектам. <br /></td></tr>
+<tr class="memitem:a7cf2bebc87a7d0b660318e946a176eb9 inherit signals_class_c_abstruct_controller_item"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">sendData</a> (QString *)</td></tr>
+<tr class="memdesc:a7cf2bebc87a7d0b660318e946a176eb9 inherit signals_class_c_abstruct_controller_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал передачи данных внешним объектам.  <a href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7cf2bebc87a7d0b660318e946a176eb9 inherit signals_class_c_abstruct_controller_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6898e48061cb0cac2065f8193bd386c1 inherit signals_class_c_abstruct_controller_item"><td class="memItemLeft" align="right" valign="top"><a id="a6898e48061cb0cac2065f8193bd386c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">recvData</a> (QString *)</td></tr>
-<tr class="memdesc:a6898e48061cb0cac2065f8193bd386c1 inherit signals_class_c_abstruct_controller_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал приема данных от внешнего объекта. <br /></td></tr>
+<tr class="memitem:a6898e48061cb0cac2065f8193bd386c1 inherit signals_class_c_abstruct_controller_item"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">recvData</a> (QString *)</td></tr>
+<tr class="memdesc:a6898e48061cb0cac2065f8193bd386c1 inherit signals_class_c_abstruct_controller_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал приема данных от внешнего объекта.  <a href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6898e48061cb0cac2065f8193bd386c1 inherit signals_class_c_abstruct_controller_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a95dd0dfe547a620dee2ae10790dee6be"><td class="memItemLeft" align="right" valign="top"><a id="a95dd0dfe547a620dee2ae10790dee6be"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CClientController</b> (QTcpSocket *socket, QObject *parent=0)</td></tr>
+<tr class="memitem:a95dd0dfe547a620dee2ae10790dee6be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#a95dd0dfe547a620dee2ae10790dee6be">CClientController</a> (QTcpSocket *socket, QObject *parent=0)</td></tr>
 <tr class="separator:a95dd0dfe547a620dee2ae10790dee6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab39fa71b009189acc06aa759d636de4d"><td class="memItemLeft" align="right" valign="top"><a id="ab39fa71b009189acc06aa759d636de4d"></a>
-<a class="el" href="class_c_client_i_o_network_manager.html">CClientIONetworkManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getIONetworkManager</b> () const</td></tr>
+<tr class="memitem:adfd7338529c1b00e8ea52fa973141e70"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#adfd7338529c1b00e8ea52fa973141e70">~CClientController</a> ()</td></tr>
+<tr class="separator:adfd7338529c1b00e8ea52fa973141e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39fa71b009189acc06aa759d636de4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_client_i_o_network_manager.html">CClientIONetworkManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#ab39fa71b009189acc06aa759d636de4d">getIONetworkManager</a> () const</td></tr>
 <tr class="separator:ab39fa71b009189acc06aa759d636de4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07441870867b13d7c867e57244101f92"><td class="memItemLeft" align="right" valign="top"><a id="a07441870867b13d7c867e57244101f92"></a>
-<a class="el" href="class_c_client_f_s_m.html">CClientFSM</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getFSM</b> () const</td></tr>
+<tr class="memitem:a07441870867b13d7c867e57244101f92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_client_f_s_m.html">CClientFSM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#a07441870867b13d7c867e57244101f92">getFSM</a> () const</td></tr>
 <tr class="separator:a07441870867b13d7c867e57244101f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a456359547ec2e4225d54daeb6463008b"><td class="memItemLeft" align="right" valign="top"><a id="a456359547ec2e4225d54daeb6463008b"></a>
-<a class="el" href="class_c_client_d_b_manager.html">CClientDBManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getDBManager</b> () const</td></tr>
+<tr class="memitem:a456359547ec2e4225d54daeb6463008b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_client_d_b_manager.html">CClientDBManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#a456359547ec2e4225d54daeb6463008b">getDBManager</a> () const</td></tr>
 <tr class="separator:a456359547ec2e4225d54daeb6463008b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_abstruct_controller_item"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_abstruct_controller_item')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="class_c_abstruct_controller_item.html">CAbstructControllerItem</a></td></tr>
 <tr class="memitem:a1d99654a9522cc8721a329d1dcee35a4 inherit pub_methods_class_c_abstruct_controller_item"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a1d99654a9522cc8721a329d1dcee35a4">CAbstructControllerItem</a> (QObject *parent=0)</td></tr>
 <tr class="memdesc:a1d99654a9522cc8721a329d1dcee35a4 inherit pub_methods_class_c_abstruct_controller_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коструктор  <a href="class_c_abstruct_controller_item.html#a1d99654a9522cc8721a329d1dcee35a4">Подробнее...</a><br /></td></tr>
 <tr class="separator:a1d99654a9522cc8721a329d1dcee35a4 inherit pub_methods_class_c_abstruct_controller_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a807bca71bd9a2966e60ec5c3c807f359 inherit pub_methods_class_c_abstruct_controller_item"><td class="memItemLeft" align="right" valign="top"><a id="a807bca71bd9a2966e60ec5c3c807f359"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a807bca71bd9a2966e60ec5c3c807f359">~CAbstructControllerItem</a> ()</td></tr>
-<tr class="memdesc:a807bca71bd9a2966e60ec5c3c807f359 inherit pub_methods_class_c_abstruct_controller_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальный деструктор <br /></td></tr>
+<tr class="memitem:a807bca71bd9a2966e60ec5c3c807f359 inherit pub_methods_class_c_abstruct_controller_item"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a807bca71bd9a2966e60ec5c3c807f359">~CAbstructControllerItem</a> ()</td></tr>
+<tr class="memdesc:a807bca71bd9a2966e60ec5c3c807f359 inherit pub_methods_class_c_abstruct_controller_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальный деструктор  <a href="class_c_abstruct_controller_item.html#a807bca71bd9a2966e60ec5c3c807f359">Подробнее...</a><br /></td></tr>
 <tr class="separator:a807bca71bd9a2966e60ec5c3c807f359 inherit pub_methods_class_c_abstruct_controller_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Защищенные члены</h2></td></tr>
-<tr class="memitem:a1dabfbc538daf66f1c2565808bc7db6d"><td class="memItemLeft" align="right" valign="top"><a id="a1dabfbc538daf66f1c2565808bc7db6d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#a1dabfbc538daf66f1c2565808bc7db6d">initConnections</a> ()</td></tr>
-<tr class="memdesc:a1dabfbc538daf66f1c2565808bc7db6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. <br /></td></tr>
+<tr class="memitem:a1dabfbc538daf66f1c2565808bc7db6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#a1dabfbc538daf66f1c2565808bc7db6d">initConnections</a> ()</td></tr>
+<tr class="memdesc:a1dabfbc538daf66f1c2565808bc7db6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках.  <a href="#a1dabfbc538daf66f1c2565808bc7db6d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a1dabfbc538daf66f1c2565808bc7db6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ae97793346f702b77829129673408df48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_client_i_o_network_manager.html">CClientIONetworkManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a></td></tr>
+<tr class="separator:ae97793346f702b77829129673408df48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8b08c2eae487031b6b64dac3296f5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_client_f_s_m.html">CClientFSM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a></td></tr>
+<tr class="separator:ade8b08c2eae487031b6b64dac3296f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc71f5de726af350427a5eaedd6cf6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_client_d_b_manager.html">CClientDBManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">m_dbm</a></td></tr>
+<tr class="separator:aacc71f5de726af350427a5eaedd6cf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab573eef5149837a53b276c928d2b680d"><td class="memItemLeft" align="right" valign="top">QThread *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a></td></tr>
+<tr class="separator:ab573eef5149837a53b276c928d2b680d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p>См. определение в файле <a class="el" href="cclientcontroller_8h_source.html">cclientcontroller.h</a> строка <a class="el" href="cclientcontroller_8h_source.html#l00012">12</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a95dd0dfe547a620dee2ae10790dee6be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95dd0dfe547a620dee2ae10790dee6be">&sect;&nbsp;</a></span>CClientController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CClientController::CClientController </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8cpp_source.html">cclientcontroller.cpp</a> строка <a class="el" href="cclientcontroller_8cpp_source.html#l00003">3</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="cclientcontroller_8cpp_source.html#l00042">initConnections()</a>, <a class="el" href="cclientcontroller_8h_source.html#l00026">m_dbm</a>, <a class="el" href="cclientcontroller_8h_source.html#l00025">m_fsm</a>, <a class="el" href="cclientcontroller_8h_source.html#l00024">m_net</a> и <a class="el" href="cclientcontroller_8h_source.html#l00027">m_thread</a>.</p>
+<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                                                       :</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <a class="code" href="class_c_abstruct_controller_item.html#a1d99654a9522cc8721a329d1dcee35a4">CAbstructControllerItem</a>(parent), <a class="code" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a>(0), <a class="code" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a>(0), <a class="code" href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">m_dbm</a>(0), <a class="code" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a>(0)</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    socket-&gt;setParent(NULL);</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a> = <span class="keyword">new</span> <a class="code" href="class_c_client_i_o_network_manager.html">CClientIONetworkManager</a>(socket);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a> = <span class="keyword">new</span> <a class="code" href="class_c_client_f_s_m.html">CClientFSM</a>();</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">m_dbm</a> = <span class="keyword">new</span> <a class="code" href="class_c_client_d_b_manager.html">CClientDBManager</a>();</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a> = <span class="keyword">new</span> QThread(<span class="keyword">this</span>);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_c_client_controller.html#a1dabfbc538daf66f1c2565808bc7db6d">initConnections</a>();</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    socket-&gt;moveToThread(<a class="code" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a>);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a>-&gt;moveToThread(<a class="code" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a>);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a>-&gt;moveToThread(<a class="code" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a>);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">m_dbm</a>-&gt;moveToThread(<a class="code" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a>);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a>-&gt;start();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div><div class="ttc" id="class_c_client_controller_html_ade8b08c2eae487031b6b64dac3296f5d"><div class="ttname"><a href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">CClientController::m_fsm</a></div><div class="ttdeci">CClientFSM * m_fsm</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00025">cclientcontroller.h:25</a></div></div>
+<div class="ttc" id="class_c_client_f_s_m_html"><div class="ttname"><a href="class_c_client_f_s_m.html">CClientFSM</a></div><div class="ttdef"><b>Definition:</b> <a href="cclientfsm_8h_source.html#l00007">cclientfsm.h:7</a></div></div>
+<div class="ttc" id="class_c_client_d_b_manager_html"><div class="ttname"><a href="class_c_client_d_b_manager.html">CClientDBManager</a></div><div class="ttdef"><b>Definition:</b> <a href="cclientdbmanager_8h_source.html#l00007">cclientdbmanager.h:7</a></div></div>
+<div class="ttc" id="class_c_client_controller_html_ae97793346f702b77829129673408df48"><div class="ttname"><a href="class_c_client_controller.html#ae97793346f702b77829129673408df48">CClientController::m_net</a></div><div class="ttdeci">CClientIONetworkManager * m_net</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00024">cclientcontroller.h:24</a></div></div>
+<div class="ttc" id="class_c_client_controller_html_a1dabfbc538daf66f1c2565808bc7db6d"><div class="ttname"><a href="class_c_client_controller.html#a1dabfbc538daf66f1c2565808bc7db6d">CClientController::initConnections</a></div><div class="ttdeci">void initConnections()</div><div class="ttdoc">Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. </div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8cpp_source.html#l00042">cclientcontroller.cpp:42</a></div></div>
+<div class="ttc" id="class_c_client_controller_html_aacc71f5de726af350427a5eaedd6cf6c"><div class="ttname"><a href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">CClientController::m_dbm</a></div><div class="ttdeci">CClientDBManager * m_dbm</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00026">cclientcontroller.h:26</a></div></div>
+<div class="ttc" id="class_c_abstruct_controller_item_html_a1d99654a9522cc8721a329d1dcee35a4"><div class="ttname"><a href="class_c_abstruct_controller_item.html#a1d99654a9522cc8721a329d1dcee35a4">CAbstructControllerItem::CAbstructControllerItem</a></div><div class="ttdeci">CAbstructControllerItem(QObject *parent=0)</div><div class="ttdoc">Коструктор </div><div class="ttdef"><b>Definition:</b> <a href="cabstructcontrolleritem_8cpp_source.html#l00008">cabstructcontrolleritem.cpp:8</a></div></div>
+<div class="ttc" id="class_c_client_controller_html_ab573eef5149837a53b276c928d2b680d"><div class="ttname"><a href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">CClientController::m_thread</a></div><div class="ttdeci">QThread * m_thread</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00027">cclientcontroller.h:27</a></div></div>
+<div class="ttc" id="class_c_client_i_o_network_manager_html"><div class="ttname"><a href="class_c_client_i_o_network_manager.html">CClientIONetworkManager</a></div><div class="ttdef"><b>Definition:</b> <a href="cclientionetworkmanager_8h_source.html#l00008">cclientionetworkmanager.h:8</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adfd7338529c1b00e8ea52fa973141e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd7338529c1b00e8ea52fa973141e70">&sect;&nbsp;</a></span>~CClientController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CClientController::~CClientController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8cpp_source.html">cclientcontroller.cpp</a> строка <a class="el" href="cclientcontroller_8cpp_source.html#l00022">22</a></p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a358ef743560d560acef69e90dfaca11e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358ef743560d560acef69e90dfaca11e">&sect;&nbsp;</a></span>connectToHost</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CClientController::connectToHost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Используется в <a class="el" href="cclientcontroller_8cpp_source.html#l00042">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="a171db18126ffb9541f47aec5cc0eda79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a171db18126ffb9541f47aec5cc0eda79">&sect;&nbsp;</a></span>disconnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CClientController::disconnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Используется в <a class="el" href="cclientcontroller_8cpp_source.html#l00042">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="a04a024fdb1135b1b5dec86b006511672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04a024fdb1135b1b5dec86b006511672">&sect;&nbsp;</a></span>finished</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CClientController::finished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Используется в <a class="el" href="cclientcontroller_8cpp_source.html#l00042">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="a456359547ec2e4225d54daeb6463008b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456359547ec2e4225d54daeb6463008b">&sect;&nbsp;</a></span>getDBManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_client_d_b_manager.html">CClientDBManager</a> * CClientController::getDBManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8cpp_source.html">cclientcontroller.cpp</a> строка <a class="el" href="cclientcontroller_8cpp_source.html#l00037">37</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="cclientcontroller_8h_source.html#l00026">m_dbm</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">m_dbm</a>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div><div class="ttc" id="class_c_client_controller_html_aacc71f5de726af350427a5eaedd6cf6c"><div class="ttname"><a href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">CClientController::m_dbm</a></div><div class="ttdeci">CClientDBManager * m_dbm</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00026">cclientcontroller.h:26</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a07441870867b13d7c867e57244101f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07441870867b13d7c867e57244101f92">&sect;&nbsp;</a></span>getFSM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_client_f_s_m.html">CClientFSM</a> * CClientController::getFSM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8cpp_source.html">cclientcontroller.cpp</a> строка <a class="el" href="cclientcontroller_8cpp_source.html#l00032">32</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="cclientcontroller_8h_source.html#l00025">m_fsm</a>.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div><div class="ttc" id="class_c_client_controller_html_ade8b08c2eae487031b6b64dac3296f5d"><div class="ttname"><a href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">CClientController::m_fsm</a></div><div class="ttdeci">CClientFSM * m_fsm</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00025">cclientcontroller.h:25</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab39fa71b009189acc06aa759d636de4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39fa71b009189acc06aa759d636de4d">&sect;&nbsp;</a></span>getIONetworkManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_client_i_o_network_manager.html">CClientIONetworkManager</a> * CClientController::getIONetworkManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8cpp_source.html">cclientcontroller.cpp</a> строка <a class="el" href="cclientcontroller_8cpp_source.html#l00027">27</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="cclientcontroller_8h_source.html#l00024">m_net</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div><div class="ttc" id="class_c_client_controller_html_ae97793346f702b77829129673408df48"><div class="ttname"><a href="class_c_client_controller.html#ae97793346f702b77829129673408df48">CClientController::m_net</a></div><div class="ttdeci">CClientIONetworkManager * m_net</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00024">cclientcontroller.h:24</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1dabfbc538daf66f1c2565808bc7db6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dabfbc538daf66f1c2565808bc7db6d">&sect;&nbsp;</a></span>initConnections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CClientController::initConnections </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. </p>
+
+<p>Замещает <a class="el" href="class_c_abstruct_controller_item.html#a27c6889230a86cb0782e6d7596b883c1">CAbstructControllerItem</a>.</p>
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8cpp_source.html">cclientcontroller.cpp</a> строка <a class="el" href="cclientcontroller_8cpp_source.html#l00042">42</a></p>
+
+<p>Перекрестные ссылки <a class="el" href="class_c_client_controller.html#a358ef743560d560acef69e90dfaca11e">connectToHost()</a>, <a class="el" href="class_c_client_controller.html#a171db18126ffb9541f47aec5cc0eda79">disconnected()</a>, <a class="el" href="class_c_client_controller.html#a04a024fdb1135b1b5dec86b006511672">finished()</a>, <a class="el" href="cclientcontroller_8h_source.html#l00026">m_dbm</a>, <a class="el" href="cclientcontroller_8h_source.html#l00025">m_fsm</a>, <a class="el" href="cclientcontroller_8h_source.html#l00024">m_net</a>, <a class="el" href="cclientcontroller_8h_source.html#l00027">m_thread</a>, <a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">CAbstructControllerItem::recvData()</a> и <a class="el" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">CAbstructControllerItem::sendData()</a>.</p>
+
+<p>Используется в <a class="el" href="cclientcontroller_8cpp_source.html#l00003">CClientController()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    connect(<a class="code" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a>, SIGNAL(<a class="code" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">sendData</a>(QString*)), <a class="code" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a>, SIGNAL(<a class="code" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">recvData</a>(QString*)));</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    connect(<a class="code" href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">m_dbm</a>, SIGNAL(<a class="code" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">sendData</a>(QString*)), <a class="code" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a>, SIGNAL(<a class="code" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">recvData</a>(QString*)));</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    connect(<a class="code" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a>, SIGNAL(sendDataToIONetworkManager(QString*)), <a class="code" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a>, SIGNAL(<a class="code" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">recvData</a>(QString*)));</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    connect(<a class="code" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a>, SIGNAL(sendDataToDBManager(QString*)), <a class="code" href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">m_dbm</a>, SIGNAL(<a class="code" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">recvData</a>(QString*)));</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    connect(<a class="code" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a>, SIGNAL(<a class="code" href="class_c_client_controller.html#a171db18126ffb9541f47aec5cc0eda79">disconnected</a>()), <span class="keyword">this</span>, SIGNAL(<a class="code" href="class_c_client_controller.html#a171db18126ffb9541f47aec5cc0eda79">disconnected</a>()));</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    connect(<span class="keyword">this</span>, SIGNAL(<a class="code" href="class_c_client_controller.html#a171db18126ffb9541f47aec5cc0eda79">disconnected</a>()), <a class="code" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a>, SLOT(deleteLater()));</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    connect(<span class="keyword">this</span>, SIGNAL(<a class="code" href="class_c_client_controller.html#a171db18126ffb9541f47aec5cc0eda79">disconnected</a>()), <a class="code" href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">m_fsm</a>, SLOT(deleteLater()));</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    connect(<span class="keyword">this</span>, SIGNAL(<a class="code" href="class_c_client_controller.html#a171db18126ffb9541f47aec5cc0eda79">disconnected</a>()), <a class="code" href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">m_dbm</a>, SLOT(deleteLater()));</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    connect(<span class="keyword">this</span>, SIGNAL(<a class="code" href="class_c_client_controller.html#a171db18126ffb9541f47aec5cc0eda79">disconnected</a>()), <a class="code" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a>, SLOT(quit()));</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    connect(<a class="code" href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">m_thread</a>, SIGNAL(<a class="code" href="class_c_client_controller.html#a04a024fdb1135b1b5dec86b006511672">finished</a>()), <span class="keyword">this</span>, SIGNAL(<a class="code" href="class_c_client_controller.html#a04a024fdb1135b1b5dec86b006511672">finished</a>()));</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    connect(<span class="keyword">this</span>, SIGNAL(<a class="code" href="class_c_client_controller.html#a358ef743560d560acef69e90dfaca11e">connectToHost</a>()), <a class="code" href="class_c_client_controller.html#ae97793346f702b77829129673408df48">m_net</a>, SLOT(<a class="code" href="class_c_client_controller.html#a358ef743560d560acef69e90dfaca11e">connectToHost</a>()));</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="class_c_client_controller_html_ade8b08c2eae487031b6b64dac3296f5d"><div class="ttname"><a href="class_c_client_controller.html#ade8b08c2eae487031b6b64dac3296f5d">CClientController::m_fsm</a></div><div class="ttdeci">CClientFSM * m_fsm</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00025">cclientcontroller.h:25</a></div></div>
+<div class="ttc" id="class_c_client_controller_html_ae97793346f702b77829129673408df48"><div class="ttname"><a href="class_c_client_controller.html#ae97793346f702b77829129673408df48">CClientController::m_net</a></div><div class="ttdeci">CClientIONetworkManager * m_net</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00024">cclientcontroller.h:24</a></div></div>
+<div class="ttc" id="class_c_client_controller_html_a04a024fdb1135b1b5dec86b006511672"><div class="ttname"><a href="class_c_client_controller.html#a04a024fdb1135b1b5dec86b006511672">CClientController::finished</a></div><div class="ttdeci">void finished()</div></div>
+<div class="ttc" id="class_c_client_controller_html_a358ef743560d560acef69e90dfaca11e"><div class="ttname"><a href="class_c_client_controller.html#a358ef743560d560acef69e90dfaca11e">CClientController::connectToHost</a></div><div class="ttdeci">void connectToHost()</div></div>
+<div class="ttc" id="class_c_client_controller_html_aacc71f5de726af350427a5eaedd6cf6c"><div class="ttname"><a href="class_c_client_controller.html#aacc71f5de726af350427a5eaedd6cf6c">CClientController::m_dbm</a></div><div class="ttdeci">CClientDBManager * m_dbm</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00026">cclientcontroller.h:26</a></div></div>
+<div class="ttc" id="class_c_abstruct_controller_item_html_a7cf2bebc87a7d0b660318e946a176eb9"><div class="ttname"><a href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">CAbstructControllerItem::sendData</a></div><div class="ttdeci">void sendData(QString *)</div><div class="ttdoc">Сигнал передачи данных внешним объектам. </div></div>
+<div class="ttc" id="class_c_abstruct_controller_item_html_a6898e48061cb0cac2065f8193bd386c1"><div class="ttname"><a href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">CAbstructControllerItem::recvData</a></div><div class="ttdeci">void recvData(QString *)</div><div class="ttdoc">Сигнал приема данных от внешнего объекта. </div></div>
+<div class="ttc" id="class_c_client_controller_html_a171db18126ffb9541f47aec5cc0eda79"><div class="ttname"><a href="class_c_client_controller.html#a171db18126ffb9541f47aec5cc0eda79">CClientController::disconnected</a></div><div class="ttdeci">void disconnected()</div></div>
+<div class="ttc" id="class_c_client_controller_html_ab573eef5149837a53b276c928d2b680d"><div class="ttname"><a href="class_c_client_controller.html#ab573eef5149837a53b276c928d2b680d">CClientController::m_thread</a></div><div class="ttdeci">QThread * m_thread</div><div class="ttdef"><b>Definition:</b> <a href="cclientcontroller_8h_source.html#l00027">cclientcontroller.h:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aacc71f5de726af350427a5eaedd6cf6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc71f5de726af350427a5eaedd6cf6c">&sect;&nbsp;</a></span>m_dbm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_client_d_b_manager.html">CClientDBManager</a>* CClientController::m_dbm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8h_source.html">cclientcontroller.h</a> строка <a class="el" href="cclientcontroller_8h_source.html#l00026">26</a></p>
+
+<p>Используется в <a class="el" href="cclientcontroller_8cpp_source.html#l00003">CClientController()</a>, <a class="el" href="cclientcontroller_8cpp_source.html#l00037">getDBManager()</a> и <a class="el" href="cclientcontroller_8cpp_source.html#l00042">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="ade8b08c2eae487031b6b64dac3296f5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8b08c2eae487031b6b64dac3296f5d">&sect;&nbsp;</a></span>m_fsm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_client_f_s_m.html">CClientFSM</a>* CClientController::m_fsm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8h_source.html">cclientcontroller.h</a> строка <a class="el" href="cclientcontroller_8h_source.html#l00025">25</a></p>
+
+<p>Используется в <a class="el" href="cclientcontroller_8cpp_source.html#l00003">CClientController()</a>, <a class="el" href="cclientcontroller_8cpp_source.html#l00032">getFSM()</a> и <a class="el" href="cclientcontroller_8cpp_source.html#l00042">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="ae97793346f702b77829129673408df48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae97793346f702b77829129673408df48">&sect;&nbsp;</a></span>m_net</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_client_i_o_network_manager.html">CClientIONetworkManager</a>* CClientController::m_net</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8h_source.html">cclientcontroller.h</a> строка <a class="el" href="cclientcontroller_8h_source.html#l00024">24</a></p>
+
+<p>Используется в <a class="el" href="cclientcontroller_8cpp_source.html#l00003">CClientController()</a>, <a class="el" href="cclientcontroller_8cpp_source.html#l00027">getIONetworkManager()</a> и <a class="el" href="cclientcontroller_8cpp_source.html#l00042">initConnections()</a>.</p>
+
+</div>
+</div>
+<a id="ab573eef5149837a53b276c928d2b680d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab573eef5149837a53b276c928d2b680d">&sect;&nbsp;</a></span>m_thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QThread* CClientController::m_thread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="cclientcontroller_8h_source.html">cclientcontroller.h</a> строка <a class="el" href="cclientcontroller_8h_source.html#l00027">27</a></p>
+
+<p>Используется в <a class="el" href="cclientcontroller_8cpp_source.html#l00003">CClientController()</a> и <a class="el" href="cclientcontroller_8cpp_source.html#l00042">initConnections()</a>.</p>
+
+</div>
+</div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li>E:/workspace/Qt/PersonalTrainer/PersonalTrainer/PersonalTrainer/Client/<a class="el" href="cclientcontroller_8h_source.html">cclientcontroller.h</a></li>
-<li>E:/workspace/Qt/PersonalTrainer/PersonalTrainer/PersonalTrainer/Client/cclientcontroller.cpp</li>
+<li>Client/<a class="el" href="cclientcontroller_8h_source.html">cclientcontroller.h</a></li>
+<li>Client/<a class="el" href="cclientcontroller_8cpp_source.html">cclientcontroller.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

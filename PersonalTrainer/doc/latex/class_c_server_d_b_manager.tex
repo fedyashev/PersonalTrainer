@@ -1,5 +1,14 @@
 \hypertarget{class_c_server_d_b_manager}{}\section{Класс C\+Server\+D\+B\+Manager}
 \label{class_c_server_d_b_manager}\index{C\+Server\+D\+B\+Manager@{C\+Server\+D\+B\+Manager}}
+
+
+Класс работы с базой данных на сервере  
+
+
+
+
+{\ttfamily \#include $<$cserverdbmanager.\+h$>$}
+
 Граф наследования\+:C\+Server\+D\+B\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,19 +18,111 @@
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_d_b_manager_af2bf11fcced1aad0ccd34a3d16c45a03}{}\label{class_c_server_d_b_manager_af2bf11fcced1aad0ccd34a3d16c45a03} 
-{\bfseries C\+Server\+D\+B\+Manager} (Q\+Object $\ast$parent=0)
-\end{DoxyCompactItemize}
+\hyperlink{class_c_server_d_b_manager_af2bf11fcced1aad0ccd34a3d16c45a03}{C\+Server\+D\+B\+Manager} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_d_b_manager_a78afc3d1890662a9bcbb3d184ac71141}{$\sim$\+C\+Server\+D\+B\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_d_b_manager_a6dcd2f88c0845cc79a47bac2ab9e9235}{}\label{class_c_server_d_b_manager_a6dcd2f88c0845cc79a47bac2ab9e9235} 
 void \hyperlink{class_c_server_d_b_manager_a6dcd2f88c0845cc79a47bac2ab9e9235}{init\+Connections} ()
-\begin{DoxyCompactList}\small\item\em Реализация виртуального метода базового класса. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Метод соединения сигналов и слотов. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Дополнительные унаследованные члены}
+
+
+\subsection{Подробное описание}
+Класс работы с базой данных на сервере 
+
+См. определение в файле cserverdbmanager.\+h строка 10
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_server_d_b_manager_af2bf11fcced1aad0ccd34a3d16c45a03}{}\label{class_c_server_d_b_manager_af2bf11fcced1aad0ccd34a3d16c45a03} 
+\index{C\+Server\+D\+B\+Manager@{C\+Server\+D\+B\+Manager}!C\+Server\+D\+B\+Manager@{C\+Server\+D\+B\+Manager}}
+\index{C\+Server\+D\+B\+Manager@{C\+Server\+D\+B\+Manager}!C\+Server\+D\+B\+Manager@{C\+Server\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{C\+Server\+D\+B\+Manager()}{CServerDBManager()}}
+{\footnotesize\ttfamily C\+Server\+D\+B\+Manager\+::\+C\+Server\+D\+B\+Manager (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em parent} & Указатель на объект верхнего уровня иерархии объектов.\\
+\hline
+\end{DoxyParams}
+В конструкторе вызывается метод \hyperlink{class_c_server_d_b_manager_a6dcd2f88c0845cc79a47bac2ab9e9235}{init\+Connections()} для соединения сигналов и слотов. 
+
+См. определение в файле cserverdbmanager.\+cpp строка 9
+
+
+
+Перекрестные ссылки init\+Connections().
+
+
+\begin{DoxyCode}
+9                                                   :
+10     \hyperlink{class_c_abstruct_d_b_manager_a53c2018cfa7a1a24bacd747967509bd7}{CAbstructDBManager}(parent)
+11 \{
+12     \hyperlink{class_c_server_d_b_manager_a6dcd2f88c0845cc79a47bac2ab9e9235}{initConnections}();
+13 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_d_b_manager_a78afc3d1890662a9bcbb3d184ac71141}{}\label{class_c_server_d_b_manager_a78afc3d1890662a9bcbb3d184ac71141} 
+\index{C\+Server\+D\+B\+Manager@{C\+Server\+D\+B\+Manager}!````~C\+Server\+D\+B\+Manager@{$\sim$\+C\+Server\+D\+B\+Manager}}
+\index{````~C\+Server\+D\+B\+Manager@{$\sim$\+C\+Server\+D\+B\+Manager}!C\+Server\+D\+B\+Manager@{C\+Server\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Server\+D\+B\+Manager()}{~CServerDBManager()}}
+{\footnotesize\ttfamily C\+Server\+D\+B\+Manager\+::$\sim$\+C\+Server\+D\+B\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. 
+
+
+
+См. определение в файле cserverdbmanager.\+cpp строка 18
+
+
+\begin{DoxyCode}
+19 \{
+20     qDebug() << \textcolor{stringliteral}{"CServerDBManager: destructor "} << \textcolor{keyword}{this};
+21 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_server_d_b_manager_a6dcd2f88c0845cc79a47bac2ab9e9235}{}\label{class_c_server_d_b_manager_a6dcd2f88c0845cc79a47bac2ab9e9235} 
+\index{C\+Server\+D\+B\+Manager@{C\+Server\+D\+B\+Manager}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Server\+D\+B\+Manager@{C\+Server\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Server\+D\+B\+Manager\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Метод соединения сигналов и слотов. 
+
+
+
+Переопределяет метод предка \hyperlink{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659}{C\+Abstruct\+D\+B\+Manager}.
+
+
+
+См. определение в файле cserverdbmanager.\+cpp строка 26
+
+
+
+Используется в C\+Server\+D\+B\+Manager().
+
+
+\begin{DoxyCode}
+27 \{
+28 
+29 \}
+\end{DoxyCode}
 
 
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-cserverdbmanager.\+h\item 
-cserverdbmanager.\+cpp\end{DoxyCompactItemize}
+Server/\hyperlink{cserverdbmanager_8h}{cserverdbmanager.\+h}\item 
+Server/\hyperlink{cserverdbmanager_8cpp}{cserverdbmanager.\+cpp}\end{DoxyCompactItemize}

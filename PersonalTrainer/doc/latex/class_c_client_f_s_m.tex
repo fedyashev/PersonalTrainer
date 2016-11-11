@@ -1,5 +1,9 @@
 \hypertarget{class_c_client_f_s_m}{}\section{Класс C\+Client\+F\+SM}
 \label{class_c_client_f_s_m}\index{C\+Client\+F\+SM@{C\+Client\+F\+SM}}
+
+
+{\ttfamily \#include $<$cclientfsm.\+h$>$}
+
 Граф наследования\+:C\+Client\+F\+SM\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,19 +13,98 @@
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_f_s_m_ad5cde8ac83f83aa722a1739bdf46a453}{}\label{class_c_client_f_s_m_ad5cde8ac83f83aa722a1739bdf46a453} 
-{\bfseries C\+Client\+F\+SM} (Q\+Object $\ast$parent=0)
+\hyperlink{class_c_client_f_s_m_ad5cde8ac83f83aa722a1739bdf46a453}{C\+Client\+F\+SM} (Q\+Object $\ast$parent=0)
+\item 
+virtual \hyperlink{class_c_client_f_s_m_acd28280c438e234e05340ddb46472c2d}{$\sim$\+C\+Client\+F\+SM} ()
 \end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_f_s_m_aaf6b857e9a5d2b2f55b71212e74fd4cb}{}\label{class_c_client_f_s_m_aaf6b857e9a5d2b2f55b71212e74fd4cb} 
 void \hyperlink{class_c_client_f_s_m_aaf6b857e9a5d2b2f55b71212e74fd4cb}{init\+Connections} ()
 \begin{DoxyCompactList}\small\item\em Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Дополнительные унаследованные члены}
 
 
+\subsection{Подробное описание}
+
+
+См. определение в файле cclientfsm.\+h строка 7
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_client_f_s_m_ad5cde8ac83f83aa722a1739bdf46a453}{}\label{class_c_client_f_s_m_ad5cde8ac83f83aa722a1739bdf46a453} 
+\index{C\+Client\+F\+SM@{C\+Client\+F\+SM}!C\+Client\+F\+SM@{C\+Client\+F\+SM}}
+\index{C\+Client\+F\+SM@{C\+Client\+F\+SM}!C\+Client\+F\+SM@{C\+Client\+F\+SM}}
+\subsubsection{\texorpdfstring{C\+Client\+F\+S\+M()}{CClientFSM()}}
+{\footnotesize\ttfamily C\+Client\+F\+S\+M\+::\+C\+Client\+F\+SM (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+См. определение в файле cclientfsm.\+cpp строка 3
+
+
+
+Перекрестные ссылки init\+Connections().
+
+
+\begin{DoxyCode}
+3                                      :
+4     \hyperlink{class_c_abstruct_f_s_m_a54037c986f6b437c50d5e8ba42063330}{CAbstructFSM}(parent)
+5 \{
+6     \hyperlink{class_c_client_f_s_m_aaf6b857e9a5d2b2f55b71212e74fd4cb}{initConnections}();
+7 \}
+\end{DoxyCode}
+\hypertarget{class_c_client_f_s_m_acd28280c438e234e05340ddb46472c2d}{}\label{class_c_client_f_s_m_acd28280c438e234e05340ddb46472c2d} 
+\index{C\+Client\+F\+SM@{C\+Client\+F\+SM}!````~C\+Client\+F\+SM@{$\sim$\+C\+Client\+F\+SM}}
+\index{````~C\+Client\+F\+SM@{$\sim$\+C\+Client\+F\+SM}!C\+Client\+F\+SM@{C\+Client\+F\+SM}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Client\+F\+S\+M()}{~CClientFSM()}}
+{\footnotesize\ttfamily C\+Client\+F\+S\+M\+::$\sim$\+C\+Client\+F\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+См. определение в файле cclientfsm.\+cpp строка 9
+
+
+\begin{DoxyCode}
+10 \{
+11 
+12 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_client_f_s_m_aaf6b857e9a5d2b2f55b71212e74fd4cb}{}\label{class_c_client_f_s_m_aaf6b857e9a5d2b2f55b71212e74fd4cb} 
+\index{C\+Client\+F\+SM@{C\+Client\+F\+SM}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Client\+F\+SM@{C\+Client\+F\+SM}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Client\+F\+S\+M\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. 
+
+
+
+Замещает \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{C\+Abstruct\+Controller\+Item}.
+
+
+
+См. определение в файле cclientfsm.\+cpp строка 14
+
+
+
+Используется в C\+Client\+F\+S\+M().
+
+
+\begin{DoxyCode}
+15 \{
+16 
+17 \}
+\end{DoxyCode}
+
+
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/cclientfsm.\+h\item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/cclientfsm.\+cpp\end{DoxyCompactItemize}
+Client/\hyperlink{cclientfsm_8h}{cclientfsm.\+h}\item 
+Client/\hyperlink{cclientfsm_8cpp}{cclientfsm.\+cpp}\end{DoxyCompactItemize}

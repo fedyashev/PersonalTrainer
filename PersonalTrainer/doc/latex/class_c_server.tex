@@ -18,30 +18,236 @@
 \subsection*{Открытые слоты}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_a4e5b127e1eb4342a130018d9ff921735}{}\label{class_c_server_a4e5b127e1eb4342a130018d9ff921735} 
-void {\bfseries new\+Connection} ()
-\item 
-\hypertarget{class_c_server_adbc93cef317eac86a09a0b7067c96cc1}{}\label{class_c_server_adbc93cef317eac86a09a0b7067c96cc1} 
-void {\bfseries start\+Server} ()
-\end{DoxyCompactItemize}
+void \hyperlink{class_c_server_a4e5b127e1eb4342a130018d9ff921735}{new\+Connection} ()
+\begin{DoxyCompactList}\small\item\em Слот обработки для сигнала Q\+Tcp\+Server\+::new\+Connection(). \end{DoxyCompactList}\item 
+void \hyperlink{class_c_server_adbc93cef317eac86a09a0b7067c96cc1}{start\+Server} ()
+\begin{DoxyCompactList}\small\item\em Слот запуска сервера. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_a743d64a8f7c949de3de873735f726fcf}{}\label{class_c_server_a743d64a8f7c949de3de873735f726fcf} 
-{\bfseries C\+Server} (Q\+Object $\ast$parent=0)
+\hyperlink{class_c_server_a743d64a8f7c949de3de873735f726fcf}{C\+Server} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+\hyperlink{class_c_server_af6da9f8b52bdc049e21cd7c687ef4d4b}{$\sim$\+C\+Server} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_server_a32c8f33336a76b36c2653553b970e76c}{init\+Connections} ()
+\begin{DoxyCompactList}\small\item\em Метод инициализации соединения сигналов и слотов. \end{DoxyCompactList}\item 
+Q\+Tcp\+Server $\ast$ \hyperlink{class_c_server_a3ad6eca8c26fc7852aaf1c626c84e220}{get\+Server} () const
+\begin{DoxyCompactList}\small\item\em Метод-\/getter указателя на объект сервера. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_server_a32c8f33336a76b36c2653553b970e76c}{}\label{class_c_server_a32c8f33336a76b36c2653553b970e76c} 
-void {\bfseries init\+Connections} ()
-\item 
-\hypertarget{class_c_server_a3ad6eca8c26fc7852aaf1c626c84e220}{}\label{class_c_server_a3ad6eca8c26fc7852aaf1c626c84e220} 
-Q\+Tcp\+Server $\ast$ {\bfseries get\+Server} () const
-\end{DoxyCompactItemize}
+Q\+Tcp\+Server $\ast$ \hyperlink{class_c_server_a0ee5b734ddfc86fc181e767700f7a46b}{m\+\_\+server}
+\begin{DoxyCompactList}\small\item\em Указатель на объект сервера. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Подробное описание}
 Сервер 
 
+См. определение в файле cserver.\+h строка 13
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_server_a743d64a8f7c949de3de873735f726fcf}{}\label{class_c_server_a743d64a8f7c949de3de873735f726fcf} 
+\index{C\+Server@{C\+Server}!C\+Server@{C\+Server}}
+\index{C\+Server@{C\+Server}!C\+Server@{C\+Server}}
+\subsubsection{\texorpdfstring{C\+Server()}{CServer()}}
+{\footnotesize\ttfamily C\+Server\+::\+C\+Server (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em parent} & Указатель на объект верхнего уровня иерархии объектов.\\
+\hline
+\end{DoxyParams}
+В конструкторе вызывается метод init\+Connection() который инициализирует соединения сигналов и слотов. 
+
+См. определение в файле cserver.\+cpp строка 10
+
+
+
+Перекрестные ссылки init\+Connections() и start\+Server().
+
+
+\begin{DoxyCode}
+10                                 :
+11     QObject(parent), \hyperlink{class_c_server_a0ee5b734ddfc86fc181e767700f7a46b}{m\_server}(\textcolor{keyword}{new} QTcpServer())
+12 \{
+13     \hyperlink{class_c_server_a32c8f33336a76b36c2653553b970e76c}{initConnections}();
+14     \hyperlink{class_c_server_adbc93cef317eac86a09a0b7067c96cc1}{startServer}();
+15 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_af6da9f8b52bdc049e21cd7c687ef4d4b}{}\label{class_c_server_af6da9f8b52bdc049e21cd7c687ef4d4b} 
+\index{C\+Server@{C\+Server}!````~C\+Server@{$\sim$\+C\+Server}}
+\index{````~C\+Server@{$\sim$\+C\+Server}!C\+Server@{C\+Server}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Server()}{~CServer()}}
+{\footnotesize\ttfamily C\+Server\+::$\sim$\+C\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. 
+
+
+
+См. определение в файле cserver.\+cpp строка 20
+
+
+\begin{DoxyCode}
+21 \{
+22     qDebug() << \textcolor{stringliteral}{"CServer: destructor "} << \textcolor{keyword}{this};
+23 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_server_a3ad6eca8c26fc7852aaf1c626c84e220}{}\label{class_c_server_a3ad6eca8c26fc7852aaf1c626c84e220} 
+\index{C\+Server@{C\+Server}!get\+Server@{get\+Server}}
+\index{get\+Server@{get\+Server}!C\+Server@{C\+Server}}
+\subsubsection{\texorpdfstring{get\+Server()}{getServer()}}
+{\footnotesize\ttfamily Q\+Tcp\+Server $\ast$ C\+Server\+::get\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Метод-\/getter указателя на объект сервера. 
+
+\begin{DoxyReturn}{Возвращает}
+Возвращыет указатель на объект сервера. 
+\end{DoxyReturn}
+
+
+См. определение в файле cserver.\+cpp строка 43
+
+
+
+Перекрестные ссылки m\+\_\+server.
+
+
+\begin{DoxyCode}
+44 \{
+45     \textcolor{keywordflow}{return} \hyperlink{class_c_server_a0ee5b734ddfc86fc181e767700f7a46b}{m\_server};
+46 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_a32c8f33336a76b36c2653553b970e76c}{}\label{class_c_server_a32c8f33336a76b36c2653553b970e76c} 
+\index{C\+Server@{C\+Server}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Server@{C\+Server}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Server\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод инициализации соединения сигналов и слотов. 
+
+Соединяем сигнал Q\+Tcp\+Server\+::new\+Connection() и слот \hyperlink{class_c_server_a4e5b127e1eb4342a130018d9ff921735}{C\+Server\+::new\+Connection()}. Когда к серверу подключается новый клиент объет класса Q\+Tcp\+Server генерирует сигнал \hyperlink{class_c_server_a4e5b127e1eb4342a130018d9ff921735}{new\+Connection()}. Этот сигнал подключаем к слоту \hyperlink{class_c_server_a4e5b127e1eb4342a130018d9ff921735}{C\+Server\+::new\+Connection()}, таким образом, при подключении нового клиента вызывается слот \hyperlink{class_c_server_a4e5b127e1eb4342a130018d9ff921735}{C\+Server\+::new\+Connection()}.
+
+См. определение в файле cserver.\+cpp строка 28
+
+
+
+Перекрестные ссылки m\+\_\+server и new\+Connection().
+
+
+
+Используется в C\+Server().
+
+
+\begin{DoxyCode}
+29 \{
+36     connect(\hyperlink{class_c_server_a0ee5b734ddfc86fc181e767700f7a46b}{m\_server}, SIGNAL(\hyperlink{class_c_server_a4e5b127e1eb4342a130018d9ff921735}{newConnection}()), SLOT(
+      \hyperlink{class_c_server_a4e5b127e1eb4342a130018d9ff921735}{newConnection}()));
+37 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_a4e5b127e1eb4342a130018d9ff921735}{}\label{class_c_server_a4e5b127e1eb4342a130018d9ff921735} 
+\index{C\+Server@{C\+Server}!new\+Connection@{new\+Connection}}
+\index{new\+Connection@{new\+Connection}!C\+Server@{C\+Server}}
+\subsubsection{\texorpdfstring{new\+Connection}{newConnection}}
+{\footnotesize\ttfamily void C\+Server\+::new\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот обработки для сигнала Q\+Tcp\+Server\+::new\+Connection(). 
+
+При подключении клиента к серверу создается объект класса Q\+Tcp\+Socket. Далее создается контроллер работы с клиентом -\/ объект класса \hyperlink{class_c_server_controller}{C\+Server\+Controller}, в который передается указетль на созданный сокет для данного подключения и указатель на объект верхнего уровня иерархии объектов. Также, инициализируется соединение сигнала \hyperlink{class_c_server_controller_a49ac8bb325430fc9112056d862c5c117}{C\+Server\+Controller\+::finish\+Work()} и слота C\+Server\+Controller\+::delete\+Later(). Когда контроллер завершил работу всех в включенных в него объектов, завершил работу отдельного потока и включил объекты в расписание на удаление, то сервер включает контроллер в расписание на удаление. 
+
+См. определение в файле cserver.\+cpp строка 60
+
+
+
+Перекрестные ссылки m\+\_\+server.
+
+
+
+Используется в init\+Connections().
+
+
+\begin{DoxyCode}
+61 \{
+62     QTcpSocket *socket = \hyperlink{class_c_server_a0ee5b734ddfc86fc181e767700f7a46b}{m\_server}->nextPendingConnection();
+63     \hyperlink{class_c_server_controller}{CServerController} *controller = \textcolor{keyword}{new} \hyperlink{class_c_server_controller}{CServerController}(socket, \textcolor{keyword}{this});
+64     connect(controller, SIGNAL(finishWork()), controller, SLOT(deleteLater()));
+65     qDebug() << \textcolor{stringliteral}{"Client connected. SC: "} << socket->socketDescriptor();
+66 \}
+\end{DoxyCode}
+\hypertarget{class_c_server_adbc93cef317eac86a09a0b7067c96cc1}{}\label{class_c_server_adbc93cef317eac86a09a0b7067c96cc1} 
+\index{C\+Server@{C\+Server}!start\+Server@{start\+Server}}
+\index{start\+Server@{start\+Server}!C\+Server@{C\+Server}}
+\subsubsection{\texorpdfstring{start\+Server}{startServer}}
+{\footnotesize\ttfamily void C\+Server\+::start\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот запуска сервера. 
+
+Сервер запускает прослушивание порта 52816 на всех сетевых интерфейсах подключенных к хосту. Если успешно установлено прослушивание порта 52816 по всем сетевым интерфейсам, то в консоль выводиться сообщение о успешном запуске сервера, иначе выводиться сообщение о невозможности запуска сервера. 
+
+См. определение в файле cserver.\+cpp строка 76
+
+
+
+Перекрестные ссылки m\+\_\+server.
+
+
+
+Используется в C\+Server().
+
+
+\begin{DoxyCode}
+77 \{
+78     \textcolor{keywordflow}{if} (\hyperlink{class_c_server_a0ee5b734ddfc86fc181e767700f7a46b}{m\_server}->listen(QHostAddress::Any,52816))
+79     \{
+80         qDebug() << \textcolor{stringliteral}{"Server started: success."};
+81     \} \textcolor{keywordflow}{else}
+82     \{
+83         qDebug() << \textcolor{stringliteral}{"Server started: faild."};
+84     \}
+85 \}
+\end{DoxyCode}
+
+
+\subsection{Данные класса}
+\hypertarget{class_c_server_a0ee5b734ddfc86fc181e767700f7a46b}{}\label{class_c_server_a0ee5b734ddfc86fc181e767700f7a46b} 
+\index{C\+Server@{C\+Server}!m\+\_\+server@{m\+\_\+server}}
+\index{m\+\_\+server@{m\+\_\+server}!C\+Server@{C\+Server}}
+\subsubsection{\texorpdfstring{m\+\_\+server}{m\_server}}
+{\footnotesize\ttfamily Q\+Tcp\+Server$\ast$ C\+Server\+::m\+\_\+server\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на объект сервера. 
+
+
+
+См. определение в файле cserver.\+h строка 25
+
+
+
+Используется в get\+Server(), init\+Connections(), new\+Connection() и start\+Server().
+
+
+
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-cserver.\+h\item 
-cserver.\+cpp\end{DoxyCompactItemize}
+Server/\hyperlink{cserver_8h}{cserver.\+h}\item 
+Server/\hyperlink{cserver_8cpp}{cserver.\+cpp}\end{DoxyCompactItemize}

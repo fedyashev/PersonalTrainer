@@ -1,5 +1,9 @@
 \hypertarget{class_c_client_i_o_network_manager}{}\section{Класс C\+Client\+I\+O\+Network\+Manager}
 \label{class_c_client_i_o_network_manager}\index{C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}}
+
+
+{\ttfamily \#include $<$cclientionetworkmanager.\+h$>$}
+
 Граф наследования\+:C\+Client\+I\+O\+Network\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,28 +13,154 @@
 \subsection*{Открытые слоты}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_i_o_network_manager_a1a4c3fd9405b85cb43e20b24d9db18e8}{}\label{class_c_client_i_o_network_manager_a1a4c3fd9405b85cb43e20b24d9db18e8} 
-void {\bfseries error} (Q\+Abstract\+Socket\+::\+Socket\+Error)
+void \hyperlink{class_c_client_i_o_network_manager_a1a4c3fd9405b85cb43e20b24d9db18e8}{error} (Q\+Abstract\+Socket\+::\+Socket\+Error)
 \item 
-\hypertarget{class_c_client_i_o_network_manager_aaa7b77037603697d3bee7daed467b092}{}\label{class_c_client_i_o_network_manager_aaa7b77037603697d3bee7daed467b092} 
-void {\bfseries connect\+To\+Host} ()
+void \hyperlink{class_c_client_i_o_network_manager_aaa7b77037603697d3bee7daed467b092}{connect\+To\+Host} ()
 \end{DoxyCompactItemize}
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_i_o_network_manager_af9f85db2c4a515cc974038086edc6b9f}{}\label{class_c_client_i_o_network_manager_af9f85db2c4a515cc974038086edc6b9f} 
-{\bfseries C\+Client\+I\+O\+Network\+Manager} (Q\+Tcp\+Socket $\ast$socket, Q\+Object $\ast$parent=0)
+\hyperlink{class_c_client_i_o_network_manager_af9f85db2c4a515cc974038086edc6b9f}{C\+Client\+I\+O\+Network\+Manager} (Q\+Tcp\+Socket $\ast$socket, Q\+Object $\ast$parent=0)
+\item 
+virtual \hyperlink{class_c_client_i_o_network_manager_aaaeddd1337640480b4eae0418cee6026}{$\sim$\+C\+Client\+I\+O\+Network\+Manager} ()
 \end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_client_i_o_network_manager_aeb1564c209ae8b790cf799075cfa6a98}{}\label{class_c_client_i_o_network_manager_aeb1564c209ae8b790cf799075cfa6a98} 
 void \hyperlink{class_c_client_i_o_network_manager_aeb1564c209ae8b790cf799075cfa6a98}{init\+Connections} ()
 \begin{DoxyCompactList}\small\item\em Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Дополнительные унаследованные члены}
 
 
+\subsection{Подробное описание}
+
+
+См. определение в файле cclientionetworkmanager.\+h строка 8
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_client_i_o_network_manager_af9f85db2c4a515cc974038086edc6b9f}{}\label{class_c_client_i_o_network_manager_af9f85db2c4a515cc974038086edc6b9f} 
+\index{C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}!C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}}
+\index{C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}!C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{C\+Client\+I\+O\+Network\+Manager()}{CClientIONetworkManager()}}
+{\footnotesize\ttfamily C\+Client\+I\+O\+Network\+Manager\+::\+C\+Client\+I\+O\+Network\+Manager (\begin{DoxyParamCaption}\item[{Q\+Tcp\+Socket $\ast$}]{socket,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+См. определение в файле cclientionetworkmanager.\+cpp строка 3
+
+
+
+Перекрестные ссылки init\+Connections().
+
+
+\begin{DoxyCode}
+3                                                                                    :
+4     \hyperlink{class_c_abstruct_i_o_network_manager_a4ed201a3712ddf4ccd2135a0eb40fbf2}{CAbstructIONetworkManager}(socket, parent)
+5 \{
+6     \hyperlink{class_c_client_i_o_network_manager_aeb1564c209ae8b790cf799075cfa6a98}{initConnections}();
+7 \}
+\end{DoxyCode}
+\hypertarget{class_c_client_i_o_network_manager_aaaeddd1337640480b4eae0418cee6026}{}\label{class_c_client_i_o_network_manager_aaaeddd1337640480b4eae0418cee6026} 
+\index{C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}!````~C\+Client\+I\+O\+Network\+Manager@{$\sim$\+C\+Client\+I\+O\+Network\+Manager}}
+\index{````~C\+Client\+I\+O\+Network\+Manager@{$\sim$\+C\+Client\+I\+O\+Network\+Manager}!C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Client\+I\+O\+Network\+Manager()}{~CClientIONetworkManager()}}
+{\footnotesize\ttfamily C\+Client\+I\+O\+Network\+Manager\+::$\sim$\+C\+Client\+I\+O\+Network\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+См. определение в файле cclientionetworkmanager.\+cpp строка 9
+
+
+\begin{DoxyCode}
+10 \{
+11 
+12 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_client_i_o_network_manager_aaa7b77037603697d3bee7daed467b092}{}\label{class_c_client_i_o_network_manager_aaa7b77037603697d3bee7daed467b092} 
+\index{C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}!connect\+To\+Host@{connect\+To\+Host}}
+\index{connect\+To\+Host@{connect\+To\+Host}!C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{connect\+To\+Host}{connectToHost}}
+{\footnotesize\ttfamily void C\+Client\+I\+O\+Network\+Manager\+::connect\+To\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+См. определение в файле cclientionetworkmanager.\+cpp строка 19
+
+
+
+Перекрестные ссылки C\+Abstruct\+I\+O\+Network\+Manager\+::get\+Socket().
+
+
+\begin{DoxyCode}
+20 \{
+21     \hyperlink{class_c_abstruct_i_o_network_manager_a118a2c8254c149614cba51c42147c709}{getSocket}()->connectToHost(\textcolor{stringliteral}{"192.168.100.2"}, 52816);
+22 \}
+\end{DoxyCode}
+\hypertarget{class_c_client_i_o_network_manager_a1a4c3fd9405b85cb43e20b24d9db18e8}{}\label{class_c_client_i_o_network_manager_a1a4c3fd9405b85cb43e20b24d9db18e8} 
+\index{C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}!error@{error}}
+\index{error@{error}!C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily void C\+Client\+I\+O\+Network\+Manager\+::error (\begin{DoxyParamCaption}\item[{Q\+Abstract\+Socket\+::\+Socket\+Error}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+См. определение в файле cclientionetworkmanager.\+cpp строка 14
+
+
+
+Перекрестные ссылки C\+Abstruct\+I\+O\+Network\+Manager\+::get\+Socket() и C\+Abstruct\+Controller\+Item\+::send\+Data().
+
+
+
+Используется в init\+Connections().
+
+
+\begin{DoxyCode}
+15 \{
+16     emit \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{sendData}(\textcolor{keyword}{new} QString(\hyperlink{class_c_abstruct_i_o_network_manager_a118a2c8254c149614cba51c42147c709}{getSocket}()->errorString()));
+17 \}
+\end{DoxyCode}
+\hypertarget{class_c_client_i_o_network_manager_aeb1564c209ae8b790cf799075cfa6a98}{}\label{class_c_client_i_o_network_manager_aeb1564c209ae8b790cf799075cfa6a98} 
+\index{C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Client\+I\+O\+Network\+Manager@{C\+Client\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Client\+I\+O\+Network\+Manager\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. 
+
+
+
+Замещает \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{C\+Abstruct\+Controller\+Item}.
+
+
+
+См. определение в файле cclientionetworkmanager.\+cpp строка 24
+
+
+
+Перекрестные ссылки error() и C\+Abstruct\+I\+O\+Network\+Manager\+::get\+Socket().
+
+
+
+Используется в C\+Client\+I\+O\+Network\+Manager().
+
+
+\begin{DoxyCode}
+25 \{
+26     connect(this->\hyperlink{class_c_abstruct_i_o_network_manager_a118a2c8254c149614cba51c42147c709}{getSocket}(), SIGNAL(\hyperlink{class_c_client_i_o_network_manager_a1a4c3fd9405b85cb43e20b24d9db18e8}{error}(QAbstractSocket::SocketError)), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_c_client_i_o_network_manager_a1a4c3fd9405b85cb43e20b24d9db18e8}{error}(QAbstractSocket::SocketError)));
+27 \}
+\end{DoxyCode}
+
+
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/cclientionetworkmanager.\+h\item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/\+Client/cclientionetworkmanager.\+cpp\end{DoxyCompactItemize}
+Client/\hyperlink{cclientionetworkmanager_8h}{cclientionetworkmanager.\+h}\item 
+Client/\hyperlink{cclientionetworkmanager_8cpp}{cclientionetworkmanager.\+cpp}\end{DoxyCompactItemize}

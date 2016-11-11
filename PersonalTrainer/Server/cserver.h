@@ -22,7 +22,7 @@ public:
     QTcpServer *getServer() const;
 
 private:
-    QTcpServer *m_server;
+    QTcpServer *m_server; ///< Указатель на объект сервера.
 
 signals:
 

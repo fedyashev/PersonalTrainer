@@ -20,13 +20,11 @@
 \item 
 \hyperlink{class_c_abstruct_d_b_manager_a53c2018cfa7a1a24bacd747967509bd7}{C\+Abstruct\+D\+B\+Manager} (Q\+Object $\ast$parent=0)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_c_abstruct_d_b_manager}{C\+Abstruct\+D\+B\+Manager}. \end{DoxyCompactList}\item 
-\hypertarget{class_c_abstruct_d_b_manager_a75785e87f1f6dcb6cc2d48d4eced257b}{}\label{class_c_abstruct_d_b_manager_a75785e87f1f6dcb6cc2d48d4eced257b} 
 virtual \hyperlink{class_c_abstruct_d_b_manager_a75785e87f1f6dcb6cc2d48d4eced257b}{$\sim$\+C\+Abstruct\+D\+B\+Manager} ()
 \begin{DoxyCompactList}\small\item\em $\sim$\+C\+Abstruct\+D\+B\+Manager \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Защищенные члены}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659}{}\label{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659} 
 void \hyperlink{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659}{init\+Connections} ()
 \begin{DoxyCompactList}\small\item\em Реализация виртуального метода базового класса. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Дополнительные унаследованные члены}
@@ -34,6 +32,10 @@ void \hyperlink{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659}{
 
 \subsection{Подробное описание}
 Базовый класс задает базовый функционал работы с базой данных. 
+
+См. определение в файле cabstructdbmanager.\+h строка 11
+
+
 
 \subsection{Конструктор(ы)}
 \hypertarget{class_c_abstruct_d_b_manager_a53c2018cfa7a1a24bacd747967509bd7}{}\label{class_c_abstruct_d_b_manager_a53c2018cfa7a1a24bacd747967509bd7} 
@@ -53,7 +55,78 @@ void \hyperlink{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659}{
 \end{DoxyParams}
 
 
+См. определение в файле cabstructdbmanager.\+cpp строка 7
+
+
+
+Перекрестные ссылки init\+Connections().
+
+
+\begin{DoxyCode}
+7                                                       :
+8     \hyperlink{class_c_abstruct_controller_item_a1d99654a9522cc8721a329d1dcee35a4}{CAbstructControllerItem}(parent)
+9 \{
+10     \hyperlink{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659}{initConnections}();
+11 \}
+\end{DoxyCode}
+\hypertarget{class_c_abstruct_d_b_manager_a75785e87f1f6dcb6cc2d48d4eced257b}{}\label{class_c_abstruct_d_b_manager_a75785e87f1f6dcb6cc2d48d4eced257b} 
+\index{C\+Abstruct\+D\+B\+Manager@{C\+Abstruct\+D\+B\+Manager}!````~C\+Abstruct\+D\+B\+Manager@{$\sim$\+C\+Abstruct\+D\+B\+Manager}}
+\index{````~C\+Abstruct\+D\+B\+Manager@{$\sim$\+C\+Abstruct\+D\+B\+Manager}!C\+Abstruct\+D\+B\+Manager@{C\+Abstruct\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Abstruct\+D\+B\+Manager()}{~CAbstructDBManager()}}
+{\footnotesize\ttfamily C\+Abstruct\+D\+B\+Manager\+::$\sim$\+C\+Abstruct\+D\+B\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+$\sim$\+C\+Abstruct\+D\+B\+Manager 
+
+
+
+См. определение в файле cabstructdbmanager.\+cpp строка 16
+
+
+\begin{DoxyCode}
+17 \{
+18     qDebug() << \textcolor{stringliteral}{"CAbstructDBManager: destructor "} << \textcolor{keyword}{this};
+19 \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659}{}\label{class_c_abstruct_d_b_manager_ad450c557df6d9a7dfcc4a37082f35659} 
+\index{C\+Abstruct\+D\+B\+Manager@{C\+Abstruct\+D\+B\+Manager}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Abstruct\+D\+B\+Manager@{C\+Abstruct\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Abstruct\+D\+B\+Manager\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Реализация виртуального метода базового класса. 
+
+
+
+Замещает \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{C\+Abstruct\+Controller\+Item}.
+
+
+
+Переопределяется в \hyperlink{class_c_server_d_b_manager_a6dcd2f88c0845cc79a47bac2ab9e9235}{C\+Server\+D\+B\+Manager}.
+
+
+
+См. определение в файле cabstructdbmanager.\+cpp строка 24
+
+
+
+Используется в C\+Abstruct\+D\+B\+Manager().
+
+
+\begin{DoxyCode}
+25 \{
+26 
+27 \}
+\end{DoxyCode}
+
+
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructdbmanager.\+h\item 
-E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructdbmanager.\+cpp\end{DoxyCompactItemize}
+lib/\hyperlink{cabstructdbmanager_8h}{cabstructdbmanager.\+h}\item 
+lib/\hyperlink{cabstructdbmanager_8cpp}{cabstructdbmanager.\+cpp}\end{DoxyCompactItemize}

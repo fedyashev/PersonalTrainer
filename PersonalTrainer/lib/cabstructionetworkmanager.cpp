@@ -1,9 +1,9 @@
 #include "cabstructionetworkmanager.h"
 
 /*!
- * \brief Коструктор
- * \param[in] socket Сокет работы с сетью.
- * \param[in] parent Объект верхнего уровня иерархии объектов
+ * \brief Коструктор.
+ * \param[in] socket Указатель на объект сокета работы с сетью.
+ * \param[in] parent Указатель на объект верхнего уровня иерархии объектов.
  */
 CAbstructIONetworkManager::CAbstructIONetworkManager(QTcpSocket *socket, QObject *parent) :
     CAbstructControllerItem(parent), m_socket(socket)
@@ -74,7 +74,28 @@ void CAbstructIONetworkManager::initConnections()
      * вызывется слот приема данных из сети
      */
     connect(m_socket, SIGNAL(readyRead()), SLOT(recvDataFromSocket()));
+
+    /*!
+     * \brief Соединяем сигнал CAbstructIONetworkManager::recvData(QString*) со слотом
+     * CAbstructIONetworkManager::sendDataToSocket(QString*). Когда у объекта управляющего сетевым
+     * взаимодействием генерируется сигнал recvData(QString*), т.е. внешний объект передает данные
+     * в объект управления сетевым взаимодействием, то вызывается слот sendDataToSocket(QString*)
+     * для отправки данных по сети.
+     */
     connect(this, SIGNAL(recvData(QString*)), this, SLOT(sendDataToSocket(QString*)));
+
+    /*!
+     * \brief Соединяем сигнал QTcpSocket::disconnected() и сигнал CAbstructIONetworkManager::disconnected().
+     * При разрыве сетевого подключения сокет генерирует сигнал disconnected(). Этот сигнал вызывает
+     * генерацию сигнала disconnected() у объекта управляющего сетевым взаимодействием.
+     */
     connect(m_socket, SIGNAL(disconnected()), SIGNAL(disconnected()));
+
+    /*!
+     * \brief Соединяем сигнал QTcpSocket::disconnected() и QTcpSocket::deleteLater().
+     * Когда сокет сгенерировал сигнал disconnected(), то работа с сокетом считается завершенной
+     * и объект сокета, соответствующего текущему подключению, считается больше не нужным, поэтому
+     * объект сокета нужно включить в расписание на удаление объектов при помощи слота deleteLater().
+     */
     connect(m_socket, SIGNAL(disconnected()), m_socket, SLOT(deleteLater()));
 }
