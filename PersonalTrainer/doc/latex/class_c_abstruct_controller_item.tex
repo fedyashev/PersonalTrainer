@@ -1,0 +1,69 @@
+\hypertarget{class_c_abstruct_controller_item}{}\section{Класс C\+Abstruct\+Controller\+Item}
+\label{class_c_abstruct_controller_item}\index{C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}}
+
+
+Абстрактный класс задает интерфейс для взаимодействия объектов контроллера.  
+
+
+
+
+{\ttfamily \#include $<$cabstructcontrolleritem.\+h$>$}
+
+Граф наследования\+:C\+Abstruct\+Controller\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.720430cm]{class_c_abstruct_controller_item}
+\end{center}
+\end{figure}
+\subsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{}\label{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9} 
+void \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{send\+Data} (Q\+String $\ast$)
+\begin{DoxyCompactList}\small\item\em Сигнал передачи данных внешним объектам. \end{DoxyCompactList}\item 
+\hypertarget{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{}\label{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1} 
+void \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recv\+Data} (Q\+String $\ast$)
+\begin{DoxyCompactList}\small\item\em Сигнал приема данных от внешнего объекта. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_abstruct_controller_item_a1d99654a9522cc8721a329d1dcee35a4}{C\+Abstruct\+Controller\+Item} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Коструктор \end{DoxyCompactList}\item 
+\hypertarget{class_c_abstruct_controller_item_a807bca71bd9a2966e60ec5c3c807f359}{}\label{class_c_abstruct_controller_item_a807bca71bd9a2966e60ec5c3c807f359} 
+virtual \hyperlink{class_c_abstruct_controller_item_a807bca71bd9a2966e60ec5c3c807f359}{$\sim$\+C\+Abstruct\+Controller\+Item} ()
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{}\label{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1} 
+virtual void \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{init\+Connections} ()=0
+\begin{DoxyCompactList}\small\item\em Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Абстрактный класс задает интерфейс для взаимодействия объектов контроллера. 
+
+Класс задает интерфейс взаимодействия объектов контроллера при помощи сигналов \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{send\+Data()} и \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recv\+Data()}. Класс содержит чисто виртуальный метод init\+Connect() для инициализации сигналов и слотов в классах наследниках. В классах наследниках для передачи данных внешним объектам необходимо использовать сигнал \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{send\+Data()}, а для приема данных от внешних объектов необходимо использовать сигнал \hyperlink{class_c_abstruct_controller_item_a6898e48061cb0cac2065f8193bd386c1}{recv\+Data()}. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_abstruct_controller_item_a1d99654a9522cc8721a329d1dcee35a4}{}\label{class_c_abstruct_controller_item_a1d99654a9522cc8721a329d1dcee35a4} 
+\index{C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}!C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}}
+\index{C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}!C\+Abstruct\+Controller\+Item@{C\+Abstruct\+Controller\+Item}}
+\subsubsection{\texorpdfstring{C\+Abstruct\+Controller\+Item()}{CAbstructControllerItem()}}
+{\footnotesize\ttfamily C\+Abstruct\+Controller\+Item\+::\+C\+Abstruct\+Controller\+Item (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Коструктор 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на корневой (родительский) объект в структуре иерархии объектов \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructcontrolleritem.\+h\item 
+E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructcontrolleritem.\+cpp\end{DoxyCompactItemize}

@@ -5,6 +5,10 @@
 #include <QDebug>
 #include "cabstructcontrolleritem.h"
 
+/*!
+ * \brief Базовый класс реализующий базовый функционал конечного автомата.
+ */
+
 class CAbstructFSM : public CAbstructControllerItem
 {
     Q_OBJECT
@@ -13,7 +17,10 @@ public:
     virtual ~CAbstructFSM();
 
 signals:
+    //! \brief Сигнал передачи данных объекту управляющему сетевым взаимодействием.
     void sendDataToIONetworkManager(QString*);
+
+     //! \brief Сигнал передачи данных объекту работающему с базой данных.
     void sendDataToDBManager(QString*);
 
 public slots:

@@ -7,6 +7,9 @@
 #include <QDebug>
 #include "cservercontroller.h"
 
+/*!
+ * \brief Сервер
+ */
 class CServer : public QObject
 {
     Q_OBJECT

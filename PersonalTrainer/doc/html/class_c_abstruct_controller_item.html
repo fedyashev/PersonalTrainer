@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.12"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Класс CAbstructControllerItem</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+   <div id="projectbrief">Personal Trainer Server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.12 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="class_c_abstruct_controller_item-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс CAbstructControllerItem<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Абстрактный класс задает интерфейс для взаимодействия объектов контроллера.  
+ <a href="class_c_abstruct_controller_item.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cabstructcontrolleritem_8h_source.html">cabstructcontrolleritem.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:CAbstructControllerItem:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_c_abstruct_controller_item.png" usemap="#CAbstructControllerItem_map" alt=""/>
+  <map id="CAbstructControllerItem_map" name="CAbstructControllerItem_map">
+<area href="class_c_abstruct_d_b_manager.html" title="Базовый класс задает базовый функционал работы с базой данных. " alt="CAbstructDBManager" shape="rect" coords="94,112,272,136"/>
+<area href="class_c_abstruct_f_s_m.html" title="Базовый класс реализующий базовый функционал конечного автомата. " alt="CAbstructFSM" shape="rect" coords="470,112,648,136"/>
+<area href="class_c_abstruct_i_o_network_manager.html" title="Базовый класс передачи и приема данных по сети. " alt="CAbstructIONetworkManager" shape="rect" coords="846,112,1024,136"/>
+<area href="class_c_client_controller.html" alt="CClientController" shape="rect" coords="1034,112,1212,136"/>
+<area href="class_c_client_d_b_manager.html" alt="CClientDBManager" shape="rect" coords="0,168,178,192"/>
+<area href="class_c_server_d_b_manager.html" alt="CServerDBManager" shape="rect" coords="188,168,366,192"/>
+<area href="class_c_client_f_s_m.html" alt="CClientFSM" shape="rect" coords="376,168,554,192"/>
+<area href="class_c_server_f_s_m.html" alt="CServerFSM" shape="rect" coords="564,168,742,192"/>
+<area href="class_c_client_i_o_network_manager.html" alt="CClientIONetworkManager" shape="rect" coords="752,168,930,192"/>
+<area href="class_c_server_i_o_network_manager.html" alt="CServerIONetworkManager" shape="rect" coords="940,168,1118,192"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:a7cf2bebc87a7d0b660318e946a176eb9"><td class="memItemLeft" align="right" valign="top"><a id="a7cf2bebc87a7d0b660318e946a176eb9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9">sendData</a> (QString *)</td></tr>
+<tr class="memdesc:a7cf2bebc87a7d0b660318e946a176eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал передачи данных внешним объектам. <br /></td></tr>
+<tr class="separator:a7cf2bebc87a7d0b660318e946a176eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6898e48061cb0cac2065f8193bd386c1"><td class="memItemLeft" align="right" valign="top"><a id="a6898e48061cb0cac2065f8193bd386c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1">recvData</a> (QString *)</td></tr>
+<tr class="memdesc:a6898e48061cb0cac2065f8193bd386c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал приема данных от внешнего объекта. <br /></td></tr>
+<tr class="separator:a6898e48061cb0cac2065f8193bd386c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1d99654a9522cc8721a329d1dcee35a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a1d99654a9522cc8721a329d1dcee35a4">CAbstructControllerItem</a> (QObject *parent=0)</td></tr>
+<tr class="memdesc:a1d99654a9522cc8721a329d1dcee35a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коструктор  <a href="#a1d99654a9522cc8721a329d1dcee35a4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1d99654a9522cc8721a329d1dcee35a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807bca71bd9a2966e60ec5c3c807f359"><td class="memItemLeft" align="right" valign="top"><a id="a807bca71bd9a2966e60ec5c3c807f359"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a807bca71bd9a2966e60ec5c3c807f359">~CAbstructControllerItem</a> ()</td></tr>
+<tr class="memdesc:a807bca71bd9a2966e60ec5c3c807f359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальный деструктор <br /></td></tr>
+<tr class="separator:a807bca71bd9a2966e60ec5c3c807f359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a27c6889230a86cb0782e6d7596b883c1"><td class="memItemLeft" align="right" valign="top"><a id="a27c6889230a86cb0782e6d7596b883c1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_abstruct_controller_item.html#a27c6889230a86cb0782e6d7596b883c1">initConnections</a> ()=0</td></tr>
+<tr class="memdesc:a27c6889230a86cb0782e6d7596b883c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Чисто виртуальный метод необходим для инициализации сигналов и слотов d классах наследниках. <br /></td></tr>
+<tr class="separator:a27c6889230a86cb0782e6d7596b883c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Абстрактный класс задает интерфейс для взаимодействия объектов контроллера. </p>
+<p>Класс задает интерфейс взаимодействия объектов контроллера при помощи сигналов <a class="el" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9" title="Сигнал передачи данных внешним объектам. ">sendData()</a> и <a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1" title="Сигнал приема данных от внешнего объекта. ">recvData()</a>. Класс содержит чисто виртуальный метод initConnect() для инициализации сигналов и слотов в классах наследниках. В классах наследниках для передачи данных внешним объектам необходимо использовать сигнал <a class="el" href="class_c_abstruct_controller_item.html#a7cf2bebc87a7d0b660318e946a176eb9" title="Сигнал передачи данных внешним объектам. ">sendData()</a>, а для приема данных от внешних объектов необходимо использовать сигнал <a class="el" href="class_c_abstruct_controller_item.html#a6898e48061cb0cac2065f8193bd386c1" title="Сигнал приема данных от внешнего объекта. ">recvData()</a>. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1d99654a9522cc8721a329d1dcee35a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d99654a9522cc8721a329d1dcee35a4">&sect;&nbsp;</a></span>CAbstructControllerItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CAbstructControllerItem::CAbstructControllerItem </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Коструктор </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Указатель на корневой (родительский) объект в структуре иерархии объектов </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>E:/workspace/Qt/PersonalTrainer/PersonalTrainer/PersonalTrainer/lib/<a class="el" href="cabstructcontrolleritem_8h_source.html">cabstructcontrolleritem.h</a></li>
+<li>E:/workspace/Qt/PersonalTrainer/PersonalTrainer/PersonalTrainer/lib/cabstructcontrolleritem.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.12
+</small></address>
+</body>
+</html>

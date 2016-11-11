@@ -1,0 +1,133 @@
+\hypertarget{class_c_abstruct_i_o_network_manager}{}\section{Класс C\+Abstruct\+I\+O\+Network\+Manager}
+\label{class_c_abstruct_i_o_network_manager}\index{C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}}
+
+
+Базовый класс передачи и приема данных по сети.  
+
+
+
+
+{\ttfamily \#include $<$cabstructionetworkmanager.\+h$>$}
+
+Граф наследования\+:C\+Abstruct\+I\+O\+Network\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_c_abstruct_i_o_network_manager}
+\end{center}
+\end{figure}
+\subsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_abstruct_i_o_network_manager_a78756fc08ed619162da210a9cfc09208}{recv\+Data\+From\+Socket} ()
+\begin{DoxyCompactList}\small\item\em Слот приема данных по сети \end{DoxyCompactList}\item 
+void \hyperlink{class_c_abstruct_i_o_network_manager_a7e6c20ce1264c76a2cc66114f8490629}{send\+Data\+To\+Socket} (Q\+String $\ast$data)
+\begin{DoxyCompactList}\small\item\em Слот передачи данных по сети \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_abstruct_i_o_network_manager_a4c25afd753612c5c719944a3e8ef4373}{}\label{class_c_abstruct_i_o_network_manager_a4c25afd753612c5c719944a3e8ef4373} 
+void \hyperlink{class_c_abstruct_i_o_network_manager_a4c25afd753612c5c719944a3e8ef4373}{disconnected} ()
+\begin{DoxyCompactList}\small\item\em Сигнал генерируется когда сокет генерирует сигнал disconected() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_abstruct_i_o_network_manager_a4ed201a3712ddf4ccd2135a0eb40fbf2}{C\+Abstruct\+I\+O\+Network\+Manager} (Q\+Tcp\+Socket $\ast$socket, Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Коструктор \end{DoxyCompactList}\item 
+\hypertarget{class_c_abstruct_i_o_network_manager_ae6a3817e290e0ff8fcbf3d4c6830f5cd}{}\label{class_c_abstruct_i_o_network_manager_ae6a3817e290e0ff8fcbf3d4c6830f5cd} 
+virtual \hyperlink{class_c_abstruct_i_o_network_manager_ae6a3817e290e0ff8fcbf3d4c6830f5cd}{$\sim$\+C\+Abstruct\+I\+O\+Network\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \end{DoxyCompactList}\item 
+Q\+Tcp\+Socket $\ast$ \hyperlink{class_c_abstruct_i_o_network_manager_a118a2c8254c149614cba51c42147c709}{get\+Socket} () const
+\begin{DoxyCompactList}\small\item\em Функиция-\/getter для сокета \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_abstruct_i_o_network_manager_ac01bfefacfa37050c8d3a9317a38fbf5}{init\+Connections} ()
+\begin{DoxyCompactList}\small\item\em Инициализация подключений сигналов и слотов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Базовый класс передачи и приема данных по сети. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_c_abstruct_i_o_network_manager_a4ed201a3712ddf4ccd2135a0eb40fbf2}{}\label{class_c_abstruct_i_o_network_manager_a4ed201a3712ddf4ccd2135a0eb40fbf2} 
+\index{C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}!C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}}
+\index{C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}!C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{C\+Abstruct\+I\+O\+Network\+Manager()}{CAbstructIONetworkManager()}}
+{\footnotesize\ttfamily C\+Abstruct\+I\+O\+Network\+Manager\+::\+C\+Abstruct\+I\+O\+Network\+Manager (\begin{DoxyParamCaption}\item[{Q\+Tcp\+Socket $\ast$}]{socket,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Коструктор 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em socket} & Сокет работы с сетью. \\
+\hline
+\mbox{\tt in}  & {\em parent} & Объект верхнего уровня иерархии объектов \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\hypertarget{class_c_abstruct_i_o_network_manager_a118a2c8254c149614cba51c42147c709}{}\label{class_c_abstruct_i_o_network_manager_a118a2c8254c149614cba51c42147c709} 
+\index{C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}!get\+Socket@{get\+Socket}}
+\index{get\+Socket@{get\+Socket}!C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{get\+Socket()}{getSocket()}}
+{\footnotesize\ttfamily Q\+Tcp\+Socket $\ast$ C\+Abstruct\+I\+O\+Network\+Manager\+::get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Функиция-\/getter для сокета 
+
+\begin{DoxyReturn}{Возвращает}
+Возвращает указатель на сокет 
+\end{DoxyReturn}
+\hypertarget{class_c_abstruct_i_o_network_manager_ac01bfefacfa37050c8d3a9317a38fbf5}{}\label{class_c_abstruct_i_o_network_manager_ac01bfefacfa37050c8d3a9317a38fbf5} 
+\index{C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}!init\+Connections@{init\+Connections}}
+\index{init\+Connections@{init\+Connections}!C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{init\+Connections()}{initConnections()}}
+{\footnotesize\ttfamily void C\+Abstruct\+I\+O\+Network\+Manager\+::init\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Инициализация подключений сигналов и слотов 
+
+Соединяем сигнал сокета ready\+Read() и слот \hyperlink{class_c_abstruct_i_o_network_manager_a78756fc08ed619162da210a9cfc09208}{C\+Abstruct\+I\+O\+Network\+Manager\+::recv\+Data\+From\+Socket()}.  Когда сокет генерирует сигнал ready\+Read(), т.\+е. сокету отправили из сети данные, которые он готов принять, вызывется слот приема данных из сети
+
+Замещает \hyperlink{class_c_abstruct_controller_item_a27c6889230a86cb0782e6d7596b883c1}{C\+Abstruct\+Controller\+Item}.
+
+
+
+Переопределяется в \hyperlink{class_c_server_i_o_network_manager_a17155570c51dc951db52d827f120c689}{C\+Server\+I\+O\+Network\+Manager}.
+
+\hypertarget{class_c_abstruct_i_o_network_manager_a78756fc08ed619162da210a9cfc09208}{}\label{class_c_abstruct_i_o_network_manager_a78756fc08ed619162da210a9cfc09208} 
+\index{C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}!recv\+Data\+From\+Socket@{recv\+Data\+From\+Socket}}
+\index{recv\+Data\+From\+Socket@{recv\+Data\+From\+Socket}!C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{recv\+Data\+From\+Socket}{recvDataFromSocket}}
+{\footnotesize\ttfamily void C\+Abstruct\+I\+O\+Network\+Manager\+::recv\+Data\+From\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот приема данных по сети 
+
+Создается объект raw\+\_\+data класса Q\+Byte\+Array в который хранит данные переданные через сеть. Считывание данных происходит через вызов метода read\+All() у сокета. Массив байт помещается в объект класса Q\+String. Далее происходит генерация сигнала \hyperlink{class_c_abstruct_controller_item_a7cf2bebc87a7d0b660318e946a176eb9}{send\+Data()}. В сигнал помещается объект класса Q\+String, который содержит массив принятых байт по сети, который передается внешнему объекту. \hypertarget{class_c_abstruct_i_o_network_manager_a7e6c20ce1264c76a2cc66114f8490629}{}\label{class_c_abstruct_i_o_network_manager_a7e6c20ce1264c76a2cc66114f8490629} 
+\index{C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}!send\+Data\+To\+Socket@{send\+Data\+To\+Socket}}
+\index{send\+Data\+To\+Socket@{send\+Data\+To\+Socket}!C\+Abstruct\+I\+O\+Network\+Manager@{C\+Abstruct\+I\+O\+Network\+Manager}}
+\subsubsection{\texorpdfstring{send\+Data\+To\+Socket}{sendDataToSocket}}
+{\footnotesize\ttfamily void C\+Abstruct\+I\+O\+Network\+Manager\+::send\+Data\+To\+Socket (\begin{DoxyParamCaption}\item[{Q\+String $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот передачи данных по сети 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em data} & Объект содержащий передаваемую информацию\\
+\hline
+\end{DoxyParams}
+Формируется char$\ast$ строка из переданного в слок объекта Q\+String. Для передачи данных по сети из объекта сокета вызывается метод write в который передается char$\ast$ строка и размер этой строки. Далее для ожидания передачи данных вызывается метод wait\+For\+Bytes\+Written() и очищается буффер сокета. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructionetworkmanager.\+h\item 
+E\+:/workspace/\+Qt/\+Personal\+Trainer/\+Personal\+Trainer/\+Personal\+Trainer/lib/cabstructionetworkmanager.\+cpp\end{DoxyCompactItemize}

@@ -5,6 +5,9 @@
 #include <QDebug>
 #include "cabstructcontrolleritem.h"
 
+/*!
+ * \brief Базовый класс задает базовый функционал работы с базой данных.
+ */
 class CAbstructDBManager : public CAbstructControllerItem
 {
     Q_OBJECT
